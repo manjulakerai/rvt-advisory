@@ -21,9 +21,7 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl mb-8 text-gray-200">Expert policy advice, strategic guidance, and cultural competency training to empower businesses, government agencies, and Aboriginal organisations.</p>
           <div className="flex flex-wrap gap-4">
             <Link to="/contact">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold">
-                Book a Consultation
-              </Button>
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold">Book Your Inception Meeting Now</Button>
             </Link>
             <Link to="/about">
               <Button size="lg" variant="outline" className="border-white hover:bg-white/10 text-zinc-950">
