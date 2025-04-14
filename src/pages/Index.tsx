@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
@@ -280,7 +281,7 @@ const Index = () => {
           </p>
           <Link to="/contact">
             <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 font-bold text-lg px-8 py-6">
-              Book Your Inception Meeting Now 
+              Book Your Inception Meeting Now
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
