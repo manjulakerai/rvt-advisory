@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -6,10 +7,10 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header section with image */}
-      <div className="relative h-[50vh] flex items-center bg-gradient-to-r from-grey-900 to-grey-800 text-white">
+      <div className="relative h-[50vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         {/* Background image overlay - replace with actual landscape shots of her country */}
         <div className="absolute inset-0 bg-black/50 z-0">
-          <div className="absolute inset-0 bg-cover bg-centre" 
+          <div className="absolute inset-0 bg-cover bg-center" 
                style={{ backgroundImage: "url('/placeholder.svg')", opacity: 0.5 }}>
             {/* Note: Replace with landscape image from Renee's country */}
           </div>
@@ -29,7 +30,7 @@ const About = () => {
           {/* Profile photo column */}
           <div>
             <div className="sticky top-8">
-              <div className="rounded-lg overflow-hidden mb-6 aspect-[3/4] bg-grey-200">
+              <div className="rounded-lg overflow-hidden mb-6 aspect-[3/4] bg-gray-200">
                 {/* Replace with professional photo of Renee */}
                 <img src="/placeholder.svg" alt="Renee" className="w-full h-full object-cover" />
               </div>
@@ -63,7 +64,7 @@ const About = () => {
               <h2 className="text-3xl font-bold mb-6">Personal Story & Journey</h2>
               <div className="prose max-w-none">
                 <p className="text-lg">
-                  [PLACEHOLDER: Add Renee's personal story here, emphasising her cultural connections and journey. Include formative experiences that have shaped her approach to advisory work.]
+                  [PLACEHOLDER: Add Renee's personal story here, emphasizing her cultural connections and journey. Include formative experiences that have shaped her approach to advisory work.]
                 </p>
                 <p className="text-lg mt-4">
                   [PLACEHOLDER: Continue with details about her professional evolution, highlighting pivotal moments and the development of her unique perspective that combines cultural wisdom with strategic expertise.]
@@ -89,9 +90,9 @@ const About = () => {
                   <CardContent className="p-6">
                     <h3 className="text-xl font-semibold mb-2">Corporate Advisory</h3>
                     <ul className="space-y-2 list-disc pl-5">
-                      <li>Consulted with national and multinational organisations</li>
+                      <li>Consulted with national and multinational organizations</li>
                       <li>Developed strategic frameworks for diverse business sectors</li>
-                      <li>Created cultural competency training programmes</li>
+                      <li>Created cultural competency training programs</li>
                     </ul>
                   </CardContent>
                 </Card>
@@ -105,15 +106,14 @@ const About = () => {
                   [PLACEHOLDER: Details about Renee's cultural background and how it informs her advisory approach. Explain how her cultural supervision services work and benefit clients.]
                 </p>
                 
-                <div className="my-8 bg-grey-100 p-6 rounded-lg">
+                <div className="my-8 bg-gray-100 p-6 rounded-lg">
                   <blockquote className="text-xl italic">
                     "My work is grounded in creating opportunities for future generations and shifting societal dynamics by integrating Aboriginal cultural concepts into business strategies."
                   </blockquote>
-                
                 </div>
                 
                 <p className="text-lg">
-                  [PLACEHOLDER: Expand on how Renee's cultural expertise provides unique value in business contexts, especially for organisations seeking to improve their engagement with Aboriginal communities.]
+                  [PLACEHOLDER: Expand on how Renee's cultural expertise provides unique value in business contexts, especially for organizations seeking to improve their engagement with Aboriginal communities.]
                 </p>
               </div>
             </section>
@@ -126,7 +126,7 @@ const About = () => {
                 </p>
                 
                 <div className="grid sm:grid-cols-2 gap-6 my-6">
-                  <div className="bg-grey-100 p-6 rounded-lg" id="ted">
+                  <div className="bg-gray-100 p-6 rounded-lg" id="ted">
                     <h3 className="text-xl font-semibold mb-2">TEDx Talk</h3>
                     <p>[PLACEHOLDER: Brief description of TEDx talk topic and impact]</p>
                     <a href="#" className="text-primary hover:underline flex items-center gap-1 mt-2">
@@ -134,7 +134,7 @@ const About = () => {
                     </a>
                   </div>
                   
-                  <div className="bg-grey-100 p-6 rounded-lg" id="un">
+                  <div className="bg-gray-100 p-6 rounded-lg" id="un">
                     <h3 className="text-xl font-semibold mb-2">United Nations</h3>
                     <p>[PLACEHOLDER: Brief description of UN speaking engagement]</p>
                     <a href="#" className="text-primary hover:underline flex items-center gap-1 mt-2">

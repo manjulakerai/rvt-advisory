@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
@@ -70,7 +70,7 @@ const Index = () => {
             {[
               "Navigating complex policy landscapes",
               "Creating meaningful community connections",
-              "Developing authentic, impactful organisational strategies"
+              "Developing authentic, impactful organizational strategies"
             ].map((problem, index) => (
               <Card key={index} className="hover:shadow-lg transition-all">
                 <CardHeader>
@@ -185,15 +185,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceCard 
               title="Proven Strategies" 
-              description="Methodologies refined through work at the highest levels of government and international organisations"
+              description="Methodologies refined through work at the highest levels of government and international organizations"
             />
             <ServiceCard 
-              title="Personalised Guidance" 
-              description="Solutions tailored to your specific organisational context and challenges"
+              title="Personalized Guidance" 
+              description="Solutions tailored to your specific organizational context and challenges"
             />
             <ServiceCard 
               title="Diverse Experience" 
-              description="Insights drawn from successfully transforming organisations across multiple sectors"
+              description="Insights drawn from successfully transforming organizations across multiple sectors"
             />
           </div>
         </div>
@@ -209,7 +209,7 @@ const Index = () => {
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">1</div>
               <h3 className="text-2xl font-semibold mb-2">Initial Consultation</h3>
-              <p className="text-lg">We begin with a deep-dive discovery session to understand your organisational challenges, goals, and cultural context.</p>
+              <p className="text-lg">We begin with a deep-dive discovery session to understand your organizational challenges, goals, and cultural context.</p>
             </div>
             
             <div className="relative pl-16 mb-10">
@@ -223,7 +223,7 @@ const Index = () => {
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">3</div>
               <h3 className="text-2xl font-semibold mb-2">Implementation Planning</h3>
-              <p className="text-lg">We create a tailored roadmap with specific, achievable milestones that align with your organisational vision.</p>
+              <p className="text-lg">We create a tailored roadmap with specific, achievable milestones that align with your organizational vision.</p>
             </div>
             
             <div className="relative pl-16 mb-10">
@@ -277,11 +277,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organisation?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Take the first step toward authentic change and powerful organisational development.
+            Take the first step toward authentic change and powerful organizational development.
           </p>
           <Link to="/contact">
             <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 font-bold text-lg px-8 py-6">
-              Book Your Inception Meeting Now
+              Book Your Inception Meeting Now 
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
@@ -294,7 +294,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <h3 className="text-xl font-bold mb-4">Renee Advisory</h3>
-              <p className="mb-4">Transforming organisations through authentic cultural wisdom and strategic expertise.</p>
+              <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
               <div className="flex space-x-4">
                 {/* Social media icons would go here */}
               </div>
@@ -329,7 +329,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-            &copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.
+            <p>&copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.</p>
           </div>
         </div>
       </footer>
