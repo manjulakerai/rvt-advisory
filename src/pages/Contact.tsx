@@ -1,4 +1,3 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -9,7 +8,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { Mail, Phone, MessageSquare } from "lucide-react";
 
-// Form schema using zod
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
@@ -21,7 +19,6 @@ const formSchema = z.object({
 type FormValues = z.infer<typeof formSchema>;
 
 const Contact = () => {
-  // React Hook Form with zod validation
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -33,24 +30,17 @@ const Contact = () => {
     },
   });
 
-  // Form submission handler
   const onSubmit = (data: FormValues) => {
     console.log("Form submitted:", data);
-    // Add actual form submission code here
-    
-    // Show success message
     toast({
       title: "Inquiry Sent",
       description: "Thank you for your message. We'll get back to you shortly.",
     });
-    
-    // Reset form
     form.reset();
   };
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header section */}
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
@@ -60,11 +50,9 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Contact form section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">
-            {/* Contact information */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
               <p className="mb-8">
@@ -100,14 +88,13 @@ const Contact = () => {
                       Schedule a discovery call to discuss your needs.
                     </p>
                     <Button variant="outline" className="mt-2">
-                      Book a Consultation
+                      Book Your Inception Meeting Now
                     </Button>
                   </div>
                 </div>
               </div>
             </div>
             
-            {/* Form */}
             <div className="md:col-span-2">
               <Card>
                 <CardHeader>
@@ -154,7 +141,7 @@ const Contact = () => {
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label htmlFor="organization" className="text-sm font-medium">
-                          Organization
+                          Organisation
                         </label>
                         <Input
                           id="organization"
@@ -202,7 +189,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* FAQ section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
