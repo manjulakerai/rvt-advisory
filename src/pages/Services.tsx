@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase, Shield, Layout } from "lucide-react";
@@ -9,7 +8,7 @@ const Services = () => {
   const services = [
     {
       title: "Policy Advice",
-      description: "Strategic guidance on policy development, implementation, and evaluation for government agencies and organizations.",
+      description: "Strategic guidance on policy development, implementation, and evaluation for government agencies and organisations.",
       icon: <FileText className="h-6 w-6 text-primary" />,
       benefits: [
         "Navigate complex regulatory environments",

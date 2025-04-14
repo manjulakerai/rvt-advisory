@@ -1,4 +1,3 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -154,7 +153,7 @@ const Contact = () => {
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <label htmlFor="organization" className="text-sm font-medium">
-                          Organization
+                          Organisation
                         </label>
                         <Input
                           id="organization"
