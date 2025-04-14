@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase, Shield, Layout } from "lucide-react";
@@ -9,7 +9,7 @@ const Services = () => {
   const services = [
     {
       title: "Policy Advice",
-      description: "Strategic guidance on policy development, implementation, and evaluation for government agencies and organisations.",
+      description: "Strategic guidance on policy development, implementation, and evaluation for government agencies and organizations.",
       icon: <FileText className="h-6 w-6 text-primary" />,
       benefits: [
         "Navigate complex regulatory environments",
@@ -196,11 +196,11 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Ready to Begin Your Transformation?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Take the first step toward authentic organisational change and powerful development.
+            Take the first step toward authentic organizational change and powerful development.
           </p>
           <Link to="/contact">
             <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 font-bold text-lg px-8 py-6">
-              Book Your Inception Meeting Now
+              Book Your Discovery Session
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
