@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Video, MicrophoneIcon, BookOpen, Award } from "lucide-react";
+import { ExternalLink, Video, Mic, BookOpen, Award } from "lucide-react";
 
 const Media = () => {
   const featuredMedia = [
@@ -16,7 +16,7 @@ const Media = () => {
       type: "speaking",
       description: "[PLACEHOLDER: Brief description of the UN speaking engagement]",
       link: "#",
-      icon: <MicrophoneIcon className="h-6 w-6 text-primary" />
+      icon: <Mic className="h-6 w-6 text-primary" />
     }
   ];
 
@@ -37,7 +37,7 @@ const Media = () => {
       type: "podcast",
       description: "[PLACEHOLDER: Brief description of the podcast episode]",
       link: "#",
-      icon: <MicrophoneIcon className="h-5 w-5 text-primary" />
+      icon: <Mic className="h-5 w-5 text-primary" />
     },
     {
       title: "[PLACEHOLDER: Interview Title]",
