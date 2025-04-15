@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
@@ -272,16 +271,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section 7: CTA */}
+      {/* CTA section */}
       <section className="py-16 bg-primary text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organisation?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Take the first step toward authentic change and powerful organizational development.
+            Take the first step toward authentic change and powerful organisational development.
           </p>
           <Link to="/contact">
             <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100 font-bold text-lg px-8 py-6">
-              Book Your Inception Meeting Now 
+              BOOK YOUR INCEPTION MEETING NOW
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
           </Link>
@@ -324,7 +323,7 @@ const Index = () => {
                 <span>info@reneeadvisory.com</span>
               </div>
               <Button variant="outline" className="mt-4">
-                Book a Consultation
+                BOOK YOUR INCEPTION MEETING NOW
               </Button>
             </div>
           </div>
