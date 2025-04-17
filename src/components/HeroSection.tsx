@@ -17,7 +17,7 @@ const HeroSection = () => {
           <span className="px-4 py-1 bg-primary text-white text-sm uppercase tracking-wider font-semibold rounded-full mb-4 inline-block">
             Strategic Advisory Services
           </span>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Transforming Organisations Through Cultural Wisdom - IP address changed</h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Transforming Organisations Through Cultural Wisdom</h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">Expert policy advice, strategic guidance, and cultural competency training to empower businesses, government agencies, and Aboriginal organisations.</p>
           <div className="flex flex-wrap gap-4">
             <Link to="/contact">
