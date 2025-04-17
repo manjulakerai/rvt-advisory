@@ -1,7 +1,5 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-
 const HeroSection = () => {
   return <div className="relative h-[80vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
       {/* Background image overlay - replace the URL with your actual image */}
@@ -19,7 +17,7 @@ const HeroSection = () => {
           <span className="px-4 py-1 bg-primary text-white text-sm uppercase tracking-wider font-semibold rounded-full mb-4 inline-block">
             Strategic Advisory Services
           </span>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Transforming Organisations Through Cultural Wisdom</h1>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">Transforming Organisations Through Cultural Wisdom - test</h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">Expert policy advice, strategic guidance, and cultural competency training to empower businesses, government agencies, and Aboriginal organisations.</p>
           <div className="flex flex-wrap gap-4">
             <Link to="/contact">
@@ -35,5 +33,4 @@ const HeroSection = () => {
       </div>
     </div>;
 };
-
 export default HeroSection;
