@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase, Shield, Layout } from "lucide-react";
+import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase, Shield, Layout, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
 import TestimonialCard from "@/components/TestimonialCard";
 import Header from "@/components/Header";
@@ -82,7 +82,6 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      {/* Header section */}
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">CENTRING CONSCIOUS CHANGE</h1>
@@ -92,7 +91,6 @@ const Services = () => {
         </div>
       </div>
 
-      {/* Cultural Capability Training Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-8">Cultural Capability Training</h2>
@@ -163,7 +161,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services overview */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
@@ -217,7 +214,6 @@ const Services = () => {
             </div>
           </div>
 
-          {/* Individual services */}
           <h2 className="text-3xl font-bold mb-12 text-center">Our Advisory Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -244,7 +240,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Testimonials section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Client Success Stories</h2>
@@ -263,7 +258,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA section */}
       <section className="py-16 bg-primary text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Ready to Begin Your Transformation?</h2>
@@ -278,6 +272,51 @@ const Services = () => {
           </Link>
         </div>
       </section>
+
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Renee Advisory</h3>
+              <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
+              <div className="flex space-x-4">
+                <MessageSquare className="h-5 w-5" />
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link to="/services" className="hover:underline">Policy Advice</Link></li>
+                <li><Link to="/services" className="hover:underline">Strategic Advice</Link></li>
+                <li><Link to="/services" className="hover:underline">Cultural Supervision</Link></li>
+                <li><Link to="/services" className="hover:underline">Cultural Training</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link to="/" className="hover:underline">Home</Link></li>
+                <li><Link to="/about" className="hover:underline">About</Link></li>
+                <li><Link to="/media" className="hover:underline">Media</Link></li>
+                <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <div className="flex items-center mb-2">
+                <MessageSquare className="h-5 w-5 mr-2" />
+                <span>info@reneeadvisory.com</span>
+              </div>
+              <Button variant="outline" className="mt-4">
+                BOOK YOUR INCEPTION MEETING NOW
+              </Button>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p>&copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

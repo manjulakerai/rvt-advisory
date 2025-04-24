@@ -1,6 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Video, Mic, BookOpen, Award, FileText, Radio, Tv } from "lucide-react";
+import { ExternalLink, Video, Mic, BookOpen, Award, FileText, Radio, Tv, MessageSquare } from "lucide-react";
 import Header from "@/components/Header";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const featuredMedia = [
   {
@@ -91,7 +93,6 @@ const Media = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      {/* Header section */}
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">Media & Speaking</h1>
@@ -101,7 +102,6 @@ const Media = () => {
         </div>
       </div>
 
-      {/* Featured media section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12">Featured Appearances</h2>
@@ -110,7 +110,6 @@ const Media = () => {
             {featuredMedia.map((item, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-video bg-gray-200 relative">
-                  {/* Placeholder for video/image */}
                   <div className="absolute inset-0 flex items-center justify-center">
                     {item.icon}
                     <span className="ml-2">
@@ -141,7 +140,6 @@ const Media = () => {
         </div>
       </section>
 
-      {/* Speaker section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -163,7 +161,6 @@ const Media = () => {
               </div>
             </div>
             <div className="bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden">
-              {/* Placeholder for speaking image */}
               <div className="h-full w-full flex items-center justify-center">
                 [PLACEHOLDER: Professional image of Renee speaking]
               </div>
@@ -172,7 +169,6 @@ const Media = () => {
         </div>
       </section>
 
-      {/* Media appearances section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12">Media Appearances</h2>
@@ -209,7 +205,6 @@ const Media = () => {
         </div>
       </section>
 
-      {/* Press kit section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-6">Press Kit</h2>
@@ -232,6 +227,51 @@ const Media = () => {
           </div>
         </div>
       </section>
+
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Renee Advisory</h3>
+              <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
+              <div className="flex space-x-4">
+                {/* Social media icons would go here */}
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link to="/services" className="hover:underline">Policy Advice</Link></li>
+                <li><Link to="/services" className="hover:underline">Strategic Advice</Link></li>
+                <li><Link to="/services" className="hover:underline">Cultural Supervision</Link></li>
+                <li><Link to="/services" className="hover:underline">Cultural Training</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link to="/" className="hover:underline">Home</Link></li>
+                <li><Link to="/about" className="hover:underline">About</Link></li>
+                <li><Link to="/media" className="hover:underline">Media</Link></li>
+                <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <div className="flex items-center mb-2">
+                <MessageSquare className="h-5 w-5 mr-2" />
+                <span>info@reneeadvisory.com</span>
+              </div>
+              <Button variant="outline" className="mt-4">
+                BOOK YOUR INCEPTION MEETING NOW
+              </Button>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p>&copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };

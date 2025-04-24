@@ -1,14 +1,14 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
+import { MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      {/* Header section with image */}
       <div className="relative h-[50vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         <div className="absolute inset-0 bg-black/50 z-0">
           <div className="absolute inset-0 bg-cover bg-center" 
@@ -24,10 +24,8 @@ const About = () => {
         </div>
       </div>
 
-      {/* Main content */}
       <div className="container mx-auto px-4 py-16">
         <div className="grid md:grid-cols-3 gap-12">
-          {/* Profile photo column */}
           <div>
             <div className="sticky top-8">
               <div className="rounded-lg overflow-hidden mb-6 aspect-[3/4] bg-gray-200">
@@ -68,7 +66,6 @@ const About = () => {
             </div>
           </div>
           
-          {/* Main content column */}
           <div className="md:col-span-2 space-y-12">
             <section>
               <h2 className="text-3xl font-bold mb-6">About RVT Advisory</h2>
@@ -132,6 +129,51 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <footer className="bg-gray-900 text-white py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-xl font-bold mb-4">Renee Advisory</h3>
+              <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
+              <div className="flex space-x-4">
+                {/* Social media icons would go here */}
+              </div>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <ul className="space-y-2">
+                <li><Link to="/services" className="hover:underline">Policy Advice</Link></li>
+                <li><Link to="/services" className="hover:underline">Strategic Advice</Link></li>
+                <li><Link to="/services" className="hover:underline">Cultural Supervision</Link></li>
+                <li><Link to="/services" className="hover:underline">Cultural Training</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2">
+                <li><Link to="/" className="hover:underline">Home</Link></li>
+                <li><Link to="/about" className="hover:underline">About</Link></li>
+                <li><Link to="/media" className="hover:underline">Media</Link></li>
+                <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact</h4>
+              <div className="flex items-center mb-2">
+                <MessageSquare className="h-5 w-5 mr-2" />
+                <span>info@reneeadvisory.com</span>
+              </div>
+              <Button variant="outline" className="mt-4">
+                BOOK YOUR INCEPTION MEETING NOW
+              </Button>
+            </div>
+          </div>
+          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p>&copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
