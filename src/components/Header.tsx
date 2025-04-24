@@ -16,24 +16,24 @@ const Header = () => {
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
-              <Link to="/" className={navigationMenuTriggerStyle()}>
+              <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold`}>
                 Home
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/about" className={navigationMenuTriggerStyle()}>
+              <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold`}>
                 About
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <NavigationMenuTrigger>Services</NavigationMenuTrigger>
+              <NavigationMenuTrigger className="font-semibold">Services</NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                   {["Policy Advice", "Strategic Advice", "Cultural Supervision", "Cultural Training", "Recruitment Guidance", "Retention Strategies", "Business Consultation"].map((service) => (
                     <li key={service}>
                       <NavigationMenuLink asChild>
-                        <Link to="/services" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
-                          <div className="text-sm font-medium leading-none">{service}</div>
+                        <Link to="/services" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-semibold">
+                          <div className="text-sm font-semibold leading-none">{service}</div>
                         </Link>
                       </NavigationMenuLink>
                     </li>
@@ -42,12 +42,12 @@ const Header = () => {
               </NavigationMenuContent>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/media" className={navigationMenuTriggerStyle()}>
+              <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold`}>
                 Media
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
-              <Link to="/contact" className={navigationMenuTriggerStyle()}>
+              <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold`}>
                 Contact
               </Link>
             </NavigationMenuItem>
