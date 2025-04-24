@@ -1,9 +1,8 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { ExternalLink } from "lucide-react";
+import React from 'react';
 import { Link } from "react-router-dom";
-import Header from "@/components/Header";
 import { MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
 
 const About = () => {
   return (
@@ -134,7 +133,13 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Renee Advisory</h3>
+              <Link to="/" className="flex items-center mb-4">
+                <img 
+                  src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" 
+                  alt="RVT Advisory" 
+                  className="h-12 w-auto"
+                />
+              </Link>
               <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
               <div className="flex space-x-4">
                 {/* Social media icons would go here */}
