@@ -24,7 +24,7 @@ const HeroSection = () => {
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white font-bold">BOOK YOUR INCEPTION MEETING NOW</Button>
             </Link>
             <Link to="/about">
-              <Button size="lg" variant="outline" className="border-white hover:bg-white/10 text-zinc-950">
+              <Button size="lg" variant="outline" className="border-white hover:bg-white/10 text-zinc-950 font-bold text-gray-800">
                 Learn More About Renee
               </Button>
             </Link>
