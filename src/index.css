@@ -13,11 +13,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 75 65% 24%;  /* Green #4b5a20 */
 
-    --primary: 27 28% 34%;  /* Brown #6f5b3e */
+    --primary: 75 65% 24%;  /* Green #4b5a20 */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 75 65% 95%;  /* Light green */
-    --secondary-foreground: 27 28% 34%;  /* Brown #6f5b3e */
+    --secondary: 27 28% 34%;  /* Brown #6f5b3e */
+    --secondary-foreground: 210 40% 98%;
 
     --muted: 27 28% 95%;  /* Light brown */
     --muted-foreground: 75 65% 45%;  /* Muted green */
