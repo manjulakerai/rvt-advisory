@@ -1,22 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: 'Lejour Serif';
-  src: url('/fonts/LejourSerif-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Mont';
-  src: url('/fonts/Mont-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-}
 
 @layer base {
   :root {
@@ -112,18 +96,6 @@
   }
 
   body {
-    @apply bg-background text-foreground font-mont;
-  }
-
-  h1, h2, h3 {
-    @apply font-lejour;
-  }
-
-  h4, h5, h6 {
-    @apply font-baskerville;
-  }
-
-  p {
-    @apply font-mont;
+    @apply bg-background text-foreground;
   }
 }
