@@ -5,39 +5,37 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 75 65% 24%;  /* Changed from blue to #4b5a20 */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 75 65% 24%;  /* Changed from blue to #4b5a20 */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 75 65% 24%;  /* Changed from blue to #4b5a20 */
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 75 65% 24%;  /* Changed from blue to #4b5a20 */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 75 65% 95%;  /* Changed to lighter green */
+    --secondary-foreground: 75 65% 24%;  /* Changed to match new primary */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 75 65% 95%;  /* Changed to lighter green */
+    --muted-foreground: 75 65% 45%;  /* Changed to muted green */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 75 65% 95%;  /* Changed to lighter green */
+    --accent-foreground: 75 65% 24%;  /* Changed to match primary */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 75 65% 85%;  /* Changed to light green border */
+    --input: 75 65% 85%;  /* Changed to match border */
+    --ring: 75 65% 24%;  /* Changed to match primary */
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 75 65% 24%;  /* Changed from blue to #4b5a20 */
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
