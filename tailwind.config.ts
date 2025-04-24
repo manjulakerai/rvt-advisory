@@ -61,14 +61,6 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				},
-				'brand': {
-					neon: '#4BFA20',
-					olive: '#667538',
-					brown: '#6F5B3E',
-					cream: '#F9F6F0',
-					green: '#0F9F6F',
-					gold: '#C4AE78',
 				}
 			},
 			borderRadius: {

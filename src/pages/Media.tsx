@@ -91,9 +91,9 @@ const mediaAppearances = [
 
 const Media = () => {
   return (
-    <div className="min-h-screen bg-brand-cream">
+    <div className="min-h-screen bg-white">
       <Header />
-      <div className="bg-brand-olive text-brand-cream py-16">
+      <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">Media & Speaking</h1>
           <p className="text-xl max-w-3xl">
@@ -104,11 +104,11 @@ const Media = () => {
 
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-brand-brown">Featured Appearances</h2>
+          <h2 className="text-3xl font-bold mb-12">Featured Appearances</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             {featuredMedia.map((item, index) => (
-              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all border-brand-gold">
+              <Card key={index} className="overflow-hidden hover:shadow-lg transition-all">
                 <div className="aspect-video bg-gray-200 relative">
                   <div className="absolute inset-0 flex items-center justify-center">
                     {item.icon}
@@ -228,7 +228,7 @@ const Media = () => {
         </div>
       </section>
 
-      <footer className="bg-brand-olive text-brand-cream py-12">
+      <footer className="bg-gray-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
