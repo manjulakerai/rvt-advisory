@@ -277,7 +277,13 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Renee Advisory</h3>
+              <Link to="/" className="inline-block mb-4">
+                <img 
+                  src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" 
+                  alt="Renee Advisory Logo" 
+                  className="h-12 w-auto"
+                />
+              </Link>
               <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
               <div className="flex space-x-4">
                 <MessageSquare className="h-5 w-5" />
