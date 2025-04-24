@@ -142,15 +142,15 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <ServiceCard 
               title="Proven Strategies" 
-              description="Methodologies refined through work at the highest levels of government and international organizations"
+              description="Methodologies refined through work at the highest levels of government and international organisations"
             />
             <ServiceCard 
-              title="Personalized Guidance" 
-              description="Solutions tailored to your specific organizational context and challenges"
+              title="Personalised Guidance" 
+              description="Solutions tailored to your specific organisational context and challenges"
             />
             <ServiceCard 
               title="Diverse Experience" 
-              description="Insights drawn from successfully transforming organizations across multiple sectors"
+              description="Insights drawn from successfully transforming organisations across multiple sectors"
             />
           </div>
         </div>
