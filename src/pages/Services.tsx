@@ -85,12 +85,83 @@ const Services = () => {
       {/* Header section */}
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold mb-6">Our Services</h1>
+          <h1 className="text-4xl font-bold mb-6">CENTRING CONSCIOUS CHANGE</h1>
           <p className="text-xl max-w-3xl">
-            Comprehensive advisory services combining strategic expertise with cultural wisdom to transform organizations and create authentic change.
+            Partnering with businesses to elevate their internal capabilities and external offerings, RVT Advisory is passionate about creating lasting change and centring human agency.
           </p>
         </div>
       </div>
+
+      {/* Cultural Capability Training Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">Cultural Capability Training</h2>
+          <div className="grid md:grid-cols-2 gap-12">
+            <div>
+              <p className="text-lg mb-6">
+                Transform your business and let our expert facilitators take your team through a transformational, immersive and interactive cultural experience.
+              </p>
+              <p className="text-lg mb-6">
+                Our Cultural Capability Training programs are based on Aboriginal principles and are tailored to suit your business's needs. We deliver interactive and human-centred cultural experiences for all participants by creating safe, inclusive and respectful spaces.
+              </p>
+              <div className="bg-white p-6 rounded-lg shadow-sm">
+                <h3 className="text-xl font-semibold mb-4">Training Formats</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>90-minute (face-to-face or virtual)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>2-hour (face-to-face)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>Half-day (face-to-face)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>Full-day (face-to-face)</span>
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <CheckCircle className="h-4 w-4 text-primary" />
+                    <span>60-minute Yarning Circle (face-to-face or virtual)</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <h3 className="text-xl font-semibold">Course Components</h3>
+              <div className="grid gap-4">
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">Aboriginal & Torres Strait Islander Cultures</h4>
+                    <p className="text-sm text-gray-600">Histories, Languages, Protocols and Experiences</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">Understanding Australia's History</h4>
+                    <p className="text-sm text-gray-600">Impact analysis and contemporary perspectives</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">Unpacking Myths & Terminology</h4>
+                    <p className="text-sm text-gray-600">Addressing stereotypes and appropriate language</p>
+                  </CardContent>
+                </Card>
+                <Card>
+                  <CardContent className="p-4">
+                    <h4 className="font-semibold">Reframing Reconciliation</h4>
+                    <p className="text-sm text-gray-600">Contemporary approaches and action plans</p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services overview */}
       <section className="py-16">

@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -9,18 +10,16 @@ const About = () => {
       <Header />
       {/* Header section with image */}
       <div className="relative h-[50vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-        {/* Background image overlay - replace with actual landscape shots of her country */}
         <div className="absolute inset-0 bg-black/50 z-0">
           <div className="absolute inset-0 bg-cover bg-center" 
                style={{ backgroundImage: "url('/placeholder.svg')", opacity: 0.5 }}>
-            {/* Note: Replace with landscape image from Renee's country */}
           </div>
         </div>
         
         <div className="container mx-auto px-4 z-10 relative">
-          <h1 className="text-5xl font-extrabold mb-6">About Renee</h1>
+          <h1 className="text-5xl font-extrabold mb-6">RVT ADVISORY</h1>
           <p className="text-xl max-w-2xl">
-            A versatile professional with an extensive background in corporate, government, and political offices, bringing a unique cultural perspective to complex business challenges.
+            Centring people and partnerships in everything we do —because sustainable business success begins with genuine connections.
           </p>
         </div>
       </div>
@@ -32,27 +31,37 @@ const About = () => {
           <div>
             <div className="sticky top-8">
               <div className="rounded-lg overflow-hidden mb-6 aspect-[3/4] bg-gray-200">
-                {/* Replace with professional photo of Renee */}
-                <img src="/placeholder.svg" alt="Renee" className="w-full h-full object-cover" />
+                <img src="/placeholder.svg" alt="Renee Thomson" className="w-full h-full object-cover" />
               </div>
               
               <div className="space-y-4">
                 <div className="border-t pt-4">
-                  <h3 className="font-semibold mb-2">Featured Speaking</h3>
+                  <h3 className="text-2xl font-bold mb-4">Our Ethos</h3>
+                  <p className="text-gray-700 mb-4">
+                    At RVT Advisory, our culture is built on creating meaningful relationships and centring conscious change. We take pride in the way we work—with care, clarity, and a deep commitment to values.
+                  </p>
+                  <h4 className="font-semibold mb-2">Our Values:</h4>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2">
                       <ExternalLink className="h-4 w-4 text-primary" />
-                      <a href="#ted" className="text-primary hover:underline">TED Talk</a>
+                      <span>Authenticity</span>
                     </li>
                     <li className="flex items-center gap-2">
                       <ExternalLink className="h-4 w-4 text-primary" />
-                      <a href="#un" className="text-primary hover:underline">United Nations</a>
+                      <span>Accountability</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <ExternalLink className="h-4 w-4 text-primary" />
+                      <span>Integrity</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <ExternalLink className="h-4 w-4 text-primary" />
+                      <span>Connection</span>
                     </li>
                   </ul>
                 </div>
                 
                 <div className="border-t pt-4">
-                  <h3 className="font-semibold mb-2">Connect</h3>
                   <Link to="/contact" className="text-primary hover:underline">Book a consultation</Link>
                 </div>
               </div>
@@ -60,99 +69,64 @@ const About = () => {
           </div>
           
           {/* Main content column */}
-          <div className="md:col-span-2 space-y-8">
+          <div className="md:col-span-2 space-y-12">
             <section>
-              <h2 className="text-3xl font-bold mb-6">Personal Story & Journey</h2>
+              <h2 className="text-3xl font-bold mb-6">About RVT Advisory</h2>
               <div className="prose max-w-none">
-                <p className="text-lg">
-                  [PLACEHOLDER: Add Renee's personal story here, emphasizing her cultural connections and journey. Include formative experiences that have shaped her approach to advisory work.]
+                <p className="text-lg mb-4">
+                  RVT Advisory is a values-led advisory firm that partners with businesses to deliver clarity, confidence, and strategy— to achieve their business goals and sustainable growth. Founded by Managing Director and Wiradjuri woman Renee Thomson in 2023, RVT Advisory was established on the principles of centring conscious change — committed to empowering individuals and businesses by partnering to accelerate growth and create transformative impact.
                 </p>
-                <p className="text-lg mt-4">
-                  [PLACEHOLDER: Continue with details about her professional evolution, highlighting pivotal moments and the development of her unique perspective that combines cultural wisdom with strategic expertise.]
-                </p>
+                <div className="my-8 bg-gray-100 p-6 rounded-lg">
+                  <blockquote className="text-xl italic">
+                    "By understanding the importance of centring human agency, we're all capable of creating conscious change — not only as business owners and employees, but as people."
+                    <footer className="mt-2 text-base">— Renee Thomson, Managing Director</footer>
+                  </blockquote>
+                </div>
               </div>
             </section>
             
             <section>
-              <h2 className="text-3xl font-bold mb-6">Professional Background</h2>
+              <h2 className="text-3xl font-bold mb-6">Our Approach</h2>
               <div className="grid sm:grid-cols-2 gap-6">
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">Government Experience</h3>
-                    <ul className="space-y-2 list-disc pl-5">
-                      <li>Advised premiers and ministers in political offices</li>
-                      <li>Developed significant policies in New South Wales</li>
-                      <li>Worked on major policy execution across various spaces</li>
-                    </ul>
+                    <h3 className="text-xl font-semibold mb-2">People-Centred</h3>
+                    <p>We build trust, connection, and cultural safety in every engagement.</p>
                   </CardContent>
                 </Card>
                 
                 <Card>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-semibold mb-2">Corporate Advisory</h3>
-                    <ul className="space-y-2 list-disc pl-5">
-                      <li>Consulted with national and multinational organizations</li>
-                      <li>Developed strategic frameworks for diverse business sectors</li>
-                      <li>Created cultural competency training programs</li>
-                    </ul>
+                    <h3 className="text-xl font-semibold mb-2">Values-Led</h3>
+                    <p>We are guided by authenticity, accountability, integrity, and connection.</p>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">Strengths-Based</h3>
+                    <p>We empower organisations by working with what's strong, not just what's wrong.</p>
+                  </CardContent>
+                </Card>
+
+                <Card>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-semibold mb-2">Measurable-Impact</h3>
+                    <p>We provide you with clarity and confidence to deliver, measure and adapt outcomes.</p>
                   </CardContent>
                 </Card>
               </div>
             </section>
             
             <section>
-              <h2 className="text-3xl font-bold mb-6">Cultural Expertise</h2>
+              <h2 className="text-3xl font-bold mb-6">About Renee</h2>
               <div className="prose max-w-none">
                 <p className="text-lg">
-                  [PLACEHOLDER: Details about Renee's cultural background and how it informs her advisory approach. Explain how her cultural supervision services work and benefit clients.]
+                  Renee has over 10 years of experience in strategic policy, human resources, project implementation and facilitation across government, corporate, and non-government sectors. She brings her expertise as the Policy Director for Aboriginal Affairs NSW & Regional Youth NSW in the NSW Ministerial Offices — specialising in influencing innovative strategies and policies for NSW, Renee has a proven track record of driving transformative change in service delivery, legislative reform, and community-controlled initiatives.
                 </p>
-                
-                <div className="my-8 bg-gray-100 p-6 rounded-lg">
-                  <blockquote className="text-xl italic">
-                    "My work is grounded in creating opportunities for future generations and shifting societal dynamics by integrating Aboriginal cultural concepts into business strategies."
-                  </blockquote>
-                </div>
-                
-                <p className="text-lg">
-                  [PLACEHOLDER: Expand on how Renee's cultural expertise provides unique value in business contexts, especially for organizations seeking to improve their engagement with Aboriginal communities.]
+                <p className="text-lg mt-4">
+                  Known for her relational approach and strategic insight — she is deeply passionate about empowering businesses to lead with clarity, confidence and consciousness.
                 </p>
-              </div>
-            </section>
-            
-            <section>
-              <h2 className="text-3xl font-bold mb-6">Speaking & Media</h2>
-              <div className="prose max-w-none">
-                <p className="text-lg">
-                  As a sought-after speaker, Renee has presented at prestigious events including:
-                </p>
-                
-                <div className="grid sm:grid-cols-2 gap-6 my-6">
-                  <div className="bg-gray-100 p-6 rounded-lg" id="ted">
-                    <h3 className="text-xl font-semibold mb-2">TEDx Talk</h3>
-                    <p>[PLACEHOLDER: Brief description of TEDx talk topic and impact]</p>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1 mt-2">
-                      Watch the talk <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </div>
-                  
-                  <div className="bg-gray-100 p-6 rounded-lg" id="un">
-                    <h3 className="text-xl font-semibold mb-2">United Nations</h3>
-                    <p>[PLACEHOLDER: Brief description of UN speaking engagement]</p>
-                    <a href="#" className="text-primary hover:underline flex items-center gap-1 mt-2">
-                      Learn more <ExternalLink className="h-4 w-4" />
-                    </a>
-                  </div>
-                </div>
-                
-                <p className="text-lg">
-                  [PLACEHOLDER: Information about other media appearances, publications, or interviews]
-                </p>
-                
-                <div className="mt-6">
-                  <Link to="/media" className="text-primary hover:underline flex items-center gap-1">
-                    View all media appearances <ExternalLink className="h-4 w-4" />
-                  </Link>
-                </div>
               </div>
             </section>
           </div>
