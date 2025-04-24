@@ -289,7 +289,7 @@ const Index = () => {
                 <MessageSquare className="h-5 w-5 mr-2" />
                 <span>info@reneeadvisory.com</span>
               </div>
-              <Button variant="outline" className="mt-4 text-black">
+              <Button variant="outline" className="mt-4 text-black font-bold">
                 BOOK YOUR INCEPTION MEETING NOW
               </Button>
             </div>
