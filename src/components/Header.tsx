@@ -6,7 +6,13 @@ const Header = () => {
   return (
     <header className="container mx-auto py-4">
       <div className="flex justify-between items-center">
-        <Link to="/" className="text-2xl font-bold text-primary">Renee Advisory</Link>
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" 
+            alt="RVT Advisory" 
+            className="h-12 w-auto"
+          />
+        </Link>
         <NavigationMenu>
           <NavigationMenuList>
             <NavigationMenuItem>
