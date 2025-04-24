@@ -5,83 +5,44 @@ import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase
 import { Link } from "react-router-dom";
 import TestimonialCard from "@/components/TestimonialCard";
 import Header from "@/components/Header";
-
 const Services = () => {
-  const services = [
-    {
-      title: "Policy Advice",
-      description: "Strategic guidance on policy development, implementation, and evaluation for government agencies and organizations.",
-      icon: <FileText className="h-6 w-6 text-primary" />,
-      benefits: [
-        "Navigate complex regulatory environments",
-        "Align policies with organizational goals",
-        "Implement sustainable policy frameworks"
-      ]
-    },
-    {
-      title: "Strategic Advice",
-      description: "Comprehensive strategic planning and advisory services to help organizations achieve their long-term objectives.",
-      icon: <BarChart className="h-6 w-6 text-primary" />,
-      benefits: [
-        "Develop long-term and short-term vision planning",
-        "Create actionable strategic roadmaps",
-        "Align strategies with cultural values"
-      ]
-    },
-    {
-      title: "Cultural Supervision",
-      description: "Expert guidance on cultural competency and integration of Aboriginal perspectives into organizational practices.",
-      icon: <BookOpen className="h-6 w-6 text-primary" />,
-      benefits: [
-        "Enhance cultural awareness and sensitivity",
-        "Develop culturally appropriate strategies",
-        "Improve engagement with Aboriginal communities"
-      ]
-    },
-    {
-      title: "Cultural Training",
-      description: "Customized training programs to build cultural competency and understanding within organizations.",
-      icon: <Users className="h-6 w-6 text-primary" />,
-      benefits: [
-        "Build staff cultural competency",
-        "Develop inclusive workplace practices",
-        "Enhance community engagement capabilities"
-      ]
-    },
-    {
-      title: "Recruitment Guidance",
-      description: "Strategic advice on recruiting and retaining Aboriginal employees and creating inclusive workplaces.",
-      icon: <Briefcase className="h-6 w-6 text-primary" />,
-      benefits: [
-        "Attract diverse talent",
-        "Develop culturally appropriate recruitment processes",
-        "Create inclusive onboarding experiences"
-      ]
-    },
-    {
-      title: "Retention Strategies",
-      description: "Specialized strategies to support the long-term retention and development of Aboriginal staff.",
-      icon: <Shield className="h-6 w-6 text-primary" />,
-      benefits: [
-        "Reduce turnover of Aboriginal employees",
-        "Create culturally safe work environments",
-        "Develop tailored professional development paths"
-      ]
-    },
-    {
-      title: "Business Consultation",
-      description: "Comprehensive business advisory services with a focus on cultural integration and authentic transformation.",
-      icon: <Layout className="h-6 w-6 text-primary" />,
-      benefits: [
-        "Align business practices with cultural values",
-        "Develop authentic community engagement strategies",
-        "Create sustainable business models"
-      ]
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white">
+  const services = [{
+    title: "Policy Advice",
+    description: "Strategic guidance on policy development, implementation, and evaluation for government agencies and organizations.",
+    icon: <FileText className="h-6 w-6 text-primary" />,
+    benefits: ["Navigate complex regulatory environments", "Align policies with organizational goals", "Implement sustainable policy frameworks"]
+  }, {
+    title: "Strategic Advice",
+    description: "Comprehensive strategic planning and advisory services to help organizations achieve their long-term objectives.",
+    icon: <BarChart className="h-6 w-6 text-primary" />,
+    benefits: ["Develop long-term and short-term vision planning", "Create actionable strategic roadmaps", "Align strategies with cultural values"]
+  }, {
+    title: "Cultural Supervision",
+    description: "Expert guidance on cultural competency and integration of Aboriginal perspectives into organizational practices.",
+    icon: <BookOpen className="h-6 w-6 text-primary" />,
+    benefits: ["Enhance cultural awareness and sensitivity", "Develop culturally appropriate strategies", "Improve engagement with Aboriginal communities"]
+  }, {
+    title: "Cultural Training",
+    description: "Customized training programs to build cultural competency and understanding within organizations.",
+    icon: <Users className="h-6 w-6 text-primary" />,
+    benefits: ["Build staff cultural competency", "Develop inclusive workplace practices", "Enhance community engagement capabilities"]
+  }, {
+    title: "Recruitment Guidance",
+    description: "Strategic advice on recruiting and retaining Aboriginal employees and creating inclusive workplaces.",
+    icon: <Briefcase className="h-6 w-6 text-primary" />,
+    benefits: ["Attract diverse talent", "Develop culturally appropriate recruitment processes", "Create inclusive onboarding experiences"]
+  }, {
+    title: "Retention Strategies",
+    description: "Specialized strategies to support the long-term retention and development of Aboriginal staff.",
+    icon: <Shield className="h-6 w-6 text-primary" />,
+    benefits: ["Reduce turnover of Aboriginal employees", "Create culturally safe work environments", "Develop tailored professional development paths"]
+  }, {
+    title: "Business Consultation",
+    description: "Comprehensive business advisory services with a focus on cultural integration and authentic transformation.",
+    icon: <Layout className="h-6 w-6 text-primary" />,
+    benefits: ["Align business practices with cultural values", "Develop authentic community engagement strategies", "Create sustainable business models"]
+  }];
+  return <div className="min-h-screen bg-white">
       <Header />
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -171,18 +132,10 @@ const Services = () => {
                 Our advisory services are designed to address the complex challenges faced by organizations seeking to create meaningful change and authentic engagement with Aboriginal communities.
               </p>
               <ul className="space-y-4">
-                {[
-                  "Develop long-term and short-term vision planning",
-                  "Create connections and assist with community engagement strategies",
-                  "Develop internal policies aligned with cultural values",
-                  "Help you understand policy interfaces with government sectors",
-                  "Provide cultural competency training and development"
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start gap-3">
+                {["Develop long-term and short-term vision planning", "Create connections and assist with community engagement strategies", "Develop internal policies aligned with cultural values", "Help you understand policy interfaces with government sectors", "Provide cultural competency training and development"].map((item, index) => <li key={index} className="flex items-start gap-3">
                     <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                     <span>{item}</span>
-                  </li>
-                ))}
+                  </li>)}
               </ul>
             </div>
             <div className="bg-gray-100 p-8 rounded-lg">
@@ -217,8 +170,7 @@ const Services = () => {
 
           <h2 className="text-3xl font-bold mb-12 text-center">Our Advisory Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-all">
+            {services.map((service, index) => <Card key={index} className="h-full flex flex-col hover:shadow-lg transition-all">
                 <CardHeader>
                   <div className="mb-4">{service.icon}</div>
                   <CardTitle>{service.title}</CardTitle>
@@ -227,16 +179,13 @@ const Services = () => {
                 <CardContent className="flex-grow">
                   <h4 className="font-semibold mb-2">Key Benefits:</h4>
                   <ul className="space-y-2">
-                    {service.benefits.map((benefit, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
+                    {service.benefits.map((benefit, idx) => <li key={idx} className="flex items-start gap-2">
                         <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-1" />
                         <span>{benefit}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -245,16 +194,8 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Client Success Stories</h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <TestimonialCard 
-              quote="Renee's policy advice transformed our approach to community engagement. Her guidance provided us with a clear framework that respected cultural values while achieving our strategic objectives."
-              author="Government Department Director"
-              company="State Government Agency"
-            />
-            <TestimonialCard 
-              quote="The cultural training Renee provided has fundamentally changed how our organization operates. We now have the tools and understanding to build authentic relationships with Aboriginal communities."
-              author="CEO"
-              company="National Non-Profit"
-            />
+            <TestimonialCard quote="Renee's policy advice transformed our approach to community engagement. Her guidance provided us with a clear framework that respected cultural values while achieving our strategic objectives." author="Government Department Director" company="State Government Agency" />
+            <TestimonialCard quote="The cultural training Renee provided has fundamentally changed how our organization operates. We now have the tools and understanding to build authentic relationships with Aboriginal communities." author="CEO" company="National Non-Profit" />
           </div>
         </div>
       </section>
@@ -279,15 +220,11 @@ const Services = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <Link to="/" className="inline-block mb-4">
-                <img 
-                  src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" 
-                  alt="Renee Advisory Logo" 
-                  className="h-12 w-auto"
-                />
+                <img src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" alt="Renee Advisory Logo" className="h-12 w-auto" />
               </Link>
               <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
               <div className="flex space-x-4">
-                <MessageSquare className="h-5 w-5" />
+                
               </div>
             </div>
             <div>
@@ -324,8 +261,6 @@ const Services = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Services;
