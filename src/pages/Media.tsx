@@ -215,13 +215,13 @@ const Media = () => {
           <div className="flex justify-center gap-4">
             <a 
               href="#" 
-              className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md bg-primary text-white font-bold hover:bg-primary/90 transition-colors"
             >
               Download Press Kit
             </a>
             <a 
               href="#" 
-              className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-gray-300 bg-white text-gray-700 font-medium hover:bg-gray-50 transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 rounded-md border border-gray-300 bg-white text-gray-700 font-bold hover:bg-gray-50 transition-colors"
             >
               Media Inquiries
             </a>
@@ -269,7 +269,7 @@ const Media = () => {
                 <MessageSquare className="h-5 w-5 mr-2" />
                 <span>info@reneeadvisory.com</span>
               </div>
-              <Button variant="outline" className="mt-4 text-black">
+              <Button variant="outline" className="mt-4 text-black font-bold">
                 BOOK YOUR INCEPTION MEETING NOW
               </Button>
             </div>
