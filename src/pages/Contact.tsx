@@ -1,14 +1,16 @@
+import React from 'react';
+import { Link } from "react-router-dom";
+import { MessageSquare } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
-import { Mail, Phone, MessageSquare } from "lucide-react";
-import Header from "@/components/Header";
-import { Link } from "react-router-dom";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),

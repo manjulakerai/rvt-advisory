@@ -1,8 +1,9 @@
+import React from 'react';
+import { Link } from "react-router-dom";
+import { MessageSquare, Video, Mic, BookOpen, Award, FileText, Radio, Tv, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { ExternalLink, Video, Mic, BookOpen, Award, FileText, Radio, Tv, MessageSquare } from "lucide-react";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const featuredMedia = [
   {
