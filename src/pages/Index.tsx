@@ -1,8 +1,9 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceCard from "@/components/ServiceCard";
@@ -14,11 +15,10 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <HeroSection />
-      {/* Rest of the content */}
       {/* Section 1: Problem Statement */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12">Are You Struggling With These Challenges?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Are you looking to elevate your business in these areas?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               "Navigating complex policy landscapes",
