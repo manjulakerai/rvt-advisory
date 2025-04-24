@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -14,14 +15,15 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <HeroSection />
+      {/* Section 1: Problem Statement */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Are you looking to elevate your business in these areas?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              "Navigating",
-              "Connections",
-              "Strategies"
+              "Navigating complex policy landscapes",
+              "Creating meaningful community connections",
+              "Developing authentic, impactful organizational strategies"
             ].map((problem, index) => (
               <Card key={index} className="hover:shadow-lg transition-all">
                 <CardHeader>
@@ -42,6 +44,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Section 2: Solution */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-4">How Renee Resolves These Problems</h2>
@@ -70,6 +73,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Section 3: Unique Value Proposition */}
       <section className="py-16 bg-primary text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">What Makes Renee's Approach Unique</h2>
@@ -123,6 +127,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Section 4: Proof it Works */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-6">How Can You Be Sure It Works?</h2>
@@ -147,6 +152,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Section 5: How It Works */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How It Actually Works</h2>
@@ -189,6 +195,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Section 6: Testimonials */}
       <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
@@ -218,6 +225,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* CTA section */}
       <section className="py-16 bg-secondary text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organisation?</h2>
@@ -233,6 +241,7 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Footer */}
       <footer className="bg-primary text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
