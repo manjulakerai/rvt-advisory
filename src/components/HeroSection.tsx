@@ -1,14 +1,14 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+
 const HeroSection = () => {
   return <div className="relative h-[80vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-      {/* Background image overlay - replace the URL with your actual image */}
       <div className="absolute inset-0 bg-black/50 z-0">
         <div className="absolute inset-0 bg-cover bg-center" style={{
         backgroundImage: "url('/placeholder.svg')",
         opacity: 0.5
       }}>
-          {/* Note: Replace with actual image of Renee speaking or cultural landscape */}
         </div>
       </div>
       
@@ -33,4 +33,5 @@ const HeroSection = () => {
       </div>
     </div>;
 };
+
 export default HeroSection;

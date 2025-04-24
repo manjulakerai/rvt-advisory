@@ -15,7 +15,7 @@ import { toast } from "@/components/ui/use-toast";
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Please enter a valid email address." }),
-  organization: z.string().optional(),
+  organisation: z.string().optional(),
   phone: z.string().optional(),
   message: z.string().min(10, { message: "Message must be at least 10 characters." }),
 });
@@ -28,7 +28,7 @@ const Contact = () => {
     defaultValues: {
       name: "",
       email: "",
-      organization: "",
+      organisation: "",
       phone: "",
       message: "",
     },
@@ -50,7 +50,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
           <p className="text-xl max-w-3xl">
-            Ready to transform your organization? Get in touch to schedule a discovery meeting or learn more about our services.
+            Ready to transform your organisation? Get in touch to schedule a discovery meeting or learn more about our services.
           </p>
         </div>
       </div>
@@ -60,7 +60,7 @@ const Contact = () => {
             <div>
               <h2 className="text-2xl font-bold mb-6">Get In Touch</h2>
               <p className="mb-8">
-                Have questions about how we can help your organization? Reach out to schedule a discovery meeting or learn more about our services.
+                Have questions about how we can help your organisation? Reach out to schedule a discovery meeting or learn more about our services.
               </p>
               
               <div className="space-y-6">
@@ -144,13 +144,13 @@ const Contact = () => {
                     
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <label htmlFor="organization" className="text-sm font-medium">
-                          Organization
+                        <label htmlFor="organisation" className="text-sm font-medium">
+                          Organisation
                         </label>
                         <Input
-                          id="organization"
-                          placeholder="Your organization"
-                          {...form.register("organization")}
+                          id="organisation"
+                          placeholder="Your organisation"
+                          {...form.register("organisation")}
                         />
                       </div>
                       
@@ -210,7 +210,7 @@ const Contact = () => {
             
             <Card>
               <CardHeader>
-                <CardTitle className="text-xl">What types of organizations do you work with?</CardTitle>
+                <CardTitle className="text-xl">What types of organisations do you work with?</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>
