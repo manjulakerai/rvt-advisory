@@ -143,14 +143,17 @@ const Index = () => {
             <ServiceCard 
               title="Proven Strategies" 
               description="Methodologies refined through work at the highest levels of government and international organisations"
+              descriptionClassName="text-gray-800"
             />
             <ServiceCard 
               title="Personalised Guidance" 
               description="Solutions tailored to your specific organisational context and challenges"
+              descriptionClassName="text-gray-800"
             />
             <ServiceCard 
               title="Diverse Experience" 
               description="Insights drawn from successfully transforming organisations across multiple sectors"
+              descriptionClassName="text-gray-800"
             />
           </div>
         </div>
