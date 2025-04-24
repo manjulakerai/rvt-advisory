@@ -80,9 +80,9 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-brand-cream">
       <Header />
-      <div className="bg-primary text-white py-16">
+      <div className="bg-brand-olive text-brand-cream py-16">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold mb-6">CENTRING CONSCIOUS CHANGE</h1>
           <p className="text-xl max-w-3xl">
@@ -91,45 +91,45 @@ const Services = () => {
         </div>
       </div>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Cultural Capability Training</h2>
+          <h2 className="text-3xl font-bold mb-8 text-brand-brown">Cultural Capability Training</h2>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-brand-olive">
                 Transform your business and let our expert facilitators take your team through a transformational, immersive and interactive cultural experience.
               </p>
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-brand-olive">
                 Our Cultural Capability Training programs are based on Aboriginal principles and are tailored to suit your business's needs. We deliver interactive and human-centred cultural experiences for all participants by creating safe, inclusive and respectful spaces.
               </p>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="text-xl font-semibold mb-4">Training Formats</h3>
+              <div className="bg-white p-6 rounded-lg shadow-sm border border-brand-gold">
+                <h3 className="text-xl font-semibold mb-4 text-brand-brown">Training Formats</h3>
                 <ul className="space-y-2">
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-brand-olive">
+                    <CheckCircle className="h-4 w-4 text-brand-green" />
                     <span>90-minute (face-to-face or virtual)</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-brand-olive">
+                    <CheckCircle className="h-4 w-4 text-brand-green" />
                     <span>2-hour (face-to-face)</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-brand-olive">
+                    <CheckCircle className="h-4 w-4 text-brand-green" />
                     <span>Half-day (face-to-face)</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-brand-olive">
+                    <CheckCircle className="h-4 w-4 text-brand-green" />
                     <span>Full-day (face-to-face)</span>
                   </li>
-                  <li className="flex items-center gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary" />
+                  <li className="flex items-center gap-2 text-brand-olive">
+                    <CheckCircle className="h-4 w-4 text-brand-green" />
                     <span>60-minute Yarning Circle (face-to-face or virtual)</span>
                   </li>
                 </ul>
               </div>
             </div>
             <div className="space-y-6">
-              <h3 className="text-xl font-semibold">Course Components</h3>
+              <h3 className="text-xl font-semibold text-brand-brown">Course Components</h3>
               <div className="grid gap-4">
                 <Card>
                   <CardContent className="p-4">
@@ -273,7 +273,7 @@ const Services = () => {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-brand-olive text-brand-cream py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
