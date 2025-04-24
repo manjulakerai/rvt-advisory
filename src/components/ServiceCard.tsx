@@ -9,13 +9,13 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon }: ServiceCardProps) => {
   return (
-    <Card className="hover:shadow-md transition-all bg-brand-cream border-brand-gold">
+    <Card className="hover:shadow-md transition-all">
       <CardHeader className="pb-2">
-        {icon && <div className="mb-2 text-brand-purple">{icon}</div>}
-        <CardTitle className="text-xl text-brand-brown">{title}</CardTitle>
+        {icon && <div className="mb-2">{icon}</div>}
+        <CardTitle className="text-xl">{title}</CardTitle>
       </CardHeader>
       <CardContent>
-        <p className="text-brand-brown/80">{description}</p>
+        <p className="text-muted-foreground">{description}</p>
       </CardContent>
     </Card>
   );
