@@ -12,6 +12,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
+      <HeroSection />
       {/* Rest of the content */}
       {/* Section 1: Problem Statement */}
       <section className="py-16 bg-gray-50">
