@@ -1,7 +1,9 @@
+
 import React from 'react';
 import { Link } from "react-router-dom";
-import { MessageSquare } from "lucide-react";
+import { MessageSquare, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 import Header from "@/components/Header";
 
 const About = () => {
