@@ -5,43 +5,43 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 27 28% 34%;  /* Changed to #6f5b3e */
+    --foreground: 75 65% 24%;  /* Green #4b5a20 */
 
     --card: 0 0% 100%;
-    --card-foreground: 27 28% 34%;  /* Changed to #6f5b3e */
+    --card-foreground: 27 28% 34%;  /* Brown #6f5b3e */
 
     --popover: 0 0% 100%;
-    --popover-foreground: 27 28% 34%;  /* Changed to #6f5b3e */
+    --popover-foreground: 75 65% 24%;  /* Green #4b5a20 */
 
-    --primary: 27 28% 34%;  /* Changed to #6f5b3e */
+    --primary: 27 28% 34%;  /* Brown #6f5b3e */
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 27 28% 95%;  /* Changed to lighter brown */
-    --secondary-foreground: 27 28% 34%;  /* Changed to match new primary */
+    --secondary: 75 65% 95%;  /* Light green */
+    --secondary-foreground: 27 28% 34%;  /* Brown #6f5b3e */
 
-    --muted: 27 28% 95%;  /* Changed to lighter brown */
-    --muted-foreground: 27 28% 45%;  /* Changed to muted brown */
+    --muted: 27 28% 95%;  /* Light brown */
+    --muted-foreground: 75 65% 45%;  /* Muted green */
 
-    --accent: 27 28% 95%;  /* Changed to lighter brown */
-    --accent-foreground: 27 28% 34%;  /* Changed to match primary */
+    --accent: 75 65% 95%;  /* Light green */
+    --accent-foreground: 27 28% 34%;  /* Brown #6f5b3e */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 27 28% 85%;  /* Changed to light brown border */
-    --input: 27 28% 85%;  /* Changed to match border */
-    --ring: 27 28% 34%;  /* Changed to match primary */
+    --border: 75 65% 85%;  /* Light green border */
+    --input: 27 28% 85%;  /* Light brown border */
+    --ring: 75 65% 24%;  /* Green #4b5a20 */
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 27 28% 34%;  /* Changed to #6f5b3e */
+    --sidebar-primary: 75 65% 24%;  /* Green #4b5a20 */
     --sidebar-primary-foreground: 0 0% 98%;
     --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 27 28% 34%;  /* Changed to match new primary */
+    --sidebar-accent-foreground: 27 28% 34%;  /* Brown #6f5b3e */
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 27 28% 34%;  /* Changed to #6f5b3e */
+    --sidebar-ring: 27 28% 34%;  /* Brown #6f5b3e */
   }
 
   .dark {
