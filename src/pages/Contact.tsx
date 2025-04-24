@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from "react-router-dom";
 import { MessageSquare, Mail, Phone } from "lucide-react";
@@ -255,7 +254,6 @@ const Contact = () => {
                   className="h-12 w-auto"
                 />
               </Link>
-              <h3 className="text-xl font-bold mb-4">Renee Advisory</h3>
               <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
               <div className="flex space-x-4">
                 {/* Social media icons would go here */}
