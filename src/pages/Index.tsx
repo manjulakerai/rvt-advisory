@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,6 +14,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <Header />
       <HeroSection />
+      
       {/* Section 1: Problem Statement */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -29,7 +29,11 @@ const Index = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
-                    <span>Challenge {index + 1}</span>
+                    <span>
+                      {index === 0 ? "Navigating" : 
+                       index === 1 ? "Connections" : 
+                       "Strategies"}
+                    </span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
