@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -287,7 +288,7 @@ const Index = () => {
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <div className="flex items-center mb-2">
                 <MessageSquare className="h-5 w-5 mr-2" />
-                <span>info@reneeadvisory.com</span>
+                <a href="mailto:renee@rvtadvisory.com" className="hover:underline">renee@rvtadvisory.com</a>
               </div>
               <Button variant="outline" className="mt-4 text-black font-bold">
                 BOOK YOUR INCEPTION MEETING NOW
