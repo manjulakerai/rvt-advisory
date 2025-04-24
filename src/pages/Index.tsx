@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -243,7 +242,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className="bg-primary text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
@@ -288,7 +287,7 @@ const Index = () => {
               </Button>
             </div>
           </div>
-          <div className="border-t border-gray-700 mt-8 pt-8 text-center">
+          <div className="border-t border-primary/20 mt-8 pt-8 text-center">
             <p>&copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.</p>
           </div>
         </div>
