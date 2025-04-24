@@ -11,19 +11,19 @@ interface TestimonialCardProps {
 
 const TestimonialCard = ({ quote, author, company, image }: TestimonialCardProps) => {
   return (
-    <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
+    <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 bg-brand-cream border-brand-gold">
       <CardContent className="p-6">
-        <Quote className="h-10 w-10 text-primary/20 mb-4" />
-        <p className="text-lg mb-6 italic">"{quote}"</p>
+        <Quote className="h-10 w-10 text-brand-purple mb-4" />
+        <p className="text-lg mb-6 italic text-brand-brown">{quote}</p>
         <div className="flex items-center">
           {image && (
-            <div className="h-12 w-12 rounded-full bg-gray-200 mr-4 overflow-hidden">
+            <div className="h-12 w-12 rounded-full bg-brand-gold mr-4 overflow-hidden">
               <img src={image} alt={author} className="h-full w-full object-cover" />
             </div>
           )}
           <div>
-            <p className="font-semibold">{author}</p>
-            <p className="text-sm text-muted-foreground">{company}</p>
+            <p className="font-semibold text-brand-brown">{author}</p>
+            <p className="text-sm text-brand-brown/70">{company}</p>
           </div>
         </div>
       </CardContent>

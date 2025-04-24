@@ -30,19 +30,22 @@ const EngagementModel = ({ title, description, icon }: EngagementModelProps) => 
   };
 
   return (
-    <Card className="h-full flex flex-col hover:shadow-lg transition-all duration-300 border-t-4 border-t-primary">
+    <Card className="h-full flex flex-col hover:shadow-lg transition-all duration-300 border-t-4 border-t-brand-purple bg-brand-cream">
       <CardHeader>
-        <div className="mb-4">
-          {iconMap[icon] || <CheckCircle className="h-10 w-10 text-primary" />}
+        <div className="mb-4 text-brand-purple">
+          {iconMap[icon] || <CheckCircle className="h-10 w-10" />}
         </div>
-        <CardTitle className="text-xl font-bold">{title}</CardTitle>
+        <CardTitle className="text-xl font-bold text-brand-brown">{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground">{description}</p>
+        <p className="text-brand-brown/80">{description}</p>
       </CardContent>
       <CardFooter>
         <Link to="/services" className="w-full">
-          <Button variant="outline" className="w-full group">
+          <Button 
+            variant="outline" 
+            className="w-full group border-brand-gold text-brand-brown hover:bg-brand-gold/10"
+          >
             <span className="mr-auto">Learn More</span>
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
