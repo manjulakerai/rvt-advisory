@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase, Shield, Layout } from "lucide-react";
 import { Link } from "react-router-dom";
 import TestimonialCard from "@/components/TestimonialCard";
+import Header from "@/components/Header";
 
 const Services = () => {
   const services = [
@@ -80,6 +81,7 @@ const Services = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       {/* Header section */}
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">

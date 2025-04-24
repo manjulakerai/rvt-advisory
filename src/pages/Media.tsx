@@ -1,76 +1,11 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink, Video, Mic, BookOpen, Award } from "lucide-react";
+import Header from "@/components/Header";
 
 const Media = () => {
-  const featuredMedia = [
-    {
-      title: "TEDx Talk: [PLACEHOLDER: Title]",
-      type: "video",
-      description: "[PLACEHOLDER: Brief description of the TEDx talk]",
-      link: "#",
-      icon: <Video className="h-6 w-6 text-primary" />
-    },
-    {
-      title: "United Nations Speaking Engagement",
-      type: "speaking",
-      description: "[PLACEHOLDER: Brief description of the UN speaking engagement]",
-      link: "#",
-      icon: <Mic className="h-6 w-6 text-primary" />
-    }
-  ];
-
-  const mediaAppearances = [
-    {
-      title: "[PLACEHOLDER: News Article Title]",
-      publication: "[Publication Name]",
-      date: "2023",
-      type: "article",
-      description: "[PLACEHOLDER: Brief description of the article content]",
-      link: "#",
-      icon: <BookOpen className="h-5 w-5 text-primary" />
-    },
-    {
-      title: "[PLACEHOLDER: Podcast Episode]",
-      publication: "[Podcast Name]",
-      date: "2023",
-      type: "podcast",
-      description: "[PLACEHOLDER: Brief description of the podcast episode]",
-      link: "#",
-      icon: <Mic className="h-5 w-5 text-primary" />
-    },
-    {
-      title: "[PLACEHOLDER: Interview Title]",
-      publication: "[Media Outlet]",
-      date: "2022",
-      type: "interview",
-      description: "[PLACEHOLDER: Brief description of the interview]",
-      link: "#",
-      icon: <Video className="h-5 w-5 text-primary" />
-    },
-    {
-      title: "[PLACEHOLDER: Award or Recognition]",
-      publication: "[Organization]",
-      date: "2022",
-      type: "award",
-      description: "[PLACEHOLDER: Brief description of the award/recognition]",
-      link: "#",
-      icon: <Award className="h-5 w-5 text-primary" />
-    }
-  ];
-
-  // Categories for speaking topics
-  const speakingTopics = [
-    "Aboriginal Affairs and Policy",
-    "Cultural Competency",
-    "Strategic Leadership",
-    "Community Engagement",
-    "Organizational Transformation",
-    "Diversity and Inclusion"
-  ];
-
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       {/* Header section */}
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">

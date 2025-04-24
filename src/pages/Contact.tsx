@@ -1,4 +1,3 @@
-
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -8,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
 import { Mail, Phone, MessageSquare } from "lucide-react";
+import Header from "@/components/Header";
 
 // Form schema using zod
 const formSchema = z.object({
@@ -50,6 +50,8 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Header />
+      {/* Rest of the content */}
       {/* Header section */}
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">

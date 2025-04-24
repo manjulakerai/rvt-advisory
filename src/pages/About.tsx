@@ -1,11 +1,12 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
+import Header from "@/components/Header";
 
 const About = () => {
   return (
     <div className="min-h-screen bg-white">
+      <Header />
       {/* Header section with image */}
       <div className="relative h-[50vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
         {/* Background image overlay - replace with actual landscape shots of her country */}
