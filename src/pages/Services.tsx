@@ -6,6 +6,8 @@ import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase
 import TestimonialCard from "@/components/TestimonialCard";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import StickyCallButton from "@/components/StickyCallButton";
+
 const services = [{
   icon: <Users className="h-10 w-10 text-primary" />,
   title: "Cultural Supervision",
@@ -42,8 +44,10 @@ const services = [{
   description: "Develop and implement effective strategies to retain Indigenous talent and maintain cultural engagement in your organization.",
   benefits: ["Cultural mentorship programs", "Career development pathways", "Workplace cultural safety", "Employee engagement initiatives"]
 }];
+
 const Services = () => {
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <Header />
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -201,8 +205,6 @@ const Services = () => {
         </div>
       </section>
 
-      
-
       <section className="py-16 bg-[#667538] text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organisation?</h2>
@@ -218,7 +220,10 @@ const Services = () => {
         </div>
       </section>
 
+      <StickyCallButton />
       <Footer />
-    </div>;
+    </div>
+  );
 };
+
 export default Services;
