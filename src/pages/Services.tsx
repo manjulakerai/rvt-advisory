@@ -72,6 +72,17 @@ const services = [
       "Policy and procedure development",
       "Compliance and risk management"
     ]
+  },
+  {
+    icon: <Users className="h-10 w-10 text-primary" />,
+    title: "Retention Strategies",
+    description: "Develop and implement effective strategies to retain Indigenous talent and maintain cultural engagement in your organization.",
+    benefits: [
+      "Cultural mentorship programs",
+      "Career development pathways",
+      "Workplace cultural safety",
+      "Employee engagement initiatives"
+    ]
   }
 ];
 
