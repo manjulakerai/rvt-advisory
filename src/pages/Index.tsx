@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import TestimonialCard from "@/components/TestimonialCard";
 import ServiceCard from "@/components/ServiceCard";
 import EngagementModel from "@/components/EngagementModel";
 import Header from "@/components/Header";
+
 const Index = () => {
   return <div className="min-h-screen bg-white">
       <Header />
@@ -193,9 +193,13 @@ const Index = () => {
             Take the first step toward authentic change and powerful organisational development.
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="outline" className="bg-white text-black hover:bg-gray-100 font-bold text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white text-black hover:bg-gray-100 font-bold text-sm sm:text-lg px-4 sm:px-8 py-2 sm:py-6"
+            >
               BOOK YOUR INCEPTION MEETING NOW
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
           </Link>
         </div>
@@ -250,4 +254,5 @@ const Index = () => {
       </footer>
     </div>;
 };
+
 export default Index;
