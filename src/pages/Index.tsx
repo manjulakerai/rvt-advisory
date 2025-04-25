@@ -19,7 +19,8 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Are you looking to elevate your organisation in these areas?</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {["Navigating complex policy landscapes", "Creating meaningful community connections", "Developing authentic, impactful organisational strategies"].map((problem, index) => <Card key={index} className="hover:shadow-lg transition-all">
+            {["Navigating complex policy landscapes", "Creating meaningful community connections", "Developing authentic, impactful organisational strategies"].map((problem, index) => (
+              <Card key={index} className="hover:shadow-lg transition-all">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
@@ -31,7 +32,8 @@ const Index = () => {
                 <CardContent>
                   <p className="text-lg">{problem}</p>
                 </CardContent>
-              </Card>)}
+              </Card>
+            ))}
           </div>
           <div className="text-center mt-8">
             <p className="text-xl mb-4">You're not alone. Renee's advisory services are designed to solve your most challenging business transformation needs.</p>
