@@ -97,12 +97,16 @@ const FeaturedMedia = () => {
                 <p className="mb-4">{item.description}</p>
                 {item.additionalInfo && (
                   <div className="text-sm text-gray-600 mt-2">
-                    <p>Campaign: {item.additionalInfo.campaign}</p>
-                    <p>Campaign Resources: <a href={`https://${item.additionalInfo.campaignResources}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.campaignResources}</a></p>
-                    <p>Support Hotline: {item.additionalInfo.supportHotline}</p>
-                    <p>Support Website: <a href={`https://${item.additionalInfo.supportWebsite}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.supportWebsite}</a></p>
-                    <p>{item.additionalInfo.disclaimer}</p>
-                    <p>Date: {item.additionalInfo.date}</p>
+                    {item.additionalInfo.campaign && <p>Campaign: {item.additionalInfo.campaign}</p>}
+                    {item.additionalInfo.campaignResources && (
+                      <p>Campaign Resources: <a href={`${item.additionalInfo.campaignResources}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.campaignResources}</a></p>
+                    )}
+                    {item.additionalInfo.supportHotline && <p>Support Hotline: {item.additionalInfo.supportHotline}</p>}
+                    {item.additionalInfo.supportWebsite && (
+                      <p>Support Website: <a href={`${item.additionalInfo.supportWebsite}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.supportWebsite}</a></p>
+                    )}
+                    {item.additionalInfo.disclaimer && <p>{item.additionalInfo.disclaimer}</p>}
+                    {item.additionalInfo.date && <p>Date: {item.additionalInfo.date}</p>}
                   </div>
                 )}
                 {!item.youtubeEmbed && (
