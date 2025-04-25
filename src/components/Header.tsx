@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -8,16 +9,18 @@ const Header = () => {
     <>
       <TopHeader />
       <header className="container mx-auto py-4">
-        <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
-              alt="RVT Advisory" 
-              className="h-12 w-auto"
-            />
-          </Link>
+        <div className="grid grid-cols-3 items-center gap-4">
+          <div className="flex justify-start">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
+                alt="RVT Advisory" 
+                className="h-12 w-auto"
+              />
+            </Link>
+          </div>
           
-          <div className="flex-1 flex justify-center">
+          <div className="flex justify-center">
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
@@ -60,11 +63,13 @@ const Header = () => {
             </NavigationMenu>
           </div>
 
-          <Link to="/contact">
-            <Button variant="default" size="lg" className="font-bold">
-              BOOK YOUR INCEPTION MEETING NOW
-            </Button>
-          </Link>
+          <div className="flex justify-end">
+            <Link to="/contact">
+              <Button variant="default" size="lg" className="font-bold">
+                BOOK YOUR INCEPTION MEETING NOW
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
     </>
