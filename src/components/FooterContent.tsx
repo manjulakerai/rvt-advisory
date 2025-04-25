@@ -51,7 +51,7 @@ const FooterContent = () => {
             <Phone className="h-5 w-5 mr-2" />
             <a href="tel:+61411524370" className="hover:underline">0411 524 370</a>
           </div>
-          <Button variant="outline" className="mt-4 text-black font-bold hidden sm:hidden lg:inline-flex">
+          <Button variant="outline" className="mt-4 text-black font-bold hidden sm:hidden xl:inline-flex">
             BOOK YOUR INCEPTION MEETING NOW
           </Button>
         </div>

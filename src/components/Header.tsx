@@ -87,7 +87,7 @@ const Header = () => {
                 </NavigationMenu>
               </div>
 
-              <div className="hidden lg:flex justify-end">
+              <div className="hidden xl:flex justify-end">
                 <Link to="/contact">
                   <Button variant="default" size="lg" className="font-bold">
                     BOOK YOUR INCEPTION MEETING NOW
