@@ -3,7 +3,10 @@ import { Phone, Mail } from "lucide-react";
 
 const TopHeader = () => {
   return (
-    <div className="bg-gradient-to-r from-[rgba(75,90,32,1)] via-[rgba(75,90,32,1)] to-[rgba(249,246,240,1)] text-white py-2">
+    <div className="text-white py-2" style={{
+      background: '#4B5A20',
+      background: 'linear-gradient(250deg, rgba(75, 90, 32, 1) 50%, rgba(249, 246, 240, 1) 100%)'
+    }}>
       <div className="container mx-auto px-4">
         <div className="flex justify-end items-center space-x-6 text-sm">
           <a href="tel:+61420737339" className="flex items-center hover:opacity-80 transition-opacity">
@@ -21,4 +24,3 @@ const TopHeader = () => {
 };
 
 export default TopHeader;
-
