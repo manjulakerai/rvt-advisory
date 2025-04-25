@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { Mail, Phone } from "lucide-react";
+import { Mail, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
