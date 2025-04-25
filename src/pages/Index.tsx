@@ -161,7 +161,8 @@ const Index = () => {
 
       {/* Section 5: How It Works */}
       <section className="py-16" style={{
-        background: 'linear-gradient(90deg, rgba(249, 246, 240, 1) 0%, rgba(249, 246, 240, 1) 75%, rgba(75, 90, 32, 1) 100%)'
+        background: '#F9F6F0',
+        backgroundImage: 'linear-gradient(50deg, rgba(249, 246, 240, 1) 0%, rgba(75, 90, 32, 1) 100%)'
       }}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How It Actually Works</h2>
