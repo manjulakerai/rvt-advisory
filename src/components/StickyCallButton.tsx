@@ -13,8 +13,11 @@ const StickyCallButton = () => {
     setMounted(true);
   }, []);
 
-  // Don't render anything on the server or if not mobile
-  if (!mounted || !isMobile) return null;
+  // Make sure the component is added to App.tsx to be visible across all pages
+  if (!mounted) return null;
+
+  // Always show on mobile, regardless of route
+  if (!isMobile) return null;
 
   return (
     <a 

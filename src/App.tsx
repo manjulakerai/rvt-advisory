@@ -10,6 +10,7 @@ import Services from "./pages/Services";
 import Media from "./pages/Media";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import StickyCallButton from "./components/StickyCallButton";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <StickyCallButton />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
