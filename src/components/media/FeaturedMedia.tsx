@@ -38,6 +38,17 @@ const featuredMedia = [
       supportHotline: "1800RESPECT on 1800 737 732",
       supportWebsite: "1800RESPECT.org.au"
     }
+  },
+  {
+    title: "COVID-19 Information for Aboriginal Communities",
+    type: "Health Information Video",
+    description: "Video series dedicated to provide information about COVID-19 to the Aboriginal community of Western Sydney Local Health District. The video covers COVID-19 symptoms including fever, cough, sore/scratchy throat, shortness of breath, loss of smell/taste, and other symptoms. In more severe cases, infection can cause pneumonia with severe acute respiratory distress.",
+    youtubeEmbed: "https://www.youtube.com/embed/69ksPD528bk?si=6nJRkiSgY3TtpxZ_",
+    icon: <Video className="h-8 w-8 text-primary" />,
+    additionalInfo: {
+      disclaimer: "This video was filmed on the 7th of May 2020. For updated information please visit https://www.health.nsw.gov.au/",
+      date: "May 26, 2020"
+    }
   }
 ];
 
@@ -90,6 +101,8 @@ const FeaturedMedia = () => {
                     <p>Campaign Resources: <a href={`https://${item.additionalInfo.campaignResources}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.campaignResources}</a></p>
                     <p>Support Hotline: {item.additionalInfo.supportHotline}</p>
                     <p>Support Website: <a href={`https://${item.additionalInfo.supportWebsite}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.supportWebsite}</a></p>
+                    <p>{item.additionalInfo.disclaimer}</p>
+                    <p>Date: {item.additionalInfo.date}</p>
                   </div>
                 )}
                 {!item.youtubeEmbed && (
