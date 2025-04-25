@@ -8,9 +8,9 @@ import Footer from "@/components/Footer";
 
 const featuredMedia = [
   {
-    title: "Closing the Gap in Indigenous Health",
+    title: "Breaking Down Cultural Barriers: A Personal Journey",
     type: "Video Keynote",
-    description: "Renee discusses strategies for improving Indigenous health outcomes through cultural competency, addressing systemic barriers, and implementing evidence-based practices in healthcare delivery.",
+    description: "A powerful narrative exploring identity, systemic racism, and intergenerational trauma through the lens of an Aboriginal woman's experience. The speech addresses crucial themes of cultural belonging, unconscious bias, and the path toward meaningful societal change through personal connection and understanding.",
     youtubeEmbed: "https://www.youtube.com/embed/cEtyttLkq6k?si=jsjDPNqFtVXIAHS0",
     icon: <Video className="h-8 w-8 text-primary" />
   },
