@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
@@ -23,20 +22,9 @@ const Header = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <NavigationMenuTrigger className="font-semibold">Services</NavigationMenuTrigger>
-        <NavigationMenuContent>
-          <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-            {["Policy Advice", "Strategic Advice", "Cultural Supervision", "Cultural Training", "Recruitment Guidance", "Retention Strategies", "Business Consultation"].map((service) => (
-              <li key={service}>
-                <NavigationMenuLink asChild>
-                  <Link to="/services" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-semibold">
-                    <div className="text-sm font-semibold leading-none">{service}</div>
-                  </Link>
-                </NavigationMenuLink>
-              </li>
-            ))}
-          </ul>
-        </NavigationMenuContent>
+        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+          Services
+        </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
         <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold`}>
