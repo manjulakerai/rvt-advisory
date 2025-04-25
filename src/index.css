@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,10 +9,10 @@
   }
 
   body {
-    @apply font-medium; // Increase base font weight
+    @apply font-medium; /* Increase base font weight */
   }
 
-  // Increase heading weights
+  /* Increase heading weights */
   h1 {
     @apply font-extrabold;
   }
@@ -24,7 +25,7 @@
     @apply font-semibold;
   }
 
-  // Improve paragraph readability
+  /* Improve paragraph readability */
   p {
     @apply font-medium leading-relaxed;
   }
