@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Video, Mic, FileText, Radio, Tv, ExternalLink, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -9,10 +8,10 @@ import Footer from "@/components/Footer";
 
 const featuredMedia = [
   {
-    title: "Indigenous Policy Reform",
-    type: "Video Interview",
-    description: "Renee shares insights on Indigenous policy reform and government consultation processes.",
-    link: "#",
+    title: "Closing the Gap in Indigenous Health",
+    type: "Video Keynote",
+    description: "Renee discusses strategies for improving Indigenous health outcomes through cultural competency, addressing systemic barriers, and implementing evidence-based practices in healthcare delivery.",
+    youtubeEmbed: "https://www.youtube.com/embed/cEtyttLkq6k?si=jsjDPNqFtVXIAHS0",
     icon: <Video className="h-8 w-8 text-primary" />
   },
   {
@@ -112,13 +111,25 @@ const Media = () => {
           <div className="grid md:grid-cols-2 gap-8">
             {featuredMedia.map((item, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-lg transition-all">
-                <div className="aspect-video bg-gray-200 relative">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    {item.icon}
-                    <span className="ml-2">
-                      [PLACEHOLDER: Add actual image/video thumbnail]
-                    </span>
-                  </div>
+                <div className="aspect-video bg-gray-100 relative">
+                  {item.youtubeEmbed ? (
+                    <iframe
+                      className="w-full h-full"
+                      src={item.youtubeEmbed}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      {item.icon}
+                      <span className="ml-2">
+                        [PLACEHOLDER: Add actual image/video thumbnail]
+                      </span>
+                    </div>
+                  )}
                 </div>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -128,14 +139,16 @@ const Media = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="mb-4">{item.description}</p>
-                  <a 
-                    href={item.link} 
-                    className="text-primary hover:underline flex items-center gap-1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Watch now <ExternalLink className="h-4 w-4" />
-                  </a>
+                  {!item.youtubeEmbed && (
+                    <a 
+                      href={item.link} 
+                      className="text-primary hover:underline flex items-center gap-1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Watch now <ExternalLink className="h-4 w-4" />
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             ))}
