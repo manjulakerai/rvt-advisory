@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -14,11 +15,15 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 z-10 relative py-12 md:py-0">
         <div className="max-w-3xl">
-          <span className="px-4 py-1 bg-primary text-white text-xs md:text-sm uppercase tracking-wider font-semibold rounded-full mb-4 inline-block">
+          <span className="px-4 py-1 bg-primary text-white text-xs md:text-sm uppercase tracking-wider font-bold rounded-full mb-4 inline-block">
             Strategic Advisory Services
           </span>
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">Transforming Organisations Through Cultural Wisdom</h1>
-          <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200">Expert policy advice, strategic guidance, and cultural competency training to empower businesses, government agencies, and Aboriginal organisations.</p>
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">
+            Transforming Organisations Through Cultural Wisdom
+          </h1>
+          <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200 font-medium">
+            Expert policy advice, strategic guidance, and cultural competency training to empower businesses, government agencies, and Aboriginal organisations.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full">
             <Link to="/contact" className="w-full sm:w-auto">
               <Button size="lg" className="w-full text-sm sm:text-base bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 sm:px-6">
