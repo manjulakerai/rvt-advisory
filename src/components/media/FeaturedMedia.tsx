@@ -26,6 +26,13 @@ const featuredMedia = [
     description: "A young leader from a strong Wiradjuri family, Renee Thomson shares her experiences representing at the United Nations' Expert Mechanism on the Rights of Indigenous Peoples in Geneva. As part of NSW Aboriginal Land Councils' Youth Advisory Committee, she discusses her journey and the establishment of her new Indigenous Youth Leadership Network.",
     youtubeEmbed: "https://www.youtube.com/embed/HQEmi8gOKNA",
     icon: <Video className="h-8 w-8 text-primary" />
+  },
+  {
+    title: "Renee & TJ - The importance of raising respectful young people",
+    type: "Interview",
+    description: "Wiradjuri woman Renee Thompson chats to nephew TJ about finding the courage to speak up about respect, even when we might feel embarrassed or that it's not our place.",
+    youtubeEmbed: "https://www.youtube.com/embed/l58pk1NaJtk?si=dHQSl6qWnpR9zNNf",
+    icon: <Video className="h-8 w-8 text-primary" />
   }
 ];
 
