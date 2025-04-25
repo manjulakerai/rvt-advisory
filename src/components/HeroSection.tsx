@@ -33,7 +33,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="w-full text-sm sm:text-base border-white hover:bg-white/20 text-white font-bold py-3 px-4 sm:px-6 transition-colors duration-300"
+                className="w-full text-sm sm:text-base border-white hover:bg-white/20 text-black font-bold py-3 px-4 sm:px-6 transition-colors duration-300"
               >
                 Learn More About Renee
               </Button>
