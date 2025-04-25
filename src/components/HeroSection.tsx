@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -20,14 +19,14 @@ const HeroSection = () => {
           </span>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-4 md:mb-6 leading-tight">Transforming Organisations Through Cultural Wisdom</h1>
           <p className="text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 text-gray-200">Expert policy advice, strategic guidance, and cultural competency training to empower businesses, government agencies, and Aboriginal organisations.</p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 w-full">
             <Link to="/contact" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-white font-bold">
+              <Button size="lg" className="w-full text-sm sm:text-base bg-primary hover:bg-primary/90 text-white font-bold py-3 px-4 sm:px-6">
                 BOOK YOUR INCEPTION MEETING NOW
               </Button>
             </Link>
             <Link to="/about" className="w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="w-full sm:w-auto border-white hover:bg-white/10 text-zinc-950 font-bold text-gray-800">
+              <Button size="lg" variant="outline" className="w-full text-sm sm:text-base border-white hover:bg-white/10 text-white font-bold py-3 px-4 sm:px-6">
                 Learn More About Renee
               </Button>
             </Link>

@@ -10,12 +10,12 @@ const TopHeader = () => {
       background: 'linear-gradient(250deg, rgba(75, 90, 32, 1) 50%, rgba(249, 246, 240, 1) 100%)'
     }}>
       <div className="container mx-auto px-4">
-        <div className="flex flex-col sm:flex-row justify-end items-center space-y-2 sm:space-y-0 sm:space-x-6 text-xs sm:text-sm">
-          <a href="tel:+61420737339" className="flex items-center hover:opacity-80 transition-opacity">
+        <div className="flex flex-col sm:flex-row justify-end items-center space-y-2 sm:space-y-0 sm:space-x-6">
+          <a href="tel:+61420737339" className="flex items-center hover:opacity-80 transition-opacity text-xs sm:text-sm w-full sm:w-auto justify-center sm:justify-start">
             <Phone className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
             {isMobile ? "Call Us" : "0420 737 339"}
           </a>
-          <a href="mailto:renee@rvtadvisory.com" className="flex items-center hover:opacity-80 transition-opacity">
+          <a href="mailto:renee@rvtadvisory.com" className="flex items-center hover:opacity-80 transition-opacity text-xs sm:text-sm w-full sm:w-auto justify-center sm:justify-start">
             <Mail className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
             {isMobile ? "Email Us" : "renee@rvtadvisory.com"}
           </a>
