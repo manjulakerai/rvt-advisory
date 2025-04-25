@@ -36,9 +36,7 @@ const featuredMedia = [
       campaign: "Stop it at the Start",
       campaignResources: "respect.gov.au",
       supportHotline: "1800RESPECT on 1800 737 732",
-      supportWebsite: "1800RESPECT.org.au",
-      viewerCaution: "The following video discusses disrespectful behaviours. Although our message encourages respectful behavioural changes amongst individuals, violence isn't always physical. Support is available for people experiencing violence and abuse.",
-      campaignContext: "Stop it at the Start aims to unite the community around positive actions everyone can take to break the cycle of disrespect and ultimately, violence against women. Community influencers and campaign supporters share a common message—even the simplest, smallest actions can make a big difference for young people and for our community."
+      supportWebsite: "1800RESPECT.org.au"
     }
   }
 ];
@@ -88,15 +86,6 @@ const FeaturedMedia = () => {
                 <p className="mb-4">{item.description}</p>
                 {item.additionalInfo && (
                   <div className="text-sm text-gray-600 mt-2">
-                    {item.additionalInfo.viewerCaution && (
-                      <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
-                        <p className="font-medium text-yellow-800">Viewer Caution:</p>
-                        <p className="text-yellow-700">{item.additionalInfo.viewerCaution}</p>
-                      </div>
-                    )}
-                    {item.additionalInfo.campaignContext && (
-                      <p className="mb-4">{item.additionalInfo.campaignContext}</p>
-                    )}
                     <p>Campaign: {item.additionalInfo.campaign}</p>
                     <p>Campaign Resources: <a href={`https://${item.additionalInfo.campaignResources}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.campaignResources}</a></p>
                     <p>Support Hotline: {item.additionalInfo.supportHotline}</p>
