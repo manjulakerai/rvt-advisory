@@ -172,34 +172,34 @@ const Index = () => {
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">1</div>
               <h3 className="text-2xl font-semibold mb-2">Initial Consultation</h3>
-              <p className="text-lg">We begin with a deep-dive discovery session to understand your organizational challenges, goals, and cultural context.</p>
+              <p className="text-lg text-black">We begin with a deep-dive discovery session to understand your organizational challenges, goals, and cultural context.</p>
             </div>
             
             <div className="relative pl-16 mb-10">
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">2</div>
               <h3 className="text-2xl font-semibold mb-2">Strategic Assessment</h3>
-              <p className="text-lg">A comprehensive analysis of your current position, identifying gaps and opportunities for authentic transformation.</p>
+              <p className="text-lg text-black">A comprehensive analysis of your current position, identifying gaps and opportunities for authentic transformation.</p>
             </div>
             
             <div className="relative pl-16 mb-10">
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">3</div>
               <h3 className="text-2xl font-semibold mb-2">Implementation Planning</h3>
-              <p className="text-lg">We create a tailored roadmap with specific, achievable milestones that align with your organizational vision.</p>
+              <p className="text-lg text-black">We create a tailored roadmap with specific, achievable milestones that align with your organizational vision.</p>
             </div>
             
             <div className="relative pl-16 mb-10">
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">4</div>
               <h3 className="text-2xl font-semibold mb-2">Guided Execution</h3>
-              <p className="text-lg">Depending on your chosen engagement model, we either guide your team or directly implement the strategic initiatives.</p>
+              <p className="text-lg text-black">Depending on your chosen engagement model, we either guide your team or directly implement the strategic initiatives.</p>
             </div>
             
             <div className="relative pl-16">
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">5</div>
               <h3 className="text-2xl font-semibold mb-2">Capability Transfer</h3>
-              <p className="text-lg">Unlike traditional consultants, we ensure your team is empowered with the skills and knowledge to sustain the transformation.</p>
+              <p className="text-lg text-black">Unlike traditional consultants, we ensure your team is empowered with the skills and knowledge to sustain the transformation.</p>
             </div>
           </div>
         </div>
