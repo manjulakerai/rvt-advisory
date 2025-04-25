@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
+import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
@@ -13,46 +14,55 @@ const Header = () => {
             className="h-12 w-auto"
           />
         </Link>
-        <NavigationMenu>
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold`}>
-                Home
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold`}>
-                About
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger className="font-semibold">Services</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
-                  {["Policy Advice", "Strategic Advice", "Cultural Supervision", "Cultural Training", "Recruitment Guidance", "Retention Strategies", "Business Consultation"].map((service) => (
-                    <li key={service}>
-                      <NavigationMenuLink asChild>
-                        <Link to="/services" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-semibold">
-                          <div className="text-sm font-semibold leading-none">{service}</div>
-                        </Link>
-                      </NavigationMenuLink>
-                    </li>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold`}>
-                Media
-              </Link>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold`}>
-                Contact
-              </Link>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
+        
+        <div className="flex-1 flex justify-center">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+                  Home
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+                  About
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="font-semibold">Services</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {["Policy Advice", "Strategic Advice", "Cultural Supervision", "Cultural Training", "Recruitment Guidance", "Retention Strategies", "Business Consultation"].map((service) => (
+                      <li key={service}>
+                        <NavigationMenuLink asChild>
+                          <Link to="/services" className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground font-semibold">
+                            <div className="text-sm font-semibold leading-none">{service}</div>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+                  Media
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+                  Contact
+                </Link>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        <Link to="/contact">
+          <Button variant="default" size="lg" className="font-bold">
+            BOOK YOUR INCEPTION MEETING NOW
+          </Button>
+        </Link>
       </div>
     </header>
   );
