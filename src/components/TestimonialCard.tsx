@@ -13,7 +13,7 @@ const TestimonialCard = ({ quote, author, company, image }: TestimonialCardProps
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-all duration-300">
       <CardContent className="p-6">
-        <Quote className="h-10 w-10 text-primary/20 mb-4" />
+        <Quote className="h-10 w-10 text-[#6F5B3E] mb-4" />
         <p className="text-lg mb-6 italic">"{quote}"</p>
         <div className="flex items-center">
           {image && (
