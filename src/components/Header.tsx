@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -86,7 +87,7 @@ const Header = () => {
                 </NavigationMenu>
               </div>
 
-              <div className="flex justify-end">
+              <div className="hidden lg:flex justify-end">
                 <Link to="/contact">
                   <Button variant="default" size="lg" className="font-bold">
                     BOOK YOUR INCEPTION MEETING NOW

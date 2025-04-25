@@ -48,7 +48,7 @@ const FooterContent = () => {
             <MessageSquare className="h-5 w-5 mr-2" />
             <a href="mailto:renee@rvtadvisory.com" className="hover:underline">renee@rvtadvisory.com</a>
           </div>
-          <Button variant="outline" className="mt-4 text-black font-bold">
+          <Button variant="outline" className="mt-4 text-black font-bold hidden sm:hidden lg:inline-flex">
             BOOK YOUR INCEPTION MEETING NOW
           </Button>
         </div>
