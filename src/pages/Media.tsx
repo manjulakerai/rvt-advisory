@@ -21,13 +21,6 @@ const featuredMedia = [
     image: "/lovable-uploads/d181457b-27df-411c-9bca-de8cb8a09c3f.png",
     link: "https://www.facebook.com/share/v/1XTCdu57yP/?mibextid=rS40aB7S9Ucbxw6v",
     icon: <MessageSquare className="h-8 w-8 text-primary" />
-  },
-  {
-    title: "Cultural Leadership in Organizations",
-    type: "Podcast",
-    description: "Discussion on integrating authentic cultural values into organizational leadership frameworks.",
-    link: "#",
-    icon: <Mic className="h-8 w-8 text-primary" />
   }
 ];
 
