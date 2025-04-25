@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from "react-router-dom";
 import { MessageSquare } from "lucide-react";
@@ -25,7 +24,7 @@ const NotFound = () => {
             <div>
               <Link to="/" className="flex items-center mb-4">
                 <img 
-                  src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" 
+                  src="/lovable-uploads/69f342c4-eb32-409b-a458-91dc1ee76237.png" 
                   alt="RVT Advisory" 
                   className="h-12 w-auto"
                 />

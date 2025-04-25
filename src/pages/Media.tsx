@@ -1,95 +1,9 @@
-
 import React from 'react';
 import { Link } from "react-router-dom";
 import { MessageSquare, Video, Mic, BookOpen, Award, FileText, Radio, Tv, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
-
-const featuredMedia = [
-  {
-    title: "Indigenous Policy Development in Modern Australia",
-    type: "Video Interview",
-    description: "Renee discusses the challenges and opportunities in developing effective Indigenous policy frameworks in contemporary Australia.",
-    link: "#",
-    icon: <Video className="h-12 w-12 text-primary/60" />
-  },
-  {
-    title: "Cultural Leadership in Corporate Settings",
-    type: "Podcast",
-    description: "An in-depth conversation about integrating cultural awareness and Indigenous perspectives into corporate leadership strategies.",
-    link: "#",
-    icon: <Mic className="h-12 w-12 text-primary/60" />
-  }
-];
-
-const speakingTopics = [
-  "Aboriginal Affairs Policy",
-  "Organisational Transformation",
-  "Cultural Leadership",
-  "Indigenous Engagement",
-  "Policy Development",
-  "Strategic Advice",
-  "Cultural Competency",
-  "Inclusive Governance"
-];
-
-const mediaAppearances = [
-  {
-    title: "Bridging Cultural Divides in Modern Policy",
-    publication: "The Guardian Australia",
-    date: "March 2025",
-    type: "article",
-    description: "An opinion piece on the importance of Indigenous perspectives in national policy development.",
-    link: "#",
-    icon: <FileText className="h-5 w-5 text-primary" />
-  },
-  {
-    title: "Transformational Leadership in Public Service",
-    publication: "ABC Radio National",
-    date: "February 2025",
-    type: "radio",
-    description: "Renee shares insights on transforming organisations through culturally informed leadership.",
-    link: "#",
-    icon: <Radio className="h-5 w-5 text-primary" />
-  },
-  {
-    title: "Indigenous Voices in Modern Governance",
-    publication: "SBS Insight",
-    date: "January 2025",
-    type: "television",
-    description: "A panel discussion on incorporating Indigenous knowledge systems into contemporary governance structures.",
-    link: "#",
-    icon: <Tv className="h-5 w-5 text-primary" />
-  },
-  {
-    title: "Beyond Reconciliation: Practical Steps Forward",
-    publication: "The Australian Financial Review",
-    date: "December 2024",
-    type: "article",
-    description: "Exploring tangible strategies for organisations committed to Indigenous advancement.",
-    link: "#",
-    icon: <FileText className="h-5 w-5 text-primary" />
-  },
-  {
-    title: "Cultural Supervision in Corporate Australia",
-    publication: "Business Leadership Podcast",
-    date: "November 2024",
-    type: "podcast",
-    description: "A discussion on the importance of cultural supervision in maintaining authentic Indigenous engagement.",
-    link: "#",
-    icon: <Mic className="h-5 w-5 text-primary" />
-  },
-  {
-    title: "Policy Reform for Indigenous Communities",
-    publication: "Policy Matters Conference",
-    date: "October 2024",
-    type: "presentation",
-    description: "Keynote presentation on developing policy that resonates with Indigenous communities.",
-    link: "#",
-    icon: <Award className="h-5 w-5 text-primary" />
-  }
-];
 
 const Media = () => {
   return (
@@ -236,7 +150,7 @@ const Media = () => {
             <div>
               <Link to="/" className="flex items-center mb-4">
                 <img 
-                  src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" 
+                  src="/lovable-uploads/69f342c4-eb32-409b-a458-91dc1ee76237.png" 
                   alt="RVT Advisory" 
                   className="h-12 w-auto"
                 />
