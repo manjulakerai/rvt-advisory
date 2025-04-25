@@ -1,8 +1,7 @@
-
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Link } from "react-router-dom";
 import { ArrowRight, CheckCircle, MessageSquare } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import TestimonialCard from "@/components/TestimonialCard";
@@ -254,10 +253,10 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <Link to="/" className="inline-block mb-4">
+              <Link to="/" className="flex items-center mb-4">
                 <img 
-                  src="/public/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" 
-                  alt="Renee Advisory Logo" 
+                  src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" 
+                  alt="RVT Advisory" 
                   className="h-12 w-auto"
                 />
               </Link>

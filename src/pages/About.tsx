@@ -136,7 +136,7 @@ const About = () => {
             <div>
               <Link to="/" className="flex items-center mb-4">
                 <img 
-                  src="/lovable-uploads/69f342c4-eb32-409b-a458-91dc1ee76237.png" 
+                  src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" 
                   alt="RVT Advisory" 
                   className="h-12 w-auto"
                 />

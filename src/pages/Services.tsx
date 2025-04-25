@@ -1,48 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, ArrowRight, Users, FileText, BookOpen, BarChart, Briefcase, Shield, Layout, MessageSquare } from "lucide-react";
-import { Link } from "react-router-dom";
 import TestimonialCard from "@/components/TestimonialCard";
 import Header from "@/components/Header";
+
 const Services = () => {
-  const services = [{
-    title: "Policy Advice",
-    description: "Strategic guidance on policy development, implementation, and evaluation for government agencies and organizations.",
-    icon: <FileText className="h-6 w-6 text-primary" />,
-    benefits: ["Navigate complex regulatory environments", "Align policies with organizational goals", "Implement sustainable policy frameworks"]
-  }, {
-    title: "Strategic Advice",
-    description: "Comprehensive strategic planning and advisory services to help organizations achieve their long-term objectives.",
-    icon: <BarChart className="h-6 w-6 text-primary" />,
-    benefits: ["Develop long-term and short-term vision planning", "Create actionable strategic roadmaps", "Align strategies with cultural values"]
-  }, {
-    title: "Cultural Supervision",
-    description: "Expert guidance on cultural competency and integration of Aboriginal perspectives into organizational practices.",
-    icon: <BookOpen className="h-6 w-6 text-primary" />,
-    benefits: ["Enhance cultural awareness and sensitivity", "Develop culturally appropriate strategies", "Improve engagement with Aboriginal communities"]
-  }, {
-    title: "Cultural Training",
-    description: "Customized training programs to build cultural competency and understanding within organizations.",
-    icon: <Users className="h-6 w-6 text-primary" />,
-    benefits: ["Build staff cultural competency", "Develop inclusive workplace practices", "Enhance community engagement capabilities"]
-  }, {
-    title: "Recruitment Guidance",
-    description: "Strategic advice on recruiting and retaining Aboriginal employees and creating inclusive workplaces.",
-    icon: <Briefcase className="h-6 w-6 text-primary" />,
-    benefits: ["Attract diverse talent", "Develop culturally appropriate recruitment processes", "Create inclusive onboarding experiences"]
-  }, {
-    title: "Retention Strategies",
-    description: "Specialized strategies to support the long-term retention and development of Aboriginal staff.",
-    icon: <Shield className="h-6 w-6 text-primary" />,
-    benefits: ["Reduce turnover of Aboriginal employees", "Create culturally safe work environments", "Develop tailored professional development paths"]
-  }, {
-    title: "Business Consultation",
-    description: "Comprehensive business advisory services with a focus on cultural integration and authentic transformation.",
-    icon: <Layout className="h-6 w-6 text-primary" />,
-    benefits: ["Align business practices with cultural values", "Develop authentic community engagement strategies", "Create sustainable business models"]
-  }];
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       <Header />
       <div className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -219,8 +185,12 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <Link to="/" className="inline-block mb-4">
-                <img src="/lovable-uploads/85767e98-362e-47f1-b1c9-932b6eb1dc51.png" alt="Renee Advisory Logo" className="h-12 w-auto" />
+              <Link to="/" className="flex items-center mb-4">
+                <img 
+                  src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" 
+                  alt="RVT Advisory" 
+                  className="h-12 w-auto"
+                />
               </Link>
               <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
               <div className="flex space-x-4">
@@ -261,6 +231,8 @@ const Services = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Services;
