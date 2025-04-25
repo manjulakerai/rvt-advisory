@@ -4,7 +4,6 @@ import { Phone, Mail } from "lucide-react";
 const TopHeader = () => {
   return (
     <div className="text-white py-2" style={{
-      background: '#4B5A20',
       background: 'linear-gradient(250deg, rgba(75, 90, 32, 1) 50%, rgba(249, 246, 240, 1) 100%)'
     }}>
       <div className="container mx-auto px-4">
