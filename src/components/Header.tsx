@@ -8,7 +8,7 @@ const Header = () => {
       <div className="flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <img 
-            src="/lovable-uploads/c8c4c830-b130-4102-a5ed-2a7de629336c.png" 
+            src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
             alt="RVT Advisory" 
             className="h-12 w-auto"
           />
