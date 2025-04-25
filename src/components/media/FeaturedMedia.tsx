@@ -30,9 +30,15 @@ const featuredMedia = [
   {
     title: "Renee & TJ - The importance of raising respectful young people",
     type: "Interview",
-    description: "Wiradjuri woman Renee Thompson chats to nephew TJ about finding the courage to speak up about respect, even when we might feel embarrassed or that it's not our place.",
+    description: "Wiradjuri woman Renee Thompson chats to nephew TJ about finding the courage to speak up about respect, even when we might feel embarrassed or that it's not our place. This video is part of the Australian Government Stop it at the Start campaign.",
     youtubeEmbed: "https://www.youtube.com/embed/l58pk1NaJtk?si=dHQSl6qWnpR9zNNf",
-    icon: <Video className="h-8 w-8 text-primary" />
+    icon: <Video className="h-8 w-8 text-primary" />,
+    additionalInfo: {
+      campaign: "Stop it at the Start",
+      campaignResources: "respect.gov.au",
+      supportHotline: "1800RESPECT on 1800 737 732",
+      supportWebsite: "1800RESPECT.org.au"
+    }
   }
 ];
 
@@ -79,6 +85,14 @@ const FeaturedMedia = () => {
               </CardHeader>
               <CardContent>
                 <p className="mb-4">{item.description}</p>
+                {item.additionalInfo && (
+                  <div className="text-sm text-gray-600 mt-2">
+                    <p>Campaign: {item.additionalInfo.campaign}</p>
+                    <p>Campaign Resources: <a href={`https://${item.additionalInfo.campaignResources}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.campaignResources}</a></p>
+                    <p>Support Hotline: {item.additionalInfo.supportHotline}</p>
+                    <p>Support Website: <a href={`https://${item.additionalInfo.supportWebsite}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.supportWebsite}</a></p>
+                  </div>
+                )}
                 {!item.youtubeEmbed && (
                   <a 
                     href={item.link} 
