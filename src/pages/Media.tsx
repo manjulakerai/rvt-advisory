@@ -1,9 +1,97 @@
+
 import React from 'react';
 import { Link } from "react-router-dom";
 import { MessageSquare, Video, Mic, BookOpen, Award, FileText, Radio, Tv, ExternalLink } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
+
+// Define the missing data structures
+const featuredMedia = [
+  {
+    title: "Indigenous Policy Reform",
+    type: "Video Interview",
+    description: "Renee shares insights on Indigenous policy reform and government consultation processes.",
+    link: "#",
+    icon: <Video className="h-8 w-8 text-primary" />
+  },
+  {
+    title: "Cultural Leadership in Organizations",
+    type: "Podcast",
+    description: "Discussion on integrating authentic cultural values into organizational leadership frameworks.",
+    link: "#",
+    icon: <Mic className="h-8 w-8 text-primary" />
+  }
+];
+
+const speakingTopics = [
+  "Indigenous Policy Development",
+  "Cultural Safety",
+  "Organizational Transformation",
+  "Leadership",
+  "Strategic Advice",
+  "Community Engagement",
+  "Government Relations",
+  "Cultural Intelligence"
+];
+
+const mediaAppearances = [
+  {
+    type: "article",
+    title: "Transforming Policy Through Indigenous Lens",
+    publication: "Policy Today",
+    date: "March 2025",
+    description: "Renee discusses the importance of embedding Indigenous perspectives in policy development.",
+    link: "#",
+    icon: <FileText className="h-5 w-5 text-muted-foreground" />
+  },
+  {
+    type: "podcast",
+    title: "Cultural Intelligence in Leadership",
+    publication: "Leadership Now",
+    date: "February 2025",
+    description: "An exploration of how cultural intelligence enhances leadership effectiveness.",
+    link: "#",
+    icon: <Mic className="h-5 w-5 text-muted-foreground" />
+  },
+  {
+    type: "interview",
+    title: "Bridging Communities and Government",
+    publication: "Public Sector Weekly",
+    date: "January 2025",
+    description: "Insights on improving consultation processes between government and Aboriginal communities.",
+    link: "#",
+    icon: <MessageSquare className="h-5 w-5 text-muted-foreground" />
+  },
+  {
+    type: "television",
+    title: "The Future of Indigenous Affairs",
+    publication: "National News Network",
+    date: "December 2024",
+    description: "Panel discussion on emerging trends and challenges in Indigenous affairs and policy.",
+    link: "#",
+    icon: <Tv className="h-5 w-5 text-muted-foreground" />
+  },
+  {
+    type: "radio",
+    title: "Cultural Training for Organizations",
+    publication: "Business Radio",
+    date: "November 2024",
+    description: "How cultural training enhances organizational performance and community relationships.",
+    link: "#",
+    icon: <Radio className="h-5 w-5 text-muted-foreground" />
+  },
+  {
+    type: "article",
+    title: "Policy Innovation Through Collaboration",
+    publication: "Governance Journal",
+    date: "October 2024",
+    description: "Case studies of successful collaborative approaches to policy development.",
+    link: "#",
+    icon: <FileText className="h-5 w-5 text-muted-foreground" />
+  }
+];
 
 const Media = () => {
   return (
