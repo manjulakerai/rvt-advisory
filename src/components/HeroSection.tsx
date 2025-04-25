@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -31,7 +30,11 @@ const HeroSection = () => {
               </Button>
             </Link>
             <Link to="/about" className="w-full sm:w-auto">
-              <Button size="lg" variant="outline" className="w-full text-sm sm:text-base border-white hover:bg-white/10 text-white font-bold py-3 px-4 sm:px-6">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="w-full text-sm sm:text-base border-white hover:bg-white/20 text-white font-bold py-3 px-4 sm:px-6 transition-colors duration-300"
+              >
                 Learn More About Renee
               </Button>
             </Link>
