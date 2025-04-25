@@ -1,7 +1,10 @@
+
 import React from 'react';
 import { Video, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+
 const featuredMedia = [{
   title: "Breaking Down Cultural Barriers: A Personal Journey",
   type: "Video Keynote",
@@ -13,7 +16,7 @@ const featuredMedia = [{
   type: "Featured Event",
   description: "A groundbreaking moment as our Youth Advisory Committee, led by Renee Thomson, presents to EMRIP on critical issues facing Aboriginal and Torres Strait Islander women in leadership positions, marking a significant step forward in advocating for indigenous women's empowerment.",
   image: "/lovable-uploads/f62355d4-4e5f-433e-9a12-837412f4110d.png",
-  link: "https://www.facebook.com/share/v/1XTCdu57yP/?mibextid=rS40aB7S9Ucbxw6v",
+  link: "www.facebook.com/share/v/1XTCdu57yP/?mibextid=rS40aB7S9Ucbxw6v",
   icon: <MessageSquare className="h-8 w-8 text-primary" />
 }, {
   title: "A Cuppa and Yarn with Renee Thomson",
@@ -40,10 +43,11 @@ const featuredMedia = [{
   youtubeEmbed: "https://www.youtube.com/embed/69ksPD528bk?si=6nJRkiSgY3TtpxZ_",
   icon: <Video className="h-8 w-8 text-primary" />,
   additionalInfo: {
-    disclaimer: "This video was filmed on the 7th of May 2020. For updated information please visit https://www.health.nsw.gov.au/",
+    disclaimer: "This video was filmed on the 7th of May 2020. For updated information please visit www.health.nsw.gov.au/",
     date: "May 26, 2020"
   }
 }];
+
 const FeaturedMedia = () => {
   return <section className="py-16">
       <div className="container mx-auto px-4">
@@ -67,14 +71,38 @@ const FeaturedMedia = () => {
               </CardHeader>
               <CardContent>
                 <p className="mb-4">{item.description}</p>
-                {item.additionalInfo}
-                {!item.youtubeEmbed && <a href={item.link} className="text-primary hover:underline flex items-center gap-1" target="_blank" rel="noopener noreferrer">
+                
+                {/* Render additionalInfo if it exists */}
+                {item.additionalInfo && 'campaign' in item.additionalInfo && (
+                  <Alert className="mb-4 bg-muted/50">
+                    <AlertDescription>
+                      <p className="font-medium">Campaign: {item.additionalInfo.campaign}</p>
+                      <p>Resources: {item.additionalInfo.campaignResources}</p>
+                      <p>Support: {item.additionalInfo.supportHotline}</p>
+                      <p>Website: {item.additionalInfo.supportWebsite}</p>
+                    </AlertDescription>
+                  </Alert>
+                )}
+                
+                {item.additionalInfo && 'disclaimer' in item.additionalInfo && (
+                  <Alert className="mb-4 bg-muted/50">
+                    <AlertDescription>
+                      <p><small className="text-gray-500">{item.additionalInfo.disclaimer}</small></p>
+                      <p><small className="text-gray-500">Date: {item.additionalInfo.date}</small></p>
+                    </AlertDescription>
+                  </Alert>
+                )}
+                
+                {!item.youtubeEmbed && item.link && (
+                  <a href={item.link} className="text-primary hover:underline flex items-center gap-1" target="_blank" rel="noopener noreferrer">
                     Watch now <ExternalLink className="h-4 w-4" />
-                  </a>}
+                  </a>
+                )}
               </CardContent>
             </Card>)}
         </div>
       </div>
     </section>;
 };
+
 export default FeaturedMedia;
