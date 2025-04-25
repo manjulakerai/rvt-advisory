@@ -18,7 +18,7 @@ const StickyCallButton = () => {
 
   return (
     <a 
-      href="tel:+61420737339" 
+      href="tel:+61411524370" 
       className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-md"
     >
       <Button 
@@ -27,7 +27,7 @@ const StickyCallButton = () => {
         variant="default"
       >
         <Phone className="mr-2 h-4 w-4" />
-        Call Now: 0420 737 339
+        Call Now: 0411 524 370
       </Button>
     </a>
   );

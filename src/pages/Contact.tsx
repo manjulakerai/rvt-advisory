@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Mail, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -55,6 +54,7 @@ const Contact = () => {
           </p>
         </div>
       </div>
+      
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-12">

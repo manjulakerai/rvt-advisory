@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -50,7 +49,7 @@ const FooterContent = () => {
           </div>
           <div className="flex items-center mb-2">
             <Phone className="h-5 w-5 mr-2" />
-            <a href="tel:+61412345678" className="hover:underline">0412 345 678</a>
+            <a href="tel:+61411524370" className="hover:underline">0411 524 370</a>
           </div>
           <Button variant="outline" className="mt-4 text-black font-bold hidden sm:hidden lg:inline-flex">
             BOOK YOUR INCEPTION MEETING NOW
