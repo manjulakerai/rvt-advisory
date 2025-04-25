@@ -8,10 +8,8 @@ import TestimonialCard from "@/components/TestimonialCard";
 import ServiceCard from "@/components/ServiceCard";
 import EngagementModel from "@/components/EngagementModel";
 import Header from "@/components/Header";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       <Header />
       <HeroSection />
       
@@ -20,27 +18,19 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">Are you looking to elevate your organisation in these areas?</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              "Navigating complex policy landscapes",
-              "Creating meaningful community connections",
-              "Developing authentic, impactful organisational strategies"
-            ].map((problem, index) => (
-              <Card key={index} className="hover:shadow-lg transition-all">
+            {["Navigating complex policy landscapes", "Creating meaningful community connections", "Developing authentic, impactful organisational strategies"].map((problem, index) => <Card key={index} className="hover:shadow-lg transition-all">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
                     <span>
-                      {index === 0 ? "Navigating" : 
-                       index === 1 ? "Connections" : 
-                       "Strategies"}
+                      {index === 0 ? "Navigating" : index === 1 ? "Connections" : "Strategies"}
                     </span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg">{problem}</p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
           <div className="text-center mt-8">
             <p className="text-xl mb-4">You're not alone. Renee's advisory services are designed to solve your most challenging business transformation needs.</p>
@@ -58,21 +48,9 @@ const Index = () => {
           
           <h3 className="text-2xl font-semibold text-center mb-8">Three Flexible Engagement Models</h3>
           <div className="grid md:grid-cols-3 gap-8">
-            <EngagementModel 
-              title="Advisory Analysis" 
-              description="Deep dive into your current organisational landscape. Walk the journey with you, providing a full internal analysis of where your business stands."
-              icon="Search"
-            />
-            <EngagementModel 
-              title="Collaborative Empowerment" 
-              description="Walk alongside your team to build internal capabilities. Guide you from the outside, advising on implementation strategies for your policies."
-              icon="Users"
-            />
-            <EngagementModel 
-              title="Full Implementation" 
-              description="We take the load, create solutions, and guide execution. Develop comprehensive strategies and show you how to deliver them effectively."
-              icon="CheckCircle"
-            />
+            <EngagementModel title="Advisory Analysis" description="Deep dive into your current organisational landscape. Walk the journey with you, providing a full internal analysis of where your business stands." icon="Search" />
+            <EngagementModel title="Collaborative Empowerment" description="Walk alongside your team to build internal capabilities. Guide you from the outside, advising on implementation strategies for your policies." icon="Users" />
+            <EngagementModel title="Full Implementation" description="We take the load, create solutions, and guide execution. Develop comprehensive strategies and show you how to deliver them effectively." icon="CheckCircle" />
           </div>
         </div>
       </section>
@@ -140,30 +118,18 @@ const Index = () => {
           </p>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <ServiceCard 
-              title="Proven Strategies" 
-              description="Methodologies refined through work at the highest levels of government and international organisations"
-              descriptionClassName="text-gray-800"
-            />
-            <ServiceCard 
-              title="Personalised Guidance" 
-              description="Solutions tailored to your specific organisational context and challenges"
-              descriptionClassName="text-gray-800"
-            />
-            <ServiceCard 
-              title="Diverse Experience" 
-              description="Insights drawn from successfully transforming organisations across multiple sectors"
-              descriptionClassName="text-gray-800"
-            />
+            <ServiceCard title="Proven Strategies" description="Methodologies refined through work at the highest levels of government and international organisations" descriptionClassName="text-gray-800" />
+            <ServiceCard title="Personalised Guidance" description="Solutions tailored to your specific organisational context and challenges" descriptionClassName="text-gray-800" />
+            <ServiceCard title="Diverse Experience" description="Insights drawn from successfully transforming organisations across multiple sectors" descriptionClassName="text-gray-800" />
           </div>
         </div>
       </section>
 
       {/* Section 5: How It Works */}
       <section className="py-16" style={{
-        background: '#F9F6F0',
-        backgroundImage: 'linear-gradient(50deg, rgba(75, 90, 32, 1) 0%, rgba(249, 246, 240, 1) 37%, rgba(249, 246, 240, 1) 63%, rgba(75, 90, 32, 1) 100%)'
-      }}>
+      background: '#F9F6F0',
+      backgroundImage: 'linear-gradient(50deg, rgba(75, 90, 32, 1) 0%, rgba(249, 246, 240, 1) 37%, rgba(249, 246, 240, 1) 63%, rgba(75, 90, 32, 1) 100%)'
+    }}>
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12">How It Actually Works</h2>
           
@@ -172,7 +138,7 @@ const Index = () => {
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">1</div>
               <h3 className="text-2xl font-semibold mb-2">Initial Consultation</h3>
-              <p className="text-lg text-black">We begin with a deep-dive discovery session to understand your organizational challenges, goals, and cultural context.</p>
+              <p className="text-lg text-black">We begin with a deep-dive discovery session to understand your organisational challenges, goals, and cultural context.</p>
             </div>
             
             <div className="relative pl-16 mb-10">
@@ -186,7 +152,7 @@ const Index = () => {
               <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>
               <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">3</div>
               <h3 className="text-2xl font-semibold mb-2">Implementation Planning</h3>
-              <p className="text-lg text-black">We create a tailored roadmap with specific, achievable milestones that align with your organizational vision.</p>
+              <p className="text-lg text-black">We create a tailored roadmap with specific, achievable milestones that align with your organisational vision.</p>
             </div>
             
             <div className="relative pl-16 mb-10">
@@ -211,26 +177,10 @@ const Index = () => {
           <h2 className="text-3xl font-bold text-center mb-12">What Our Clients Say</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <TestimonialCard 
-              quote="Renee doesn't just consult - she transforms. Her guidance has been instrumental in reshaping our approach to community engagement."
-              author="Small Business Owner"
-              company="Regional Enterprise"
-            />
-            <TestimonialCard 
-              quote="Unprecedented insights and actionable strategies. Working with Renee has given us a competitive edge in policy development."
-              author="Corporate Executive"
-              company="National Corporation"
-            />
-            <TestimonialCard 
-              quote="A game-changer for our organisational development. Her cultural competency expertise has transformed how we operate."
-              author="Community Leader"
-              company="Non-Profit Organization"
-            />
-            <TestimonialCard 
-              quote="Renee's unique perspective bridging government and Aboriginal wisdom has helped us create more effective and inclusive policies."
-              author="Government Stakeholder"
-              company="State Department"
-            />
+            <TestimonialCard quote="Renee doesn't just consult - she transforms. Her guidance has been instrumental in reshaping our approach to community engagement." author="Small Business Owner" company="Regional Enterprise" />
+            <TestimonialCard quote="Unprecedented insights and actionable strategies. Working with Renee has given us a competitive edge in policy development." author="Corporate Executive" company="National Corporation" />
+            <TestimonialCard quote="A game-changer for our organisational development. Her cultural competency expertise has transformed how we operate." author="Community Leader" company="Non-Profit Organization" />
+            <TestimonialCard quote="Renee's unique perspective bridging government and Aboriginal wisdom has helped us create more effective and inclusive policies." author="Government Stakeholder" company="State Department" />
           </div>
         </div>
       </section>
@@ -257,11 +207,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <Link to="/" className="flex items-center mb-4">
-                <img 
-                  src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" 
-                  alt="RVT Advisory" 
-                  className="h-12 w-auto"
-                />
+                <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto" />
               </Link>
               <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
               <div className="flex space-x-4">
@@ -302,8 +248,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
