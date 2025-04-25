@@ -15,6 +15,14 @@ const featuredMedia = [
     icon: <Video className="h-8 w-8 text-primary" />
   },
   {
+    title: "Youth Advisory Committee Addresses EMRIP",
+    type: "Featured Event",
+    description: "A groundbreaking moment as our Youth Advisory Committee, led by Renee Thomson, presents to EMRIP on critical issues facing Aboriginal and Torres Strait Islander women in leadership positions, marking a significant step forward in advocating for indigenous women's empowerment.",
+    image: "/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png",
+    link: "#",
+    icon: <MessageSquare className="h-8 w-8 text-primary" />
+  },
+  {
     title: "Cultural Leadership in Organizations",
     type: "Podcast",
     description: "Discussion on integrating authentic cultural values into organizational leadership frameworks.",
@@ -121,6 +129,12 @@ const Media = () => {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                       referrerPolicy="strict-origin-when-cross-origin"
                       allowFullScreen
+                    />
+                  ) : item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-full object-cover"
                     />
                   ) : (
                     <div className="absolute inset-0 flex items-center justify-center">
