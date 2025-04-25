@@ -67,14 +67,7 @@ const FeaturedMedia = () => {
               </CardHeader>
               <CardContent>
                 <p className="mb-4">{item.description}</p>
-                {item.additionalInfo && <div className="text-sm text-gray-600 mt-2">
-                    {item.additionalInfo.campaign && <p>Campaign: {item.additionalInfo.campaign}</p>}
-                    {item.additionalInfo.campaignResources && <p>Campaign Resources: <a href={`${item.additionalInfo.campaignResources}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.campaignResources}</a></p>}
-                    {item.additionalInfo.supportHotline && <p>Support Hotline: {item.additionalInfo.supportHotline}</p>}
-                    {item.additionalInfo.supportWebsite && <p>Support Website: <a href={`${item.additionalInfo.supportWebsite}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.supportWebsite}</a></p>}
-                    {item.additionalInfo.disclaimer}
-                    {item.additionalInfo.date}
-                  </div>}
+                {item.additionalInfo}
                 {!item.youtubeEmbed && <a href={item.link} className="text-primary hover:underline flex items-center gap-1" target="_blank" rel="noopener noreferrer">
                     Watch now <ExternalLink className="h-4 w-4" />
                   </a>}
