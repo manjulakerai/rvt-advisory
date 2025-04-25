@@ -242,9 +242,32 @@ const Services = () => {
             Take the first step toward authentic organisational change and powerful development.
           </p>
           <Link to="/contact">
-            <Button size="lg" variant="outline" className="bg-white text-black hover:bg-gray-100 font-bold text-lg px-8 py-6">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white text-black hover:bg-gray-100 font-bold text-lg px-4 py-3 sm:px-8 sm:py-6 text-sm sm:text-base"
+            >
               BOOK YOUR INCEPTION MEETING NOW
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+            </Button>
+          </Link>
+        </div>
+      </section>
+
+      <section className="py-16 bg-[#667538] text-white text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organisation?</h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Take the first step toward authentic organisational change and powerful development.
+          </p>
+          <Link to="/contact">
+            <Button 
+              size="lg" 
+              variant="outline" 
+              className="bg-white text-black hover:bg-gray-100 font-bold text-lg px-4 py-3 sm:px-8 sm:py-6 text-sm sm:text-base"
+            >
+              BOOK YOUR INCEPTION MEETING NOW
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
           </Link>
         </div>
