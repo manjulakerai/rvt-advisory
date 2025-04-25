@@ -21,10 +21,13 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="hover:underline">Policy Advice</Link></li>
-              <li><Link to="/services" className="hover:underline">Strategic Advice</Link></li>
               <li><Link to="/services" className="hover:underline">Cultural Supervision</Link></li>
-              <li><Link to="/services" className="hover:underline">Cultural Training</Link></li>
+              <li><Link to="/services" className="hover:underline">Policy Advice</Link></li>
+              <li><Link to="/services" className="hover:underline">Strategic Planning</Link></li>
+              <li><Link to="/services" className="hover:underline">Evaluation & Impact Assessment</Link></li>
+              <li><Link to="/services" className="hover:underline">Business Development</Link></li>
+              <li><Link to="/services" className="hover:underline">Governance Advisory</Link></li>
+              <li><Link to="/services" className="hover:underline">Retention Strategies</Link></li>
             </ul>
           </div>
           <div>
