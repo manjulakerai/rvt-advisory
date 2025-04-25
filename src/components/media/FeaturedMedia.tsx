@@ -39,7 +39,7 @@ const featuredMedia = [
   }, {
     title: "COVID-19 Information for Aboriginal Communities",
     type: "Health Information Video",
-    description: "Video series dedicated to provide information about COVID-19 to the Aboriginal community of Western Sydney Local Health District.",
+    description: "Video series dedicated to provide information about COVID-19 to the Aboriginal community of Western Sydney Local Health District. Renee Thomson, Partnerships Officer at Kimberwalli Aboriginal Affairs NSW, interviews Professor Ramon Shaban, Clinical Chair of Infection Control, discussing critical insights into Aboriginal health and community partnerships.",
     youtubeEmbed: "https://www.youtube.com/embed/69ksPD528bk?si=6nJRkiSgY3TtpxZ_",
     icon: <Video className="h-8 w-8 text-primary" />,
     additionalInfo: {
