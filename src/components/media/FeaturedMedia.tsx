@@ -46,12 +46,6 @@ const featuredMedia = [
       disclaimer: "This video was filmed on the 7th of May 2020. For updated information please visit www.health.nsw.gov.au/",
       date: "May 26, 2020"
     }
-  }, {
-    title: "Interview with Professor Ramon Shaban",
-    type: "Professional Interview",
-    description: "Renee Thomson, Partnerships Officer at Kimberwalli Aboriginal Affairs NSW, interviews Professor Ramon Shaban, Clinical Chair of Infection Control, discussing critical insights into Aboriginal health and community partnerships.",
-    youtubeEmbed: "",
-    icon: <Video className="h-8 w-8 text-primary" />
   }
 ];
 
