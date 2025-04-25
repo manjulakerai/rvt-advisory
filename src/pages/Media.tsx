@@ -21,6 +21,13 @@ const featuredMedia = [
     image: "/lovable-uploads/f62355d4-4e5f-433e-9a12-837412f4110d.png",
     link: "https://www.facebook.com/share/v/1XTCdu57yP/?mibextid=rS40aB7S9Ucbxw6v",
     icon: <MessageSquare className="h-8 w-8 text-primary" />
+  },
+  {
+    title: "A Cuppa and Yarn with Renee Thomson",
+    type: "Interview",
+    description: "A young leader from a strong Wiradjuri family, Renee Thomson shares her experiences representing at the United Nations' Expert Mechanism on the Rights of Indigenous Peoples in Geneva. As part of NSW Aboriginal Land Councils' Youth Advisory Committee, she discusses her journey and the establishment of her new Indigenous Youth Leadership Network.",
+    youtubeEmbed: "https://www.youtube.com/embed/HQEmi8gOKNA",
+    icon: <Video className="h-8 w-8 text-primary" />
   }
 ];
 
