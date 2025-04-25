@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Video, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -30,14 +29,16 @@ const featuredMedia = [
   {
     title: "Renee & TJ - The importance of raising respectful young people",
     type: "Interview",
-    description: "Wiradjuri woman Renee Thompson chats to nephew TJ about finding the courage to speak up about respect, even when we might feel embarrassed or that it's not our place. This video is part of the Australian Government Stop it at the Start campaign.",
+    description: "Part of the 'Unmute yourself – Speaking up to end violence against women' series. Wiradjuri woman Renee Thompson chats to nephew TJ about finding the courage to speak up about respect. This video is part of the Stop it at the Start campaign, which encourages adults to positively influence young people aged 10-17 years by role modelling positive behaviour, calling out disrespect and starting conversations about respect.",
     youtubeEmbed: "https://www.youtube.com/embed/l58pk1NaJtk?si=dHQSl6qWnpR9zNNf",
     icon: <Video className="h-8 w-8 text-primary" />,
     additionalInfo: {
       campaign: "Stop it at the Start",
       campaignResources: "respect.gov.au",
       supportHotline: "1800RESPECT on 1800 737 732",
-      supportWebsite: "1800RESPECT.org.au"
+      supportWebsite: "1800RESPECT.org.au",
+      viewerCaution: "The following video discusses disrespectful behaviours. Although our message encourages respectful behavioural changes amongst individuals, violence isn't always physical. Support is available for people experiencing violence and abuse.",
+      campaignContext: "Stop it at the Start aims to unite the community around positive actions everyone can take to break the cycle of disrespect and ultimately, violence against women. Community influencers and campaign supporters share a common message—even the simplest, smallest actions can make a big difference for young people and for our community."
     }
   }
 ];
@@ -87,6 +88,15 @@ const FeaturedMedia = () => {
                 <p className="mb-4">{item.description}</p>
                 {item.additionalInfo && (
                   <div className="text-sm text-gray-600 mt-2">
+                    {item.additionalInfo.viewerCaution && (
+                      <div className="mb-4 p-3 bg-yellow-50 border border-yellow-200 rounded-md">
+                        <p className="font-medium text-yellow-800">Viewer Caution:</p>
+                        <p className="text-yellow-700">{item.additionalInfo.viewerCaution}</p>
+                      </div>
+                    )}
+                    {item.additionalInfo.campaignContext && (
+                      <p className="mb-4">{item.additionalInfo.campaignContext}</p>
+                    )}
                     <p>Campaign: {item.additionalInfo.campaign}</p>
                     <p>Campaign Resources: <a href={`https://${item.additionalInfo.campaignResources}`} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">{item.additionalInfo.campaignResources}</a></p>
                     <p>Support Hotline: {item.additionalInfo.supportHotline}</p>
