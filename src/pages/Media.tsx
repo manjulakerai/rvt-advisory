@@ -18,8 +18,8 @@ const featuredMedia = [
     title: "Youth Advisory Committee Addresses EMRIP",
     type: "Featured Event",
     description: "A groundbreaking moment as our Youth Advisory Committee, led by Renee Thomson, presents to EMRIP on critical issues facing Aboriginal and Torres Strait Islander women in leadership positions, marking a significant step forward in advocating for indigenous women's empowerment.",
-    image: "/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png",
-    link: "#",
+    image: "/lovable-uploads/d181457b-27df-411c-9bca-de8cb8a09c3f.png",
+    link: "https://www.facebook.com/share/v/1XTCdu57yP/?mibextid=rS40aB7S9Ucbxw6v",
     icon: <MessageSquare className="h-8 w-8 text-primary" />
   },
   {
