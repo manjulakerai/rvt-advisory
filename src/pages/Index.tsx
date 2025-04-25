@@ -233,7 +233,7 @@ const Index = () => {
       </section>
 
       {/* CTA section */}
-      <section className="py-16 bg-secondary text-white text-center">
+      <section className="py-16 bg-[#667538] text-white text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Organisation?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
