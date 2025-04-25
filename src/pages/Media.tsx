@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Video, Mic, FileText, Radio, Tv, ExternalLink, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -185,9 +184,11 @@ const Media = () => {
               </div>
             </div>
             <div className="bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden">
-              <div className="h-full w-full flex items-center justify-center">
-                [PLACEHOLDER: Professional image of Renee speaking]
-              </div>
+              <img 
+                src="/lovable-uploads/a5169457-4e80-4cac-b889-f90da91cdd3f.png" 
+                alt="Renee Thomson speaking at an event" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
