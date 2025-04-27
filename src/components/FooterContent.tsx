@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Phone } from "lucide-react";
+
 const FooterContent = () => {
   return <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8">
@@ -17,13 +18,13 @@ const FooterContent = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Services</h4>
           <ul className="space-y-2">
-            <li><Link to="/services" className="hover:underline">Cultural Supervision</Link></li>
-            <li><Link to="/services" className="hover:underline">Policy Advice</Link></li>
-            <li><Link to="/services" className="hover:underline">Strategic Planning</Link></li>
-            <li><Link to="/services" className="hover:underline">Evaluation & Impact Assessment</Link></li>
-            <li><Link to="/services" className="hover:underline">Business Development</Link></li>
-            <li><Link to="/services" className="hover:underline">Governance Advisory</Link></li>
-            <li><Link to="/services" className="hover:underline">Retention Strategies</Link></li>
+            <li><Link to="/services#cultural-supervision" className="hover:underline">Cultural Supervision</Link></li>
+            <li><Link to="/services#policy-advice" className="hover:underline">Policy Advice</Link></li>
+            <li><Link to="/services#strategic-planning" className="hover:underline">Strategic Planning</Link></li>
+            <li><Link to="/services#evaluation-impact" className="hover:underline">Evaluation & Impact Assessment</Link></li>
+            <li><Link to="/services#business-development" className="hover:underline">Business Development</Link></li>
+            <li><Link to="/services#governance-advisory" className="hover:underline">Governance Advisory</Link></li>
+            <li><Link to="/services#retention-strategies" className="hover:underline">Retention Strategies</Link></li>
           </ul>
         </div>
         <div>
@@ -55,4 +56,5 @@ const FooterContent = () => {
       </div>
     </div>;
 };
+
 export default FooterContent;
