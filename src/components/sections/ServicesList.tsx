@@ -59,12 +59,12 @@ const services = [
 
 const ServicesList = () => {
   return (
-    <section className="py-16">
+    <section className="py-16" id="our-advisory-services">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold mb-12 text-center">Our Advisory Services</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.id} id={service.id} className="h-full flex flex-col hover:shadow-lg transition-all">
+            <Card key={service.id} className="h-full flex flex-col hover:shadow-lg transition-all">
               <CardHeader>
                 <div className="mb-4">{service.icon}</div>
                 <CardTitle>{service.title}</CardTitle>

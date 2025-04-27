@@ -18,13 +18,13 @@ const FooterContent = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Services</h4>
           <ul className="space-y-2">
-            <li><Link to="/services#cultural-supervision" className="hover:underline">Cultural Supervision</Link></li>
-            <li><Link to="/services#policy-advice" className="hover:underline">Policy Advice</Link></li>
-            <li><Link to="/services#strategic-planning" className="hover:underline">Strategic Planning</Link></li>
-            <li><Link to="/services#evaluation-impact" className="hover:underline">Evaluation & Impact Assessment</Link></li>
-            <li><Link to="/services#business-development" className="hover:underline">Business Development</Link></li>
-            <li><Link to="/services#governance-advisory" className="hover:underline">Governance Advisory</Link></li>
-            <li><Link to="/services#retention-strategies" className="hover:underline">Retention Strategies</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline">Cultural Supervision</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline">Policy Advice</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline">Strategic Planning</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline">Evaluation & Impact Assessment</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline">Business Development</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline">Governance Advisory</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline">Retention Strategies</Link></li>
           </ul>
         </div>
         <div>
