@@ -2,20 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Phone } from "lucide-react";
-
 const FooterContent = () => {
-  return (
-    <div className="container mx-auto px-4">
+  return <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8">
         <div>
           <Link to="/" className="flex items-center mb-4">
-            <img 
-              src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" 
-              alt="RVT Advisory" 
-              className="h-12 w-auto"
-            />
+            <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto" />
           </Link>
-          <p className="mb-4">Transforming organizations through authentic cultural wisdom and strategic expertise.</p>
+          <p className="mb-4">Transforming organisations through authentic cultural wisdom and strategic expertise.</p>
           <div className="flex space-x-4">
             {/* Social media icons would go here */}
           </div>
@@ -59,8 +53,6 @@ const FooterContent = () => {
       <div className="border-t border-primary/20 mt-8 pt-8 text-center">
         <p>&copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.</p>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default FooterContent;
