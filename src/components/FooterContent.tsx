@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -9,10 +10,8 @@ const FooterContent = () => {
   const scrollToSection = useScrollToSection();
 
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    if (location.pathname === "/services") {
-      e.preventDefault();
-      scrollToSection(sectionId);
-    }
+    e.preventDefault();
+    scrollToSection(sectionId, "/services");
   };
 
   return <div className="container mx-auto px-4">
@@ -29,13 +28,13 @@ const FooterContent = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Services</h4>
           <ul className="space-y-2">
-            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Cultural Supervision</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Policy Advice</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Strategic Planning</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Evaluation & Impact Assessment</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Business Development</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Governance Advisory</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Retention Strategies</Link></li>
+            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Cultural Supervision</a></li>
+            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Policy Advice</a></li>
+            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Strategic Planning</a></li>
+            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Evaluation & Impact Assessment</a></li>
+            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Business Development</a></li>
+            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Governance Advisory</a></li>
+            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Retention Strategies</a></li>
           </ul>
         </div>
         <div>

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useLocation } from "react-router-dom";
 import { useScrollToSection } from "@/hooks/use-scroll-to-section";
@@ -20,7 +21,7 @@ const Services = () => {
       const id = location.hash.substring(1);
       setTimeout(() => {
         scrollToSection(id);
-      }, 100);
+      }, 300); // Increased timeout to ensure page is fully loaded
     }
   }, [location, scrollToSection]);
 
