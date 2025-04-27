@@ -1,6 +1,6 @@
-
 import React, { useEffect } from 'react';
 import { useLocation } from "react-router-dom";
+import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCallButton from "@/components/StickyCallButton";
@@ -13,22 +13,16 @@ import TestimonialSection from "@/components/sections/TestimonialSection";
 
 const Services = () => {
   const location = useLocation();
+  const scrollToSection = useScrollToSection();
   
   useEffect(() => {
-    // Check if there's a hash in the URL
     if (location.hash) {
-      // Remove the # character
       const id = location.hash.substring(1);
-      
-      // Wait a bit for the page to fully render before scrolling
       setTimeout(() => {
-        const element = document.getElementById(id);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth" });
-        }
+        scrollToSection(id);
       }, 100);
     }
-  }, [location]);
+  }, [location, scrollToSection]);
 
   const serviceTestimonials = [
     {

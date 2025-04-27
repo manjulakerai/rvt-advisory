@@ -1,21 +1,17 @@
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Phone } from "lucide-react";
+import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 
 const FooterContent = () => {
   const location = useLocation();
+  const scrollToSection = useScrollToSection();
 
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
-    // If we're already on the services page, prevent default navigation
     if (location.pathname === "/services") {
       e.preventDefault();
-      
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
+      scrollToSection(sectionId);
     }
   };
 
