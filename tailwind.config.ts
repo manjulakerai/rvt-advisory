@@ -20,6 +20,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Mont', 'sans-serif'],
+        'lejourserif': ['Lejourserif', 'serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
