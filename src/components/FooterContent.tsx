@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -12,6 +11,10 @@ const FooterContent = () => {
   const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
     e.preventDefault();
     scrollToSection(sectionId, "/services");
+  };
+
+  const handleNavigationClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return <div className="container mx-auto px-4">
@@ -40,10 +43,10 @@ const FooterContent = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
-            <li><Link to="/" className="hover:underline">Home</Link></li>
-            <li><Link to="/about" className="hover:underline">About</Link></li>
-            <li><Link to="/media" className="hover:underline">Media</Link></li>
-            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
+            <li><Link to="/" className="hover:underline" onClick={handleNavigationClick}>Home</Link></li>
+            <li><Link to="/about" className="hover:underline" onClick={handleNavigationClick}>About</Link></li>
+            <li><Link to="/media" className="hover:underline" onClick={handleNavigationClick}>Media</Link></li>
+            <li><Link to="/contact" className="hover:underline" onClick={handleNavigationClick}>Contact</Link></li>
           </ul>
         </div>
         <div>
