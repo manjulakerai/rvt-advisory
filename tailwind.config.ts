@@ -21,6 +21,7 @@ export default {
       fontFamily: {
         sans: ['Mont', 'sans-serif'],
         'lejourserif': ['Lejourserif', 'serif'],
+        'libre-baskerville': ['Libre Baskerville', 'serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
