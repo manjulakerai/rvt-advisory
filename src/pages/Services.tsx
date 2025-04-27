@@ -1,5 +1,6 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCallButton from "@/components/StickyCallButton";
@@ -11,6 +12,24 @@ import CallToAction from "@/components/sections/CallToAction";
 import TestimonialSection from "@/components/sections/TestimonialSection";
 
 const Services = () => {
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Check if there's a hash in the URL
+    if (location.hash) {
+      // Remove the # character
+      const id = location.hash.substring(1);
+      
+      // Wait a bit for the page to fully render before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
   const serviceTestimonials = [
     {
       quote: "Renee's policy advice transformed our approach to community engagement. Her guidance provided us with a clear framework that respected cultural values while achieving our strategic objectives.",

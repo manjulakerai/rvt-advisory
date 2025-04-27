@@ -1,9 +1,24 @@
+
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Phone } from "lucide-react";
 
 const FooterContent = () => {
+  const location = useLocation();
+
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    // If we're already on the services page, prevent default navigation
+    if (location.pathname === "/services") {
+      e.preventDefault();
+      
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8">
         <div>
@@ -18,13 +33,13 @@ const FooterContent = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Services</h4>
           <ul className="space-y-2">
-            <li><Link to="/services#our-advisory-services" className="hover:underline">Cultural Supervision</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline">Policy Advice</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline">Strategic Planning</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline">Evaluation & Impact Assessment</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline">Business Development</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline">Governance Advisory</Link></li>
-            <li><Link to="/services#our-advisory-services" className="hover:underline">Retention Strategies</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Cultural Supervision</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Policy Advice</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Strategic Planning</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Evaluation & Impact Assessment</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Business Development</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Governance Advisory</Link></li>
+            <li><Link to="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Retention Strategies</Link></li>
           </ul>
         </div>
         <div>
