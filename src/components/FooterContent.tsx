@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -29,24 +30,24 @@ const FooterContent = () => {
           </div>
         </div>
         <div>
-          <h4 className="text-lg font-semibold mb-4">Services</h4>
+          <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+          <ul className="space-y-2">
+            <li><Link to="/" className="hover:underline" onClick={handleNavigationClick}>Home</Link></li>
+            <li><Link to="/about" className="hover:underline" onClick={handleNavigationClick}>About</Link></li>
+            <li><Link to="/services" className="hover:underline" onClick={handleNavigationClick}>Services</Link></li>
+            <li><Link to="/media" className="hover:underline" onClick={handleNavigationClick}>Media</Link></li>
+            <li><Link to="/contact" className="hover:underline" onClick={handleNavigationClick}>Contact</Link></li>
+            <li><Link to="/coming-soon" className="hover:underline" onClick={handleNavigationClick}>Coming Soon</Link></li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="text-lg font-semibold mb-4">Our Services</h4>
           <ul className="space-y-2">
             <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Cultural Supervision</a></li>
             <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Policy Advice</a></li>
             <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Strategic Planning</a></li>
             <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Evaluation & Impact Assessment</a></li>
             <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Business Development</a></li>
-            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Governance Advisory</a></li>
-            <li><a href="/services#our-advisory-services" className="hover:underline" onClick={(e) => handleScrollToSection(e, "our-advisory-services")}>Retention Strategies</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-          <ul className="space-y-2">
-            <li><Link to="/" className="hover:underline" onClick={handleNavigationClick}>Home</Link></li>
-            <li><Link to="/about" className="hover:underline" onClick={handleNavigationClick}>About</Link></li>
-            <li><Link to="/media" className="hover:underline" onClick={handleNavigationClick}>Media</Link></li>
-            <li><Link to="/contact" className="hover:underline" onClick={handleNavigationClick}>Contact</Link></li>
           </ul>
         </div>
         <div>
@@ -65,7 +66,7 @@ const FooterContent = () => {
         </div>
       </div>
       <div className="border-t border-primary/20 mt-8 pt-8 text-center">
-        <p>&copy; {new Date().getFullYear()} Renee Advisory. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} RVT Advisory. All rights reserved.</p>
       </div>
     </div>;
 };
