@@ -41,6 +41,8 @@ const FooterContent = () => {
             <li>Strategic Planning</li>
             <li>Evaluation & Impact Assessment</li>
             <li>Business Development</li>
+            <li>Governance Advisory</li>
+            <li>Retention Strategies</li>
           </ul>
         </div>
         <div>
