@@ -43,7 +43,7 @@ const FooterContent = () => {
   };
 
   return <div className="container mx-auto px-4">
-      <div className="grid md:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-3 gap-8">
         <div>
           {renderLink("/", 
             <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto" />,
@@ -59,20 +59,9 @@ const FooterContent = () => {
           <ul className="space-y-2">
             <li>{renderLink("/", "Home", "hover:underline")}</li>
             <li>{renderLink("/about", "About", "hover:underline")}</li>
+            <li>{renderLink("/services", "Services", "hover:underline")}</li>
             <li>{renderLink("/media", "Media", "hover:underline")}</li>
             <li>{renderLink("/contact", "Contact", "hover:underline")}</li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="text-lg font-semibold mb-4">Our Services</h4>
-          <ul className="space-y-2">
-            <li>Cultural Supervision</li>
-            <li>Policy Advice</li>
-            <li>Strategic Planning</li>
-            <li>Evaluation & Impact Assessment</li>
-            <li>Business Development</li>
-            <li>Governance Advisory</li>
-            <li>Retention Strategies</li>
           </ul>
         </div>
         <div>
