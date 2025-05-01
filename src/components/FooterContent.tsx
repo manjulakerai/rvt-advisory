@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -5,19 +6,49 @@ import { MessageSquare, Phone } from "lucide-react";
 import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 
 const FooterContent = () => {
-  const location = useLocation();
-  const scrollToSection = useScrollToSection();
+  // We need to check if we're in a router context before using router hooks
+  let location;
+  let scrollToSection;
+  
+  try {
+    location = useLocation();
+    scrollToSection = useScrollToSection();
+  } catch (error) {
+    // If we're outside of Router context, we'll handle links differently
+    location = null;
+    scrollToSection = () => {};
+  }
 
   const handleNavigationClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Function to render a link that works both inside and outside Router context
+  const renderLink = (to: string, children: React.ReactNode, className?: string) => {
+    if (location !== null) {
+      // We're in a Router context
+      return (
+        <Link to={to} className={className} onClick={handleNavigationClick}>
+          {children}
+        </Link>
+      );
+    } else {
+      // We're outside Router context, use regular a tag
+      return (
+        <a href={to} className={className}>
+          {children}
+        </a>
+      );
+    }
+  };
+
   return <div className="container mx-auto px-4">
       <div className="grid md:grid-cols-4 gap-8">
         <div>
-          <Link to="/" className="flex items-center mb-4">
-            <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto" />
-          </Link>
+          {renderLink("/", 
+            <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto" />,
+            "flex items-center mb-4"
+          )}
           <p className="mb-4">Transforming organisations through authentic cultural wisdom and strategic expertise.</p>
           <div className="flex space-x-4">
             {/* Social media icons would go here */}
@@ -26,11 +57,11 @@ const FooterContent = () => {
         <div>
           <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
           <ul className="space-y-2">
-            <li><Link to="/" className="hover:underline" onClick={handleNavigationClick}>Home</Link></li>
-            <li><Link to="/about" className="hover:underline" onClick={handleNavigationClick}>About</Link></li>
-            <li><Link to="/services" className="hover:underline" onClick={handleNavigationClick}>Services</Link></li>
-            <li><Link to="/media" className="hover:underline" onClick={handleNavigationClick}>Media</Link></li>
-            <li><Link to="/contact" className="hover:underline" onClick={handleNavigationClick}>Contact</Link></li>
+            <li>{renderLink("/", "Home", "hover:underline")}</li>
+            <li>{renderLink("/about", "About", "hover:underline")}</li>
+            <li>{renderLink("/services", "Services", "hover:underline")}</li>
+            <li>{renderLink("/media", "Media", "hover:underline")}</li>
+            <li>{renderLink("/contact", "Contact", "hover:underline")}</li>
           </ul>
         </div>
         <div>

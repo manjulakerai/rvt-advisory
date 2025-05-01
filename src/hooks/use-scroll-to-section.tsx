@@ -4,7 +4,14 @@ import { useNavigate } from "react-router-dom";
 
 export const useScrollToSection = () => {
   const isMobile = useIsMobile();
-  const navigate = useNavigate();
+  let navigate;
+  
+  try {
+    navigate = useNavigate();
+  } catch (error) {
+    // If we're not in a Router context, provide a dummy navigate function
+    navigate = (path: string) => { window.location.href = path; };
+  }
 
   const scrollToSection = (elementId: string, currentPath?: string) => {
     // If we have a current path specified and we're not on that path,
