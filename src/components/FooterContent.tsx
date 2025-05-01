@@ -59,7 +59,6 @@ const FooterContent = () => {
           <ul className="space-y-2">
             <li>{renderLink("/", "Home", "hover:underline")}</li>
             <li>{renderLink("/about", "About", "hover:underline")}</li>
-            <li>{renderLink("/services", "Services", "hover:underline")}</li>
             <li>{renderLink("/media", "Media", "hover:underline")}</li>
             <li>{renderLink("/contact", "Contact", "hover:underline")}</li>
           </ul>
