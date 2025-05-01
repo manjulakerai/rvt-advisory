@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useRef } from 'react';
 import { Mail, Phone, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -11,6 +12,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "@/components/ui/use-toast";
+import emailjs from '@emailjs/browser';
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -34,13 +44,42 @@ const Contact = () => {
     },
   });
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Form submitted:", data);
-    toast({
-      title: "Inquiry Sent",
-      description: "Thank you for your message. We'll get back to you shortly.",
-    });
-    form.reset();
+  const onSubmit = async (data: FormValues) => {
+    try {
+      console.log("Form submitted:", data);
+      
+      // Send email using EmailJS
+      const templateParams = {
+        from_name: data.name,
+        from_email: data.email,
+        from_phone: data.phone || 'Not provided',
+        organisation: data.organisation || 'Not provided',
+        message: data.message,
+      };
+      
+      // Replace these with your actual EmailJS service ID, template ID, and user ID
+      const result = await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your actual Service ID from EmailJS
+        'YOUR_TEMPLATE_ID', // Replace with your actual Template ID from EmailJS
+        templateParams,
+        'YOUR_PUBLIC_KEY' // Replace with your actual Public Key from EmailJS
+      );
+      
+      console.log('Email successfully sent!', result);
+      
+      toast({
+        title: "Inquiry Sent",
+        description: "Thank you for your message. We'll get back to you shortly.",
+      });
+      form.reset();
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      toast({
+        title: "Error",
+        description: "There was a problem sending your message. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -109,90 +148,98 @@ const Contact = () => {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="name" className="text-sm font-medium">
-                          Name <span className="text-red-500">*</span>
-                        </label>
-                        <Input
-                          id="name"
-                          placeholder="Your name"
-                          {...form.register("name")}
-                          aria-invalid={!!form.formState.errors.name}
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="name"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Name <span className="text-red-500">*</span></FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your name" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
-                        {form.formState.errors.name && (
-                          <p className="text-sm text-red-500">{form.formState.errors.name.message}</p>
-                        )}
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <label htmlFor="email" className="text-sm font-medium">
-                          Email <span className="text-red-500">*</span>
-                        </label>
-                        <Input
-                          id="email"
-                          type="email"
-                          placeholder="Your email address"
-                          {...form.register("email")}
-                          aria-invalid={!!form.formState.errors.email}
-                        />
-                        {form.formState.errors.email && (
-                          <p className="text-sm text-red-500">{form.formState.errors.email.message}</p>
-                        )}
-                      </div>
-                    </div>
-                    
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <label htmlFor="organisation" className="text-sm font-medium">
-                          Organisation
-                        </label>
-                        <Input
-                          id="organisation"
-                          placeholder="Your organisation"
-                          {...form.register("organisation")}
+                        
+                        <FormField
+                          control={form.control}
+                          name="email"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Email <span className="text-red-500">*</span></FormLabel>
+                              <FormControl>
+                                <Input type="email" placeholder="Your email address" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
                       
-                      <div className="space-y-2">
-                        <label htmlFor="phone" className="text-sm font-medium">
-                          Phone
-                        </label>
-                        <Input
-                          id="phone"
-                          placeholder="Your phone number"
-                          {...form.register("phone")}
+                      <div className="grid sm:grid-cols-2 gap-4">
+                        <FormField
+                          control={form.control}
+                          name="organisation"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Organisation</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your organisation" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
+                        />
+                        
+                        <FormField
+                          control={form.control}
+                          name="phone"
+                          render={({ field }) => (
+                            <FormItem>
+                              <FormLabel>Phone</FormLabel>
+                              <FormControl>
+                                <Input placeholder="Your phone number" {...field} />
+                              </FormControl>
+                              <FormMessage />
+                            </FormItem>
+                          )}
                         />
                       </div>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        Message <span className="text-red-500">*</span>
-                      </label>
-                      <Textarea
-                        id="message"
-                        placeholder="How can we help you?"
-                        rows={6}
-                        {...form.register("message")}
-                        aria-invalid={!!form.formState.errors.message}
+                      
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Message <span className="text-red-500">*</span></FormLabel>
+                            <FormControl>
+                              <Textarea 
+                                placeholder="How can we help you?" 
+                                rows={6}
+                                {...field} 
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
                       />
-                      {form.formState.errors.message && (
-                        <p className="text-sm text-red-500">{form.formState.errors.message.message}</p>
-                      )}
-                    </div>
-                    
-                    <Button type="submit" className="w-full">
-                      Send Message
-                    </Button>
-                  </form>
+                      
+                      <Button type="submit" className="w-full">
+                        Send Message
+                      </Button>
+                    </form>
+                  </Form>
                 </CardContent>
               </Card>
             </div>
           </div>
         </div>
       </section>
+      
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-12 text-center">Frequently Asked Questions</h2>
