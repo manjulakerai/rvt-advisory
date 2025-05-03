@@ -3,7 +3,6 @@ import React from 'react';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactInfo from "@/components/contact/ContactInfo";
-import ContactForm from "@/components/contact/ContactForm";
 import FAQSection from "@/components/contact/FAQSection";
 
 const Contact = () => {
@@ -21,14 +20,8 @@ const Contact = () => {
       
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-12">
-            <div>
-              <ContactInfo />
-            </div>
-            
-            <div className="md:col-span-2">
-              <ContactForm />
-            </div>
+          <div className="max-w-lg mx-auto">
+            <ContactInfo />
           </div>
         </div>
       </section>
@@ -40,3 +33,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
