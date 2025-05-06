@@ -23,7 +23,7 @@ const TestimonialSection = ({
   return (
     <section className={`py-16 ${background === "gray" ? "bg-gray-50" : "bg-white"} ${className}`}>
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-12 text-center">{title}</h2>
+        <h2 className="text-3xl font-bold mb-12 text-center text-secondary">{title}</h2>
         <div className="grid md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard 
