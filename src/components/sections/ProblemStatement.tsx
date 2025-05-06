@@ -16,17 +16,20 @@ const ProblemStatement = () => {
         <h2 className="text-3xl font-bold text-center mb-12">Are you looking to elevate your organisation in these areas?</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {problems.map((problem, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all">
+            <Card 
+              key={index} 
+              className="hover:shadow-lg transition-all border-secondary/20 bg-secondary text-white"
+            >
               <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <CheckCircle className="h-5 w-5 text-primary" />
+                <CardTitle className="flex items-center gap-2 text-white">
+                  <CheckCircle className="h-5 w-5 text-white" />
                   <span>
                     {index === 0 ? "Navigating" : index === 1 ? "Connections" : "Strategies"}
                   </span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg">{problem}</p>
+                <p className="text-lg text-white/90">{problem}</p>
               </CardContent>
             </Card>
           ))}
