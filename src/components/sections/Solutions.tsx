@@ -11,7 +11,7 @@ const Solutions = () => {
           Renee listens, provides feedback on your current position, and offers suggested achievements, guidance, structures, and policies for implementation.
         </p>
         
-        <h3 className="text-2xl font-semibold text-center mb-8">Three Flexible Engagement Models</h3>
+        <h3 className="text-2xl font-semibold text-center mb-8 text-secondary">Three Flexible Engagement Models</h3>
         <div className="grid md:grid-cols-3 gap-8">
           <EngagementModel title="Advisory Analysis" description="Deep dive into your current organisational landscape. Walk the journey with you, providing a full internal analysis of where your business stands." icon="Search" />
           <EngagementModel title="Collaborative Empowerment" description="Walk alongside your team to build internal capabilities. Guide you from the outside, advising on implementation strategies for your policies." icon="Users" />
