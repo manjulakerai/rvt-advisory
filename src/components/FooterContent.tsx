@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MessageSquare, Phone } from "lucide-react";
 import { useScrollToSection } from "@/hooks/use-scroll-to-section";
+import { Separator } from "@/components/ui/separator";
 
 const FooterContent = () => {
   // We need to check if we're in a router context before using router hooks
@@ -79,6 +80,17 @@ const FooterContent = () => {
           </Button>
         </div>
       </div>
+      
+      <div className="mt-8 pt-4">
+        <Separator className="mb-4" />
+        <div className="text-sm">
+          <h4 className="font-semibold mb-2">Acknowledgement of Country</h4>
+          <p>
+            RVT Advisory acknowledges Traditional Owners of Country throughout Australia and recognises the continuing connection to lands, waters and communities. We pay our respect to Aboriginal and Torres Strait Islander cultures; and to Elders past and present.
+          </p>
+        </div>
+      </div>
+      
       <div className="border-t border-primary/20 mt-8 pt-8 text-center">
         <p>&copy; {new Date().getFullYear()} RVT Advisory. All rights reserved.</p>
       </div>
