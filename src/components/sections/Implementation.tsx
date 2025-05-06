@@ -23,7 +23,7 @@ const Implementation = () => {
             <div key={index} className={`relative pl-16 ${index !== steps.length - 1 ? 'mb-12' : ''}`}>
               {/* Timeline Line */}
               {index !== steps.length - 1 && (
-                <div className="absolute left-[14px] top-8 h-full w-[2px] bg-primary"></div>
+                <div className="absolute left-[14px] top-8 h-[calc(100%+20px)] w-[2px] bg-primary"></div>
               )}
               
               {/* Circle with Number */}
