@@ -84,7 +84,7 @@ const FooterContent = () => {
       <div className="mt-8 pt-4">
         <Separator className="mb-4" />
         <div className="text-sm">
-          <h4 className="font-semibold mb-2">Acknowledgement of Country</h4>
+          <h4 className="font-semibold mb-2 text-center">Acknowledgement of Country</h4>
           <p>
             RVT Advisory acknowledges Traditional Owners of Country throughout Australia and recognises the continuing connection to lands, waters and communities. We pay our respect to Aboriginal and Torres Strait Islander cultures; and to Elders past and present.
           </p>
