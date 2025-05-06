@@ -44,11 +44,11 @@ const FooterContent = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-4">
+    <div className="container mx-auto px-4 py-6">
       <div className="grid md:grid-cols-3 gap-8">
         <div className="space-y-4">
           {renderLink("/", 
-            <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto" />,
+            <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto filter brightness-0 invert" />,
             "flex items-center"
           )}
           <p className="text-sm">Transforming organisations through authentic cultural wisdom and strategic expertise.</p>
@@ -83,13 +83,15 @@ const FooterContent = () => {
               <a href="tel:+61411524370" className="hover:underline">0411 524 370</a>
             </div>
           </div>
-          <Button variant="outline" className="mt-4 text-black font-medium text-xs hidden xl:inline-flex">
+          <Button variant="outline" className="mt-4 bg-transparent border-white text-white hover:bg-white/10 text-xs hidden xl:inline-flex">
             BOOK YOUR INCEPTION MEETING NOW
           </Button>
         </div>
       </div>
       
-      <div className="border-t border-primary/10 mt-8 pt-4 text-xs text-center text-gray-500">
+      <Separator className="my-6 bg-white/20" />
+      
+      <div className="text-xs text-center">
         <p>&copy; {new Date().getFullYear()} RVT Advisory. All rights reserved.</p>
       </div>
     </div>
