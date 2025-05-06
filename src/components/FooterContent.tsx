@@ -83,7 +83,7 @@ const FooterContent = () => {
               <a href="tel:+61411524370" className="hover:underline">0411 524 370</a>
             </div>
           </div>
-          <Button variant="outline" className="mt-4 bg-transparent border-white text-white hover:bg-white/10 text-xs hidden xl:inline-flex transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+          <Button variant="outline" className="mt-4 bg-transparent border-white text-white hover:bg-white/10 hover:text-white text-xs hidden xl:inline-flex transition-transform duration-300 hover:scale-105 hover:shadow-lg">
             BOOK YOUR INCEPTION MEETING NOW
           </Button>
         </div>
