@@ -20,11 +20,22 @@ const Implementation = () => {
         
         <div className="max-w-3xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className={`relative pl-16 ${index !== steps.length - 1 ? 'mb-10' : ''}`}>
-              {index !== steps.length - 1 && <div className="absolute left-0 top-0 h-full w-[2px] bg-primary"></div>}
-              <div className="absolute left-[-10px] top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center">{index + 1}</div>
-              <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
-              <p className="text-lg text-black">{step.description}</p>
+            <div key={index} className={`relative pl-16 ${index !== steps.length - 1 ? 'mb-12' : ''}`}>
+              {/* Timeline Line */}
+              {index !== steps.length - 1 && (
+                <div className="absolute left-[14px] top-8 h-full w-[2px] bg-primary"></div>
+              )}
+              
+              {/* Circle with Number */}
+              <div className="absolute left-0 top-0 h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center font-semibold">
+                {index + 1}
+              </div>
+              
+              {/* Content */}
+              <div className="pb-2">
+                <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
+                <p className="text-lg text-black">{step.description}</p>
+              </div>
             </div>
           ))}
         </div>
