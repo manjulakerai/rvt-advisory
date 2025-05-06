@@ -43,21 +43,26 @@ const FooterContent = () => {
     }
   };
 
-  return <div className="container mx-auto px-4">
+  return (
+    <div className="container mx-auto px-4 py-4">
       <div className="grid md:grid-cols-3 gap-8">
-        <div>
+        <div className="space-y-4">
           {renderLink("/", 
             <img src="/lovable-uploads/98aa60e8-6822-4380-82b8-8308e111ac9e.png" alt="RVT Advisory" className="h-12 w-auto" />,
-            "flex items-center mb-4"
+            "flex items-center"
           )}
-          <p className="mb-4">Transforming organisations through authentic cultural wisdom and strategic expertise.</p>
-          <div className="flex space-x-4">
-            {/* Social media icons would go here */}
+          <p className="text-sm">Transforming organisations through authentic cultural wisdom and strategic expertise.</p>
+          <div className="text-xs mt-4">
+            <h4 className="font-semibold mb-2">Acknowledgement of Country</h4>
+            <p>
+              RVT Advisory acknowledges Traditional Owners of Country throughout Australia and recognises the continuing connection to lands, waters and communities. We pay our respect to Aboriginal and Torres Strait Islander cultures; and to Elders past and present.
+            </p>
           </div>
         </div>
+        
         <div>
-          <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-          <ul className="space-y-2">
+          <h4 className="text-lg font-semibold mb-3">Quick Links</h4>
+          <ul className="space-y-2 text-sm">
             <li>{renderLink("/", "Home", "hover:underline")}</li>
             <li>{renderLink("/about", "About", "hover:underline")}</li>
             <li>{renderLink("/services", "Services", "hover:underline")}</li>
@@ -65,36 +70,30 @@ const FooterContent = () => {
             <li>{renderLink("/contact", "Contact", "hover:underline")}</li>
           </ul>
         </div>
+        
         <div>
-          <h4 className="text-lg font-semibold mb-4">Contact</h4>
-          <div className="flex items-center mb-2">
-            <MessageSquare className="h-5 w-5 mr-2" />
-            <a href="mailto:renee@rvtadvisory.com" className="hover:underline">renee@rvtadvisory.com</a>
+          <h4 className="text-lg font-semibold mb-3">Contact</h4>
+          <div className="space-y-2 text-sm">
+            <div className="flex items-center">
+              <MessageSquare className="h-4 w-4 mr-2" />
+              <a href="mailto:renee@rvtadvisory.com" className="hover:underline">renee@rvtadvisory.com</a>
+            </div>
+            <div className="flex items-center">
+              <Phone className="h-4 w-4 mr-2" />
+              <a href="tel:+61411524370" className="hover:underline">0411 524 370</a>
+            </div>
           </div>
-          <div className="flex items-center mb-2">
-            <Phone className="h-5 w-5 mr-2" />
-            <a href="tel:+61411524370" className="hover:underline">0411 524 370</a>
-          </div>
-          <Button variant="outline" className="mt-4 text-black font-bold hidden sm:hidden xl:inline-flex">
+          <Button variant="outline" className="mt-4 text-black font-medium text-xs hidden xl:inline-flex">
             BOOK YOUR INCEPTION MEETING NOW
           </Button>
         </div>
       </div>
       
-      <div className="mt-8 pt-4">
-        <Separator className="mb-4" />
-        <div className="text-sm">
-          <h4 className="font-semibold mb-2 text-center">Acknowledgement of Country</h4>
-          <p>
-            RVT Advisory acknowledges Traditional Owners of Country throughout Australia and recognises the continuing connection to lands, waters and communities. We pay our respect to Aboriginal and Torres Strait Islander cultures; and to Elders past and present.
-          </p>
-        </div>
-      </div>
-      
-      <div className="border-t border-primary/20 mt-8 pt-8 text-center">
+      <div className="border-t border-primary/10 mt-8 pt-4 text-xs text-center text-gray-500">
         <p>&copy; {new Date().getFullYear()} RVT Advisory. All rights reserved.</p>
       </div>
-    </div>;
+    </div>
+  );
 };
 
 export default FooterContent;
