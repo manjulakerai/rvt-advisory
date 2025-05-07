@@ -15,6 +15,8 @@ interface YT {
         rel?: number;
         showinfo?: number;
         enablejsapi?: number;
+        start?: number;
+        end?: number;
       };
       events?: {
         onReady?: (event: { target: any }) => void;
