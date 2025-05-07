@@ -50,8 +50,8 @@ const HeroSection = () => {
         <div id="youtube-player" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] min-w-[100vw] min-h-[100vh]"></div>
       </div>
       
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/90 to-black/70 z-10"></div>
+      {/* Dark Overlay - Reduced opacity from 90% to 60% and from 70% to 40% */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10"></div>
       
       {/* Content */}
       <div className="container mx-auto px-4 z-20 relative py-12 md:py-0">
