@@ -20,7 +20,7 @@ interface YT {
       };
       events?: {
         onReady?: (event: { target: any }) => void;
-        onStateChange?: (event: { data: number }) => void;
+        onStateChange?: (event: { data: number; target: any }) => void;
       };
     }
   ) => void;
