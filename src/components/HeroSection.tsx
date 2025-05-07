@@ -1,10 +1,11 @@
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
+  const [playerReady, setPlayerReady] = useState(false);
   
   useEffect(() => {
     // YouTube API script loading
@@ -32,7 +33,16 @@ const HeroSection = () => {
         },
         events: {
           onReady: (event) => {
+            event.target.setPlaybackQuality('hd1080');
             event.target.playVideo();
+            setPlayerReady(true);
+          },
+          onStateChange: (event) => {
+            // If the video ends, restart it (for smoother looping)
+            if (event.data === window.YT.PlayerState.ENDED) {
+              event.target.seekTo(1);
+              event.target.playVideo();
+            }
           }
         }
       });
@@ -48,7 +58,7 @@ const HeroSection = () => {
   return (
     <div className="relative min-h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
       {/* Video Background Container */}
-      <div ref={videoContainerRef} className="absolute inset-0 w-full h-full overflow-hidden">
+      <div ref={videoContainerRef} className={`absolute inset-0 w-full h-full overflow-hidden transition-opacity duration-700 ${playerReady ? 'opacity-100' : 'opacity-0'}`}>
         <div id="youtube-player" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-full h-auto min-h-[100vh] aspect-video object-cover"></div>
       </div>
       

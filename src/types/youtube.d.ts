@@ -24,6 +24,13 @@ interface YT {
       };
     }
   ) => void;
+  PlayerState: {
+    ENDED: number;
+    PLAYING: number;
+    PAUSED: number;
+    BUFFERING: number;
+    CUED: number;
+  };
 }
 
 interface Window {
