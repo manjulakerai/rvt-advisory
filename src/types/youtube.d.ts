@@ -4,6 +4,8 @@ interface YT {
   Player: new (
     elementId: string,
     options: {
+      height?: string | number;
+      width?: string | number;
       videoId: string;
       playerVars?: {
         autoplay?: number;
