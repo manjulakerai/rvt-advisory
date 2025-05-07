@@ -27,6 +27,8 @@ const HeroSection = () => {
           rel: 0,
           enablejsapi: 1,
           playlist: '7z9MEn5RLpY', // Required for looping
+          start: 1, // Skip the first second
+          end: 178, // End before the last second (assuming video is 180 seconds)
         },
         events: {
           onReady: (event) => {
@@ -47,10 +49,10 @@ const HeroSection = () => {
     <div className="relative min-h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
       {/* Video Background Container */}
       <div ref={videoContainerRef} className="absolute inset-0 w-full h-full overflow-hidden">
-        <div id="youtube-player" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] min-w-[100vw] min-h-[100vh]"></div>
+        <div id="youtube-player" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-full h-auto min-h-[100vh] aspect-video object-cover"></div>
       </div>
       
-      {/* Dark Overlay - Reduced opacity from 90% to 60% and from 70% to 40% */}
+      {/* Dark Overlay - Reduced opacity */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10"></div>
       
       {/* Content */}
@@ -75,7 +77,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="w-full text-sm sm:text-base border-white hover:bg-white/20 text-white font-bold py-3 px-4 sm:px-6 transition-colors duration-300"
+                className="w-full text-sm sm:text-base border-white bg-white/80 hover:bg-transparent text-black hover:text-white font-bold py-3 px-4 sm:px-6 transition-colors duration-300"
               >
                 Learn More About Renee
               </Button>
