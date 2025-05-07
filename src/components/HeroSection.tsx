@@ -17,8 +17,6 @@ const HeroSection = () => {
     // Initialize player when API is ready
     window.onYouTubeIframeAPIReady = () => {
       new window.YT.Player('youtube-player', {
-        height: '100%',
-        width: '100%',
         videoId: '7z9MEn5RLpY', // The YouTube video ID
         playerVars: {
           autoplay: 1,
@@ -35,33 +33,15 @@ const HeroSection = () => {
         },
         events: {
           onReady: (event) => {
-            // Set the highest quality first, before starting playback
             event.target.setPlaybackQuality('hd1080');
-            
-            // Make the container visible before playing
-            if (videoContainerRef.current) {
-              videoContainerRef.current.style.opacity = '1';
-              videoContainerRef.current.style.transition = 'opacity 1.5s ease';
-            }
-            
-            // Slight delay before playing to ensure quality is set
-            setTimeout(() => {
-              event.target.playVideo();
-              setPlayerReady(true);
-            }, 100);
+            event.target.playVideo();
+            setPlayerReady(true);
           },
           onStateChange: (event) => {
             // If the video ends, restart it (for smoother looping)
             if (event.data === window.YT.PlayerState.ENDED) {
               event.target.seekTo(1);
               event.target.playVideo();
-            }
-            
-            // If video is buffering, ensure the container stays visible
-            if (event.data === window.YT.PlayerState.BUFFERING) {
-              if (videoContainerRef.current) {
-                videoContainerRef.current.style.opacity = '1';
-              }
             }
           }
         }
@@ -77,16 +57,9 @@ const HeroSection = () => {
 
   return (
     <div className="relative min-h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
-      {/* Video Background Container - with initial opacity 0 and CSS controlling the fade */}
-      <div 
-        ref={videoContainerRef} 
-        className="absolute inset-0 w-full h-full overflow-hidden opacity-0 z-0" 
-        style={{ transition: 'opacity 1.5s ease-in-out' }}
-      >
-        <div 
-          id="youtube-player" 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-full h-[150%] min-h-[100vh] aspect-video object-cover"
-        ></div>
+      {/* Video Background Container */}
+      <div ref={videoContainerRef} className={`absolute inset-0 w-full h-full overflow-hidden transition-opacity duration-700 ${playerReady ? 'opacity-100' : 'opacity-0'}`}>
+        <div id="youtube-player" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-full h-auto min-h-[100vh] aspect-video object-cover"></div>
       </div>
       
       {/* Dark Overlay - Reduced opacity */}
