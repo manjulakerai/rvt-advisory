@@ -4,7 +4,7 @@ import EngagementModel from "@/components/EngagementModel";
 
 const Solutions = () => {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gradient-to-l from-primary/30 to-primary/5 via-[#F9F6F0] via-40% from-0% to-100%">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-4">How Renee Resolves These Problems</h2>
         <p className="text-center text-xl mb-12 max-w-3xl mx-auto">
