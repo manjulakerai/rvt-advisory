@@ -87,7 +87,7 @@ const HeroSection = () => {
               <Button 
                 size="lg" 
                 variant="outline" 
-                className="w-full text-sm sm:text-base border-white bg-white/80 hover:bg-transparent text-black hover:text-white font-bold py-3 px-4 sm:px-6 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+                className="w-full text-sm sm:text-base border-white bg-transparent hover:bg-white/80 text-white hover:text-black font-bold py-3 px-4 sm:px-6 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
               >
                 Learn More About Renee
               </Button>
