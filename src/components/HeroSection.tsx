@@ -79,7 +79,7 @@ const HeroSection = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full">
             <Link to="/contact" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full text-sm sm:text-base bg-[#5F3873] hover:bg-[#5F3873]/90 text-white hover:text-white font-bold py-3 px-4 sm:px-6 border-0 transition-transform duration-300 hover:scale-105 hover:shadow-lg">
+              <Button size="lg" className="w-full text-sm sm:text-base bg-[#5F3873] hover:bg-[#5F3873]/90 text-white hover:text-white font-bold py-3 px-4 sm:px-6 border-0 transition-all duration-300 hover:scale-110 hover:shadow-lg">
                 BOOK YOUR INCEPTION MEETING NOW
               </Button>
             </Link>
