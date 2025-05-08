@@ -85,7 +85,7 @@ const FooterContent = () => {
           </div>
           <Button 
             variant="outline" 
-            className="mt-4 bg-[#5F3873] text-white hover:bg-[#5F3873]/90 font-bold border-0 transition-transform duration-300 hover:scale-105 hover:shadow-lg text-xs hidden xl:inline-flex"
+            className="mt-4 bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white font-bold border-0 transition-transform duration-300 hover:scale-105 hover:shadow-lg text-xs hidden xl:inline-flex"
           >
             BOOK YOUR INCEPTION MEETING NOW
           </Button>

@@ -39,8 +39,11 @@ const ContactInfo = () => {
             <p className="text-muted-foreground mb-2">
               Schedule a discovery call to discuss your needs.
             </p>
-            <Button variant="outline" className="mt-2">
-              Book a Consultation
+            <Button 
+              variant="outline" 
+              className="mt-2 bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white font-bold border-0 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              BOOK A CONSULTATION
             </Button>
           </div>
         </div>
