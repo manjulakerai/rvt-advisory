@@ -11,7 +11,7 @@ const ProblemStatement = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gradient-to-r from-primary/30 to-primary/5 via-[#F9F6F0] via-40% from-0% to-100%">
       <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center mb-12">Are you looking to elevate your organisation in these areas?</h2>
         <div className="grid md:grid-cols-3 gap-8">
