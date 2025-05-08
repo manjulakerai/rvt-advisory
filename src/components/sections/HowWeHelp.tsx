@@ -50,8 +50,8 @@ const HowWeHelp = () => {
           </li>
         </ul>
         <Link to="/contact">
-          <Button className="w-full">
-            Book a Consultation
+          <Button className="w-full bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white font-bold border-0">
+            BOOK YOUR INCEPTION MEETING NOW
           </Button>
         </Link>
       </div>

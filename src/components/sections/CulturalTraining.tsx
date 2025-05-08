@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -65,6 +64,16 @@ const CulturalTraining = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mt-8 text-center">
+        <Link to="/contact">
+          <Button 
+            size="lg" 
+            className="font-bold bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white border-0"
+          >
+            BOOK NOW
+          </Button>
+        </Link>
       </div>
     </section>
   );

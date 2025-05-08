@@ -1,7 +1,5 @@
 
 import React from 'react';
-import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Users, FileText, BookOpen, BarChart, Briefcase, Shield } from "lucide-react";
 
@@ -83,17 +81,6 @@ const ServicesList = () => {
               </CardContent>
             </Card>
           ))}
-        </div>
-        
-        <div className="mt-12 text-center">
-          <Link to="/contact">
-            <Button 
-              size="lg" 
-              className="font-bold bg-[#5F3873] text-white hover:bg-[#5F3873]/90 border-0"
-            >
-              BOOK YOUR INCEPTION MEETING NOW
-            </Button>
-          </Link>
         </div>
       </div>
     </section>
