@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
@@ -60,8 +61,19 @@ const About = () => {
                   </ul>
                 </div>
                 
-                <div className="border-t pt-4">
+                <div className="border-t pt-4 space-y-4">
                   <Link to="/contact" className="text-primary hover:underline">Book a consultation</Link>
+                  
+                  <div className="mt-4">
+                    <Link to="/contact">
+                      <Button 
+                        size="lg" 
+                        className="w-full bg-[#5F3873] text-white hover:bg-[#5F3873]/90 font-bold border-0"
+                      >
+                        BOOK YOUR INCEPTION MEETING NOW
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

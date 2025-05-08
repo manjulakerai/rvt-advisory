@@ -84,6 +84,17 @@ const ServicesList = () => {
             </Card>
           ))}
         </div>
+        
+        <div className="mt-12 text-center">
+          <Link to="/contact">
+            <Button 
+              size="lg" 
+              className="font-bold bg-[#5F3873] text-white hover:bg-[#5F3873]/90 border-0"
+            >
+              BOOK YOUR INCEPTION MEETING NOW
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );

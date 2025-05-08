@@ -70,7 +70,7 @@ const Header = () => {
                     </NavigationMenu>
                     <div className="mt-8">
                       <Link to="/contact" className="w-full">
-                        <Button variant="default" size="lg" className="w-full font-bold text-sm">
+                        <Button variant="default" size="lg" className="w-full font-bold text-sm bg-[#5F3873] hover:bg-[#5F3873]/90 border-0">
                           BOOK YOUR INCEPTION MEETING
                         </Button>
                       </Link>
@@ -89,7 +89,7 @@ const Header = () => {
 
               <div className="hidden xl:flex justify-end">
                 <Link to="/contact">
-                  <Button variant="default" size="lg" className="font-bold">
+                  <Button variant="default" size="lg" className="font-bold bg-[#5F3873] hover:bg-[#5F3873]/90 border-0">
                     BOOK YOUR INCEPTION MEETING NOW
                   </Button>
                 </Link>
