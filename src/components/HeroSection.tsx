@@ -6,8 +6,14 @@ import React, { useEffect, useRef, useState } from "react";
 const HeroSection = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const [playerReady, setPlayerReady] = useState(false);
+  const [contentVisible, setContentVisible] = useState(false);
   
   useEffect(() => {
+    // Show content with a slight delay
+    const contentTimer = setTimeout(() => {
+      setContentVisible(true);
+    }, 300);
+    
     // YouTube API script loading
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
@@ -50,6 +56,7 @@ const HeroSection = () => {
 
     return () => {
       // Clean up
+      clearTimeout(contentTimer);
       window.onYouTubeIframeAPIReady = null;
       delete window.onYouTubeIframeAPIReady;
     };
@@ -58,7 +65,7 @@ const HeroSection = () => {
   return (
     <div className="relative min-h-[60vh] md:h-[80vh] flex items-center overflow-hidden">
       {/* Video Background Container */}
-      <div ref={videoContainerRef} className={`absolute inset-0 w-full h-full overflow-hidden transition-opacity duration-700 ${playerReady ? 'opacity-100' : 'opacity-0'}`}>
+      <div ref={videoContainerRef} className={`absolute inset-0 w-full h-full overflow-hidden transition-opacity duration-1000 ${playerReady ? 'opacity-100' : 'opacity-0'}`}>
         <div id="youtube-player" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-full h-auto min-h-[100vh] aspect-video object-cover"></div>
       </div>
       
@@ -66,7 +73,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40 z-10"></div>
       
       {/* Content */}
-      <div className="container mx-auto px-4 z-20 relative py-12 md:py-0">
+      <div className={`container mx-auto px-4 z-20 relative py-12 md:py-0 transition-all duration-1000 transform ${contentVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
         <div className="max-w-3xl">
           <span className="px-4 py-1 bg-primary text-white text-xs md:text-sm uppercase tracking-wider font-bold rounded-full mb-4 inline-block">
             Strategic Advisory Services

@@ -10,11 +10,46 @@ import { useIsMobile } from "@/hooks/use-mobile";
 const Header = () => {
   const isMobile = useIsMobile();
 
-  const NavigationItems = () => (
-    <NavigationMenuList className={isMobile ? "flex-col space-y-4" : ""}>
+  const LeftNavigationItems = () => (
+    <NavigationMenuList className={isMobile ? "flex-col space-y-4" : "mr-4"}>
       <NavigationMenuItem>
-        <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold`}>
-          Home
+        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+          About
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+          Services
+        </Link>
+      </NavigationMenuItem>
+    </NavigationMenuList>
+  );
+
+  const RightNavigationItems = () => (
+    <NavigationMenuList className={isMobile ? "flex-col space-y-4 mt-4" : "ml-4"}>
+      <NavigationMenuItem>
+        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+          Media
+        </Link>
+      </NavigationMenuItem>
+      <NavigationMenuItem>
+        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+          Contact
+        </Link>
+      </NavigationMenuItem>
+    </NavigationMenuList>
+  );
+
+  const MobileNavigationItems = () => (
+    <NavigationMenuList className="flex-col space-y-4">
+      <NavigationMenuItem>
+        <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold flex items-center justify-center`}>
+          <img 
+            src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
+            alt="RVT Advisory" 
+            className="h-8 w-auto"
+          />
+          <span className="sr-only">Home</span>
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
@@ -45,54 +80,71 @@ const Header = () => {
       <TopHeader />
       <header className="container mx-auto py-4">
         <div className="grid grid-cols-3 items-center gap-4">
-          <div className="flex justify-start">
-            <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
-                alt="RVT Advisory" 
-                className="h-8 md:h-12 w-auto"
-              />
-            </Link>
-          </div>
-          
           {isMobile ? (
-            <div className="col-span-2 flex justify-end">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="ghost" size="icon">
-                    <Menu className="h-6 w-6" />
-                  </Button>
-                </SheetTrigger>
-                <SheetContent>
-                  <div className="mt-8">
-                    <NavigationMenu orientation="vertical" className="w-full">
-                      <NavigationItems />
-                    </NavigationMenu>
+            <>
+              <div className="flex justify-start">
+                <Link to="/" className="flex items-center">
+                  <img 
+                    src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
+                    alt="RVT Advisory" 
+                    className="h-8 md:h-12 w-auto"
+                  />
+                </Link>
+              </div>
+              <div className="col-span-2 flex justify-end">
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button variant="ghost" size="icon">
+                      <Menu className="h-6 w-6" />
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent>
                     <div className="mt-8">
-                      <Link to="/contact" className="w-full">
-                        <Button variant="default" size="lg" className="w-full font-bold text-sm bg-[#5F3873] hover:bg-[#5F3873]/90 border-0 transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                          BOOK YOUR INCEPTION MEETING
-                        </Button>
-                      </Link>
+                      <NavigationMenu orientation="vertical" className="w-full">
+                        <MobileNavigationItems />
+                      </NavigationMenu>
+                      <div className="mt-8">
+                        <Link to="/contact" className="w-full">
+                          <Button variant="default" size="lg" className="w-full font-bold text-sm bg-[#5F3873] hover:bg-[#5F3873]/90 border-0 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                            BOOK YOUR INCEPTION MEETING
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                </SheetContent>
-              </Sheet>
-            </div>
+                  </SheetContent>
+                </Sheet>
+              </div>
+            </>
           ) : (
             <>
-              <div className="flex justify-center">
+              <div className="flex justify-start">
                 <NavigationMenu>
-                  <NavigationItems />
+                  <LeftNavigationItems />
                 </NavigationMenu>
               </div>
-
-              <div className="hidden xl:flex justify-end">
-                <Link to="/contact">
-                  <Button variant="default" size="lg" className="font-bold bg-[#5F3873] hover:bg-[#5F3873]/90 border-0 transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                    BOOK YOUR INCEPTION MEETING NOW
-                  </Button>
+              
+              <div className="flex justify-center">
+                <Link to="/" className="flex items-center">
+                  <img 
+                    src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
+                    alt="RVT Advisory" 
+                    className="h-12 md:h-16 w-auto transition-transform duration-300 hover:scale-105"
+                  />
                 </Link>
+              </div>
+
+              <div className="flex justify-between">
+                <NavigationMenu>
+                  <RightNavigationItems />
+                </NavigationMenu>
+
+                <div className="hidden xl:flex justify-end">
+                  <Link to="/contact">
+                    <Button variant="default" size="lg" className="font-bold bg-[#5F3873] hover:bg-[#5F3873]/90 border-0 transition-all duration-300 hover:scale-110 hover:shadow-lg">
+                      BOOK YOUR INCEPTION MEETING NOW
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </>
           )}
