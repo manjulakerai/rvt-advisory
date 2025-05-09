@@ -18,18 +18,18 @@ const ProblemStatement = () => {
           {problems.map((problem, index) => (
             <Card 
               key={index} 
-              className="hover:shadow-lg transition-all border-secondary/20 bg-secondary text-white"
+              className="hover:shadow-lg transition-all"
             >
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-white">
-                  <CheckCircle className="h-5 w-5 text-white" />
+                <CardTitle className="flex items-center gap-2">
+                  <CheckCircle className="h-5 w-5 text-primary" />
                   <span>
                     {index === 0 ? "Navigating" : index === 1 ? "Connections" : "Strategies"}
                   </span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg text-white/90">{problem}</p>
+                <p className="text-lg">{problem}</p>
               </CardContent>
             </Card>
           ))}
