@@ -8,6 +8,7 @@ interface LoadingAnimationProps {
 const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
   const [fadeOut, setFadeOut] = useState(false);
   const [logoPosition, setLogoPosition] = useState({ top: '50%', left: '50%' });
+  const [logoSize, setLogoSize] = useState({ height: '24rem', width: 'auto' }); // Start with larger logo
 
   useEffect(() => {
     // Get the position of the header logo for seamless transition
@@ -32,6 +33,8 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
       const headerPosition = getHeaderLogoPosition();
       if (headerPosition) {
         setLogoPosition(headerPosition);
+        // Shrink logo to match header logo size
+        setLogoSize({ height: '3rem', width: 'auto' });
         // Start the fade-out transition after logo has moved
         setTimeout(() => {
           setFadeOut(true);
@@ -61,12 +64,14 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
       <img
         src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png"
         alt="RVT Advisory"
-        className="h-24 w-auto transition-all duration-1000"
+        className="transition-all duration-1000"
         style={{
           position: 'absolute',
           top: logoPosition.top,
           left: logoPosition.left,
           transform: 'translate(-50%, -50%)',
+          height: logoSize.height,
+          width: logoSize.width,
         }}
       />
     </div>
