@@ -45,7 +45,7 @@ const Header = () => {
       <NavigationMenuItem>
         <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold flex items-center justify-center`}>
           <img 
-            src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
+            src="/lovable-uploads/4b3d46a3-f88d-447d-a32f-11841fa6b7b7.png" 
             alt="RVT Advisory" 
             className="h-8 w-auto header-logo"
           />
@@ -86,7 +86,7 @@ const Header = () => {
                 <div className="flex justify-start">
                   <Link to="/" className="flex items-center">
                     <img 
-                      src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
+                      src="/lovable-uploads/4b3d46a3-f88d-447d-a32f-11841fa6b7b7.png" 
                       alt="RVT Advisory" 
                       className="h-8 md:h-12 w-auto header-logo"
                     />
@@ -127,7 +127,7 @@ const Header = () => {
                       <NavigationMenuItem className="mx-2">
                         <Link to="/" className="flex items-center transition-transform duration-300 hover:scale-105">
                           <img 
-                            src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
+                            src="/lovable-uploads/4b3d46a3-f88d-447d-a32f-11841fa6b7b7.png" 
                             alt="RVT Advisory" 
                             className="h-12 md:h-16 w-auto header-logo"
                           />

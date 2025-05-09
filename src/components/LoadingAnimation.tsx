@@ -62,7 +62,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
       }`}
     >
       <img
-        src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png"
+        src="/lovable-uploads/4b3d46a3-f88d-447d-a32f-11841fa6b7b7.png"
         alt="RVT Advisory"
         className="transition-all duration-1000"
         style={{
