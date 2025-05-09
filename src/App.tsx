@@ -25,7 +25,7 @@ const App = () => {
   useEffect(() => {
     if (!loading && !contentReady) {
       // Short delay to ensure DOM is ready before showing content
-      const timer = setTimeout(() => setContentReady(true), 50);
+      const timer = setTimeout(() => setContentReady(true), 100); // Doubled from 50ms to 100ms
       return () => clearTimeout(timer);
     }
   }, [loading, contentReady]);
@@ -38,7 +38,7 @@ const App = () => {
           <Toaster />
           <Sonner />
           {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
-          <div className={`transition-opacity duration-1000 ${contentReady ? 'opacity-100' : 'opacity-0'}`}>
+          <div className={`transition-opacity duration-2000 ${contentReady ? 'opacity-100' : 'opacity-0'}`}>
             <BrowserRouter>
               <Routes>
                 <Route path="/coming-soon" element={<ComingSoon />} />
