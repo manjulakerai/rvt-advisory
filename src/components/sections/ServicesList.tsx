@@ -45,13 +45,6 @@ const services = [
     title: "Governance Advisory",
     description: "Guidance on governance structures that honor cultural protocols while meeting compliance requirements.",
     benefits: ["Cultural governance integration", "Board development and training", "Policy and procedure development", "Compliance and risk management"]
-  },
-  {
-    id: 'retention-strategies',
-    icon: <Users className="h-10 w-10 text-primary" />,
-    title: "Retention Strategies",
-    description: "Develop and implement effective strategies to retain Indigenous talent and maintain cultural engagement in your organization.",
-    benefits: ["Cultural mentorship programs", "Career development pathways", "Workplace cultural safety", "Employee engagement initiatives"]
   }
 ];
 
