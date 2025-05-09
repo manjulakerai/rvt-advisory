@@ -8,7 +8,7 @@ interface LoadingAnimationProps {
 const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
   const [fadeOut, setFadeOut] = useState(false);
   const [logoPosition, setLogoPosition] = useState({ top: '50%', left: '50%' });
-  const [logoSize, setLogoSize] = useState({ height: '24rem', width: 'auto' }); // Start with larger logo
+  const [logoSize, setLogoSize] = useState({ height: '8rem', width: 'auto' }); // Smaller initial logo size
 
   useEffect(() => {
     // Get the position of the header logo for seamless transition
