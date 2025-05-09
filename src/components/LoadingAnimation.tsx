@@ -28,27 +28,27 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
       return null;
     };
 
-    // First render - wait for header to be available
+    // First render - wait for header to be available - DOUBLED from 1500 to 3000
     setTimeout(() => {
       const headerPosition = getHeaderLogoPosition();
       if (headerPosition) {
         setLogoPosition(headerPosition);
         // Shrink logo to match header logo size
         setLogoSize({ height: '3rem', width: 'auto' });
-        // Start the fade-out transition after logo has moved
+        // Start the fade-out transition after logo has moved - DOUBLED from 500 to 1000
         setTimeout(() => {
           setFadeOut(true);
-        }, 500);
+        }, 1000);
       } else {
         // Fallback if header logo not found
         setFadeOut(true);
       }
-    }, 1500);
+    }, 3000);
 
-    // Trigger the onComplete callback once animation is done
+    // Trigger the onComplete callback once animation is done - DOUBLED from 2500 to 5000
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 2500);
+    }, 5000);
 
     return () => {
       clearTimeout(completeTimer);
@@ -57,14 +57,14 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-primary z-50 flex items-center justify-center transition-opacity duration-1000 ease-in-out ${
+      className={`fixed inset-0 bg-primary z-50 flex items-center justify-center transition-opacity duration-2000 ease-in-out ${
         fadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >
       <img
         src="/lovable-uploads/4b3d46a3-f88d-447d-a32f-11841fa6b7b7.png"
         alt="RVT Advisory"
-        className="transition-all duration-1000"
+        className="transition-all duration-2000"
         style={{
           position: 'absolute',
           top: logoPosition.top,
