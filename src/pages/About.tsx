@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from "react-router-dom";
 import { ExternalLink } from "lucide-react";
@@ -10,16 +11,16 @@ const About = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <div className="relative h-[50vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-        <div className="absolute inset-0 bg-black/50 z-0">
-          <div className="absolute inset-0 bg-cover bg-center" 
-               style={{ backgroundImage: "url('/placeholder.svg')", opacity: 0.5 }}>
-          </div>
+      <div className="relative h-[50vh] flex items-center">
+        {/* Background image */}
+        <div className="absolute inset-0 bg-cover bg-center z-0" 
+             style={{ backgroundImage: "url('/lovable-uploads/94cbec84-34a5-465e-91ef-2f7ff160d2e0.png')" }}>
+          <div className="absolute inset-0 bg-black/60 z-0"></div>
         </div>
         
         <div className="container mx-auto px-4 z-10 relative">
-          <h1 className="text-5xl font-extrabold mb-6">RVT ADVISORY</h1>
-          <p className="text-xl max-w-2xl">
+          <h1 className="text-5xl font-extrabold mb-6 text-white">RVT ADVISORY</h1>
+          <p className="text-xl max-w-2xl text-white">
             Centring people and partnerships in everything we do —because sustainable business success begins with genuine connections.
           </p>
         </div>
