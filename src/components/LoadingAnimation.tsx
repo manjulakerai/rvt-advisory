@@ -32,7 +32,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
       }`}
     >
       <img
-        src="/lovable-uploads/d181457b-27df-411c-9bca-de8cb8a09c3f.png"
+        src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png"
         alt="RVT Advisory"
         className="h-24 w-auto animate-pulse"
       />
