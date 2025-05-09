@@ -13,12 +13,12 @@ const Header = () => {
   const LeftNavigationItems = () => (
     <NavigationMenuList className={isMobile ? "flex-col space-y-4" : "flex-row space-x-2"}>
       <NavigationMenuItem>
-        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
           About
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
           Services
         </Link>
       </NavigationMenuItem>
@@ -28,12 +28,12 @@ const Header = () => {
   const RightNavigationItems = () => (
     <NavigationMenuList className={isMobile ? "flex-col space-y-4 mt-4" : "flex-row space-x-2"}>
       <NavigationMenuItem>
-        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
           Media
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
           Contact
         </Link>
       </NavigationMenuItem>
@@ -53,22 +53,22 @@ const Header = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
           About
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
           Services
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
           Media
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold`}>
+        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
           Contact
         </Link>
       </NavigationMenuItem>
@@ -78,7 +78,9 @@ const Header = () => {
   return (
     <>
       <TopHeader />
-      <header className="bg-primary py-4">
+      <header className="text-white py-4" style={{
+        background: 'linear-gradient(250deg, rgba(75, 90, 32, 1) 50%, rgba(249, 246, 240, 1) 100%)'
+      }}>
         <div className="container mx-auto">
           <div className="grid grid-cols-3 items-center gap-4">
             {isMobile ? (
@@ -115,12 +117,12 @@ const Header = () => {
                   <NavigationMenu className="flex items-center">
                     <NavigationMenuList className="flex-row space-x-2">
                       <NavigationMenuItem>
-                        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+                        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
                           About
                         </Link>
                       </NavigationMenuItem>
                       <NavigationMenuItem>
-                        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+                        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
                           Services
                         </Link>
                       </NavigationMenuItem>
@@ -134,12 +136,12 @@ const Header = () => {
                         </Link>
                       </NavigationMenuItem>
                       <NavigationMenuItem>
-                        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+                        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
                           Media
                         </Link>
                       </NavigationMenuItem>
                       <NavigationMenuItem>
-                        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10`}>
+                        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-transparent hover:bg-primary-foreground/10 hover:text-white`}>
                           Contact
                         </Link>
                       </NavigationMenuItem>
