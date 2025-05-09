@@ -31,7 +31,7 @@ const About = () => {
           <div>
             <div className="sticky top-8">
               <div className="rounded-lg overflow-hidden mb-6 aspect-[3/4] bg-gray-200">
-                <img src="/placeholder.svg" alt="Renee Thomson" className="w-full h-full object-cover" />
+                <img src="/lovable-uploads/a135ca22-ef80-45d6-ab7d-8beacf2a0092.png" alt="Renee Thomson" className="w-full h-full object-cover" />
               </div>
               
               <div className="space-y-4">
