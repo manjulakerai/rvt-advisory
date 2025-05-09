@@ -36,7 +36,7 @@ const SpeakingEngagements = () => {
           </div>
           <div className="bg-gray-200 aspect-[4/3] rounded-lg overflow-hidden">
             <img 
-              src="/lovable-uploads/a5169457-4e80-4cac-b889-f90da91cdd3f.png" 
+              src="/lovable-uploads/3a631742-38d0-4edc-87b4-8287de822f58.png" 
               alt="Renee Thomson speaking at an event" 
               className="w-full h-full object-cover"
             />

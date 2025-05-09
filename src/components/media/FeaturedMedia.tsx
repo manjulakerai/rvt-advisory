@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Video, MessageSquare } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,7 +16,7 @@ const featuredMedia = [
     title: "Youth Advisory Committee Addresses EMRIP",
     type: "Featured Event",
     description: "A groundbreaking moment as our Youth Advisory Committee, led by Renee Thomson, presents to EMRIP on critical issues facing Aboriginal and Torres Strait Islander women in leadership positions, marking a significant step forward in advocating for indigenous women's empowerment.",
-    image: "/lovable-uploads/f62355d4-4e5f-433e-9a12-837412f4110d.png",
+    image: "/lovable-uploads/575697fd-9399-408b-b1aa-3a04e21a39fd.png",
     link: "https://www.facebook.com/share/v/1XTCdu57yP/?mibextid=rS40aB7S9Ucbxw6v",
     icon: <MessageSquare className="h-8 w-8 text-primary" />
   }, {
