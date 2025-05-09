@@ -17,7 +17,7 @@ const HeroSection = () => {
     // Initialize player when API is ready
     window.onYouTubeIframeAPIReady = () => {
       new window.YT.Player('youtube-player', {
-        videoId: '7z9MEn5RLpY', // The YouTube video ID
+        videoId: 'kHAWj3D4hp0', // Updated YouTube video ID
         playerVars: {
           autoplay: 1,
           loop: 1,
@@ -27,9 +27,9 @@ const HeroSection = () => {
           modestbranding: 1,
           rel: 0,
           enablejsapi: 1,
-          playlist: '7z9MEn5RLpY', // Required for looping
-          start: 1, // Skip the first second
-          end: 178, // End before the last second (assuming video is 180 seconds)
+          playlist: 'kHAWj3D4hp0', // Required for looping - updated video ID
+          start: 57, // Starting at 0:57
+          end: 68, // Ending at 1:08
         },
         events: {
           onReady: (event) => {
@@ -40,7 +40,7 @@ const HeroSection = () => {
           onStateChange: (event) => {
             // If the video ends, restart it (for smoother looping)
             if (event.data === window.YT.PlayerState.ENDED) {
-              event.target.seekTo(1);
+              event.target.seekTo(57);
               event.target.playVideo();
             }
           }
