@@ -17,7 +17,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
     // Trigger the onComplete callback once animation is done
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 2700); // 2000ms initial delay + 700ms transition
+    }, 2500); // Reduced from 2700ms to 2500ms for smoother transition
 
     return () => {
       clearTimeout(timer);
@@ -27,7 +27,7 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
 
   return (
     <div
-      className={`fixed inset-0 bg-primary z-50 flex items-center justify-center transition-opacity duration-700 ease-in-out ${
+      className={`fixed inset-0 bg-primary z-50 flex items-center justify-center transition-opacity duration-1000 ease-in-out ${
         fadeOut ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
     >

@@ -26,7 +26,7 @@ const App = () => {
         <Toaster />
         <Sonner />
         {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
-        <div className={`transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`}>
+        <div className={`transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
           <BrowserRouter>
             <Routes>
               <Route path="/coming-soon" element={<ComingSoon />} />

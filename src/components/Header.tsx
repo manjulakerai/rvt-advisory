@@ -11,7 +11,7 @@ const Header = () => {
   const isMobile = useIsMobile();
 
   const LeftNavigationItems = () => (
-    <NavigationMenuList className={isMobile ? "flex-col space-y-4" : "mr-4"}>
+    <NavigationMenuList className={isMobile ? "flex-col space-y-4" : ""}>
       <NavigationMenuItem>
         <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold`}>
           About
@@ -26,7 +26,7 @@ const Header = () => {
   );
 
   const RightNavigationItems = () => (
-    <NavigationMenuList className={isMobile ? "flex-col space-y-4 mt-4" : "ml-4"}>
+    <NavigationMenuList className={isMobile ? "flex-col space-y-4 mt-4" : ""}>
       <NavigationMenuItem>
         <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold`}>
           Media
@@ -117,7 +117,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              <div className="flex justify-start">
+              <div className="flex justify-start items-center">
                 <NavigationMenu>
                   <LeftNavigationItems />
                 </NavigationMenu>
@@ -133,7 +133,7 @@ const Header = () => {
                 </Link>
               </div>
 
-              <div className="flex justify-between">
+              <div className="flex justify-between items-center">
                 <NavigationMenu>
                   <RightNavigationItems />
                 </NavigationMenu>
