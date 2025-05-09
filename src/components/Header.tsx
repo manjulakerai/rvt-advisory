@@ -47,7 +47,7 @@ const Header = () => {
           <img 
             src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
             alt="RVT Advisory" 
-            className="h-8 w-auto"
+            className="h-8 w-auto header-logo"
           />
           <span className="sr-only">Home</span>
         </Link>
@@ -87,7 +87,7 @@ const Header = () => {
                   <img 
                     src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
                     alt="RVT Advisory" 
-                    className="h-8 md:h-12 w-auto"
+                    className="h-8 md:h-12 w-auto header-logo"
                   />
                 </Link>
               </div>
@@ -128,7 +128,7 @@ const Header = () => {
                         <img 
                           src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png" 
                           alt="RVT Advisory" 
-                          className="h-12 md:h-16 w-auto"
+                          className="h-12 md:h-16 w-auto header-logo"
                         />
                       </Link>
                     </NavigationMenuItem>

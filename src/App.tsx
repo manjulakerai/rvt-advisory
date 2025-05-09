@@ -4,7 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -19,26 +19,39 @@ const queryClient = new QueryClient();
 
 const App = () => {
   const [loading, setLoading] = useState(true);
+  const [contentReady, setContentReady] = useState(false);
+  
+  // Prepare content before removing loading screen
+  useEffect(() => {
+    if (!loading && !contentReady) {
+      // Short delay to ensure DOM is ready before showing content
+      const timer = setTimeout(() => setContentReady(true), 50);
+      return () => clearTimeout(timer);
+    }
+  }, [loading, contentReady]);
   
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
-        <div className={`transition-opacity duration-1000 ${loading ? 'opacity-0' : 'opacity-100'}`}>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/coming-soon" element={<ComingSoon />} />
-              <Route path="/" element={<Index />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/media" element={<Media />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-            <StickyCallButton />
-          </BrowserRouter>
+        {/* Style applied to the whole app to prevent white flashes during transitions */}
+        <div className="bg-primary min-h-screen">
+          <Toaster />
+          <Sonner />
+          {loading && <LoadingAnimation onComplete={() => setLoading(false)} />}
+          <div className={`transition-opacity duration-1000 ${contentReady ? 'opacity-100' : 'opacity-0'}`}>
+            <BrowserRouter>
+              <Routes>
+                <Route path="/coming-soon" element={<ComingSoon />} />
+                <Route path="/" element={<Index />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/media" element={<Media />} />
+                <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+              <StickyCallButton />
+            </BrowserRouter>
+          </div>
         </div>
       </TooltipProvider>
     </QueryClientProvider>

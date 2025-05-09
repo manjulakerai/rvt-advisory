@@ -7,20 +7,47 @@ interface LoadingAnimationProps {
 
 const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
   const [fadeOut, setFadeOut] = useState(false);
+  const [logoPosition, setLogoPosition] = useState({ top: '50%', left: '50%' });
 
   useEffect(() => {
-    // Start the fade-out transition after 2 seconds
-    const timer = setTimeout(() => {
-      setFadeOut(true);
-    }, 2000);
+    // Get the position of the header logo for seamless transition
+    const getHeaderLogoPosition = () => {
+      const headerLogo = document.querySelector('.header-logo');
+      if (headerLogo) {
+        const rect = headerLogo.getBoundingClientRect();
+        const viewportHeight = window.innerHeight;
+        const viewportWidth = window.innerWidth;
+        
+        // Calculate position as percentage for responsiveness
+        const topPercentage = (rect.top + rect.height / 2) / viewportHeight * 100;
+        const leftPercentage = (rect.left + rect.width / 2) / viewportWidth * 100;
+        
+        return { top: `${topPercentage}%`, left: `${leftPercentage}%` };
+      }
+      return null;
+    };
+
+    // First render - wait for header to be available
+    setTimeout(() => {
+      const headerPosition = getHeaderLogoPosition();
+      if (headerPosition) {
+        setLogoPosition(headerPosition);
+        // Start the fade-out transition after logo has moved
+        setTimeout(() => {
+          setFadeOut(true);
+        }, 500);
+      } else {
+        // Fallback if header logo not found
+        setFadeOut(true);
+      }
+    }, 1500);
 
     // Trigger the onComplete callback once animation is done
     const completeTimer = setTimeout(() => {
       onComplete();
-    }, 2500); // Reduced from 2700ms to 2500ms for smoother transition
+    }, 2500);
 
     return () => {
-      clearTimeout(timer);
       clearTimeout(completeTimer);
     };
   }, [onComplete]);
@@ -34,7 +61,13 @@ const LoadingAnimation = ({ onComplete }: LoadingAnimationProps) => {
       <img
         src="/lovable-uploads/adb32038-1f7a-4d8a-b54e-a11f843a705a.png"
         alt="RVT Advisory"
-        className="h-24 w-auto animate-pulse"
+        className="h-24 w-auto transition-all duration-1000"
+        style={{
+          position: 'absolute',
+          top: logoPosition.top,
+          left: logoPosition.left,
+          transform: 'translate(-50%, -50%)',
+        }}
       />
     </div>
   );
