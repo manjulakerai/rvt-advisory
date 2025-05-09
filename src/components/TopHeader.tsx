@@ -1,3 +1,4 @@
+
 import { Phone, Mail } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
@@ -6,7 +7,7 @@ const TopHeader = () => {
   
   return (
     <div className="text-white py-2" style={{
-      background: 'linear-gradient(250deg, rgba(75, 90, 32, 1) 50%, rgba(249, 246, 240, 1) 100%)'
+      background: 'linear-gradient(250deg, hsl(var(--primary)) 50%, rgba(249, 246, 240, 1) 100%)'
     }}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-end items-center space-y-2 sm:space-y-0 sm:space-x-6">

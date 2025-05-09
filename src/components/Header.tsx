@@ -76,7 +76,7 @@ const Header = () => {
 
   return (
     <header className="text-white" style={{
-      background: 'linear-gradient(250deg, rgba(75, 90, 32, 1) 50%, rgba(249, 246, 240, 1) 100%)'
+      background: 'linear-gradient(250deg, hsl(var(--primary)) 50%, rgba(249, 246, 240, 1) 100%)'
     }}>
       {/* Contact Info Section (Previously TopHeader) */}
       <div className="container mx-auto px-4 py-2 border-b border-white/20">
