@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem, NavigationMenuLink, navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { Button } from "@/components/ui/button";
@@ -42,7 +41,7 @@ const Header = () => {
   const MobileNavigationItems = () => (
     <NavigationMenuList className="flex-col space-y-4">
       <NavigationMenuItem>
-        <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold flex items-center justify-center text-white bg-primary hover:bg-primary/90`}>
+        <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold flex items-center justify-center text-white bg-primary hover:bg-primary/90 hover:text-white`}>
           <img 
             src="/lovable-uploads/4b3d46a3-f88d-447d-a32f-11841fa6b7b7.png" 
             alt="RVT Advisory" 
@@ -52,22 +51,22 @@ const Header = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90`}>
+        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90 hover:text-white`}>
           About
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90`}>
+        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90 hover:text-white`}>
           Services
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90`}>
+        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90 hover:text-white`}>
           Media
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90`}>
+        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold text-white bg-primary hover:bg-primary/90 hover:text-white`}>
           Contact
         </Link>
       </NavigationMenuItem>
