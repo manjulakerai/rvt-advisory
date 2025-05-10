@@ -1,10 +1,13 @@
 
 import React from 'react';
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 
 const HowWeHelp = () => {
+  const openCalendly = () => {
+    window.open("https://calendly.com/manjulakerai/discoverymeeting", "_blank");
+  };
+
   return (
     <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
       <div>
@@ -49,11 +52,12 @@ const HowWeHelp = () => {
             <span><strong>Full Implementation:</strong> End-to-end solution development and execution</span>
           </li>
         </ul>
-        <Link to="/contact">
-          <Button className="w-full bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white font-bold border-0">
-            BOOK YOUR INCEPTION MEETING NOW
-          </Button>
-        </Link>
+        <Button 
+          className="w-full bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white font-bold border-0"
+          onClick={openCalendly}
+        >
+          BOOK YOUR INCEPTION MEETING NOW
+        </Button>
       </div>
     </div>
   );

@@ -8,6 +8,10 @@ const HeroSection = () => {
   const [playerReady, setPlayerReady] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
   
+  const openCalendly = () => {
+    window.open("https://calendly.com/manjulakerai/discoverymeeting", "_blank");
+  };
+  
   useEffect(() => {
     // Show content with a slight delay
     const contentTimer = setTimeout(() => {
@@ -85,11 +89,13 @@ const HeroSection = () => {
             Expert policy advice, strategic guidance, and cultural competency training to empower businesses, government agencies, and Aboriginal organisations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 w-full">
-            <Link to="/contact" className="w-full sm:w-auto">
-              <Button size="lg" className="w-full text-sm sm:text-base bg-[#5F3873] hover:bg-[#5F3873]/90 text-white hover:text-white font-bold py-3 px-4 sm:px-6 border-0 transition-all duration-300 hover:scale-110 hover:shadow-lg">
-                BOOK YOUR INCEPTION MEETING NOW
-              </Button>
-            </Link>
+            <Button 
+              size="lg" 
+              className="w-full sm:w-auto text-sm sm:text-base bg-[#5F3873] hover:bg-[#5F3873]/90 text-white hover:text-white font-bold py-3 px-4 sm:px-6 border-0 transition-all duration-300 hover:scale-110 hover:shadow-lg"
+              onClick={openCalendly}
+            >
+              BOOK YOUR INCEPTION MEETING NOW
+            </Button>
             <Link to="/about" className="w-full sm:w-auto">
               <Button 
                 size="lg" 

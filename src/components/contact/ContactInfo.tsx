@@ -42,6 +42,7 @@ const ContactInfo = () => {
             <Button 
               variant="outline" 
               className="mt-2 bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white font-bold border-0 transition-transform duration-300 hover:scale-105 hover:shadow-lg"
+              onClick={() => window.open("https://calendly.com/manjulakerai/discoverymeeting", "_blank")}
             >
               BOOK A CONSULTATION
             </Button>

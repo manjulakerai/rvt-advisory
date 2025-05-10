@@ -24,6 +24,10 @@ const FooterContent = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const openCalendly = () => {
+    window.open("https://calendly.com/manjulakerai/discoverymeeting", "_blank");
+  };
+
   // Function to render a link that works both inside and outside Router context
   const renderLink = (to: string, children: React.ReactNode, className?: string) => {
     if (location !== null) {
@@ -86,6 +90,7 @@ const FooterContent = () => {
           <Button 
             variant="outline" 
             className="mt-4 bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white font-bold border-0 transition-transform duration-300 hover:scale-105 hover:shadow-lg text-xs hidden xl:inline-flex"
+            onClick={openCalendly}
           >
             BOOK YOUR INCEPTION MEETING NOW
           </Button>

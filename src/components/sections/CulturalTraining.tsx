@@ -1,11 +1,14 @@
 
 import React from 'react';
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const CulturalTraining = () => {
+  const openCalendly = () => {
+    window.open("https://calendly.com/manjulakerai/discoverymeeting", "_blank");
+  };
+
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
@@ -69,14 +72,13 @@ const CulturalTraining = () => {
         </div>
       </div>
       <div className="mt-8 text-center">
-        <Link to="/contact">
-          <Button 
-            size="lg" 
-            className="font-bold bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white border-0"
-          >
-            BOOK NOW
-          </Button>
-        </Link>
+        <Button 
+          size="lg" 
+          className="font-bold bg-[#5F3873] text-white hover:bg-[#5F3873]/90 hover:text-white border-0"
+          onClick={openCalendly}
+        >
+          BOOK NOW
+        </Button>
       </div>
     </section>
   );
