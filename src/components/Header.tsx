@@ -42,7 +42,7 @@ const Header = () => {
   const MobileNavigationItems = () => (
     <NavigationMenuList className="flex-col space-y-4">
       <NavigationMenuItem>
-        <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold flex items-center justify-center`}>
+        <Link to="/" className={`${navigationMenuTriggerStyle()} font-semibold flex items-center justify-center text-white`}>
           <img 
             src="/lovable-uploads/4b3d46a3-f88d-447d-a32f-11841fa6b7b7.png" 
             alt="RVT Advisory" 
@@ -52,22 +52,22 @@ const Header = () => {
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
+        <Link to="/about" className={`${navigationMenuTriggerStyle()} font-semibold text-white hover:bg-primary-foreground/10`}>
           About
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
+        <Link to="/services" className={`${navigationMenuTriggerStyle()} font-semibold text-white hover:bg-primary-foreground/10`}>
           Services
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
+        <Link to="/media" className={`${navigationMenuTriggerStyle()} font-semibold text-white hover:bg-primary-foreground/10`}>
           Media
         </Link>
       </NavigationMenuItem>
       <NavigationMenuItem>
-        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold hover:text-white`}>
+        <Link to="/contact" className={`${navigationMenuTriggerStyle()} font-semibold text-white hover:bg-primary-foreground/10`}>
           Contact
         </Link>
       </NavigationMenuItem>
@@ -76,7 +76,7 @@ const Header = () => {
 
   return (
     <header className="text-white" style={{
-      background: 'linear-gradient(250deg, hsl(var(--primary)) 50%, rgba(249, 246, 240, 1) 100%)'
+      background: isMobile ? 'hsl(var(--primary))' : 'linear-gradient(250deg, hsl(var(--primary)) 50%, rgba(249, 246, 240, 1) 100%)'
     }}>
       {/* Contact Info Section (Previously TopHeader) */}
       <div className="container mx-auto px-4 py-2 border-b border-white/20">
@@ -85,9 +85,9 @@ const Header = () => {
             <Phone className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
             {isMobile ? "Call Us" : "0411 524 370"}
           </a>
-          <a href="mailto:renee@rvtadvisory.com" className="flex items-center hover:opacity-80 transition-opacity text-xs sm:text-sm w-full sm:w-auto justify-center sm:justify-start">
+          <a href="mailto:info@rvtadvisory.com" className="flex items-center hover:opacity-80 transition-opacity text-xs sm:text-sm w-full sm:w-auto justify-center sm:justify-start">
             <Mail className="h-3 w-3 sm:h-4 sm:w-4 mr-2" />
-            {isMobile ? "Email Us" : "renee@rvtadvisory.com"}
+            {isMobile ? "Email Us" : "info@rvtadvisory.com"}
           </a>
         </div>
       </div>
@@ -113,7 +113,7 @@ const Header = () => {
                       <Menu className="h-6 w-6" />
                     </Button>
                   </SheetTrigger>
-                  <SheetContent>
+                  <SheetContent className="bg-primary">
                     <div className="mt-8">
                       <NavigationMenu orientation="vertical" className="w-full">
                         <MobileNavigationItems />

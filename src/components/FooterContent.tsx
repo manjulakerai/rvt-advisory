@@ -5,11 +5,13 @@ import { Button } from "@/components/ui/button";
 import { MessageSquare, Phone } from "lucide-react";
 import { useScrollToSection } from "@/hooks/use-scroll-to-section";
 import { Separator } from "@/components/ui/separator";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const FooterContent = () => {
   // We need to check if we're in a router context before using router hooks
   let location;
   let scrollToSection;
+  const isMobile = useIsMobile();
   
   try {
     location = useLocation();
@@ -48,7 +50,7 @@ const FooterContent = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-6">
+    <div className={`container mx-auto px-4 py-6 ${isMobile ? 'pb-20' : ''}`}>
       <div className="grid md:grid-cols-3 gap-8">
         <div className="space-y-4">
           {renderLink("/", 
@@ -80,7 +82,7 @@ const FooterContent = () => {
           <div className="space-y-2 text-sm">
             <div className="flex items-center">
               <MessageSquare className="h-4 w-4 mr-2" />
-              <a href="mailto:renee@rvtadvisory.com" className="hover:underline">renee@rvtadvisory.com</a>
+              <a href="mailto:info@rvtadvisory.com" className="hover:underline">info@rvtadvisory.com</a>
             </div>
             <div className="flex items-center">
               <Phone className="h-4 w-4 mr-2" />
