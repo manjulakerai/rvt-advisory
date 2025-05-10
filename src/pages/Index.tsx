@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProblemStatement from "@/components/sections/ProblemStatement";
@@ -11,6 +11,11 @@ import CallToAction from "@/components/sections/CallToAction";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  // Force scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const homeTestimonials = [
     {
       quote: "Renee doesn't just consult - she transforms. Her guidance has been instrumental in reshaping our approach to community engagement.",
@@ -37,7 +42,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-white">
       <Header />
-      <HeroSection />
+      <HeroSection key="hero-section" />
       <ProblemStatement />
       <Solutions />
       <ValueProposition />

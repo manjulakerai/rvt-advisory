@@ -7,9 +7,70 @@ const HeroSection = () => {
   const videoContainerRef = useRef<HTMLDivElement>(null);
   const [playerReady, setPlayerReady] = useState(false);
   const [contentVisible, setContentVisible] = useState(false);
+  const ytPlayerRef = useRef<any>(null);
+  const apiLoadedRef = useRef<boolean>(false);
 
   const openCalendly = () => {
     window.open("https://calendly.com/manjulakerai/discoverymeeting", "_blank");
+  };
+
+  // Function to initialize YouTube player
+  const initYouTubePlayer = () => {
+    if (!window.YT || !window.YT.Player) {
+      console.log("YouTube API not loaded yet");
+      return;
+    }
+
+    console.log("Initializing YouTube player");
+    
+    // Check if there's already an iframe element with this ID
+    // If so, remove it to prevent duplicate players
+    const existingIframe = document.getElementById('youtube-player');
+    if (existingIframe && existingIframe.tagName === 'IFRAME') {
+      existingIframe.remove();
+    }
+    
+    // Create a new div element for the player
+    const playerDiv = document.createElement('div');
+    playerDiv.id = 'youtube-player';
+    playerDiv.className = 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-full h-auto min-h-[100vh] aspect-video object-cover';
+    
+    // Add the div to the container
+    if (videoContainerRef.current) {
+      videoContainerRef.current.appendChild(playerDiv);
+    }
+
+    // Initialize the new player
+    ytPlayerRef.current = new window.YT.Player('youtube-player', {
+      videoId: 'kHAWj3D4hp0',
+      playerVars: {
+        autoplay: 1,
+        loop: 1,
+        mute: 1,
+        controls: 0,
+        showinfo: 0,
+        modestbranding: 1,
+        rel: 0,
+        enablejsapi: 1,
+        playlist: 'kHAWj3D4hp0',
+        start: 57,
+        end: 68
+      },
+      events: {
+        onReady: event => {
+          event.target.setPlaybackQuality('hd1080');
+          event.target.playVideo();
+          setPlayerReady(true);
+        },
+        onStateChange: event => {
+          // If the video ends, restart it (for smoother looping)
+          if (event.data === window.YT.PlayerState.ENDED) {
+            event.target.seekTo(57);
+            event.target.playVideo();
+          }
+        }
+      }
+    });
   };
 
   useEffect(() => {
@@ -18,51 +79,36 @@ const HeroSection = () => {
       setContentVisible(true);
     }, 300);
 
-    // YouTube API script loading
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
+    // Check if YouTube API is already loaded
+    if (window.YT && window.YT.Player) {
+      console.log("YouTube API already loaded");
+      initYouTubePlayer();
+    } else if (!apiLoadedRef.current) {
+      console.log("Loading YouTube API");
+      apiLoadedRef.current = true;
+      
+      // YouTube API script loading
+      const tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode?.insertBefore(tag, firstScriptTag);
 
-    // Initialize player when API is ready
-    window.onYouTubeIframeAPIReady = () => {
-      new window.YT.Player('youtube-player', {
-        videoId: 'kHAWj3D4hp0',
-        playerVars: {
-          autoplay: 1,
-          loop: 1,
-          mute: 1,
-          controls: 0,
-          showinfo: 0,
-          modestbranding: 1,
-          rel: 0,
-          enablejsapi: 1,
-          playlist: 'kHAWj3D4hp0',
-          start: 57,
-          end: 68
-        },
-        events: {
-          onReady: event => {
-            event.target.setPlaybackQuality('hd1080');
-            event.target.playVideo();
-            setPlayerReady(true);
-          },
-          onStateChange: event => {
-            // If the video ends, restart it (for smoother looping)
-            if (event.data === window.YT.PlayerState.ENDED) {
-              event.target.seekTo(57);
-              event.target.playVideo();
-            }
-          }
-        }
-      });
-    };
+      // Initialize player when API is ready
+      window.onYouTubeIframeAPIReady = () => {
+        console.log("YouTube API ready");
+        initYouTubePlayer();
+      };
+    }
 
     return () => {
       // Clean up
       clearTimeout(contentTimer);
-      window.onYouTubeIframeAPIReady = null;
-      delete window.onYouTubeIframeAPIReady;
+      
+      // Clean up YouTube player if it exists
+      if (ytPlayerRef.current) {
+        ytPlayerRef.current.destroy();
+        ytPlayerRef.current = null;
+      }
     };
   }, []);
 
@@ -73,10 +119,7 @@ const HeroSection = () => {
         ref={videoContainerRef} 
         className={`absolute inset-0 w-full h-full overflow-hidden transition-opacity duration-1000 ${playerReady ? 'opacity-100' : 'opacity-0'}`}
       >
-        <div 
-          id="youtube-player" 
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[100%] md:w-full h-auto min-h-[100vh] aspect-video object-cover"
-        ></div>
+        {/* YouTube player will be injected here */}
       </div>
       
       {/* Dark Overlay - Reduced opacity */}
